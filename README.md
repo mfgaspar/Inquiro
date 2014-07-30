@@ -1,11 +1,6 @@
 BIG DATA PERFORMANCE STAT
 ===
 
-- [Implementation Workflow](#Overview)
-- [Install](#Install)
-- [Dependencies](#Dependencies)
-- [Future Work](#Future Work)
-
 
 #Overview 
 
@@ -62,6 +57,16 @@ Run the script "bigmet.sql" inside db_scripts folders (it will create the databa
 ## Copy the stats files created on HDFS 
 
 - Download the stats log folder created on HDFS. Use the command line to download full folder. NOTE: this will be changed to get files directly from HDFS.
+
+	Usage: hadoop fs -cp URI [URI …] <dest>
+
+	Copy files from source to destination. This command allows multiple 	sources as well in which case the destination must be a directory. 
+	Example:		
+
+	hadoop fs -cp /user/hadoop/file1 /user/hadoop/file2
+	hadoop fs -cp /user/hadoop/file1 /user/hadoop/file2 /user/hadoop/dir
+
+
 - Place the files inside the folder process_metrics_files/process_metrics/logs.
 - Using PDI, run the job named process_metrics.kjb and wait until finish.
 

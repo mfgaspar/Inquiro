@@ -232,7 +232,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;process-pdi-metrics-logs.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;process_pdi_metrics_logs.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -256,8 +256,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>327</xloc>
-      <yloc>59</yloc>
+      <xloc>479</xloc>
+      <yloc>60</yloc>
       </entry>
     <entry>
       <name>Process Hadoop Metrics</name>
@@ -265,7 +265,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;process-hadoop-metrics-logs.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;process_hadoop_metrics_logs.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -289,8 +289,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>466</xloc>
-      <yloc>59</yloc>
+      <xloc>341</xloc>
+      <yloc>60</yloc>
       </entry>
   </entries>
   <hops>
@@ -305,7 +305,7 @@
     </hop>
     <hop>
       <from>Set variables</from>
-      <to>Process PDI Metrics</to>
+      <to>Process Hadoop Metrics</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -313,8 +313,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Process PDI Metrics</from>
-      <to>Process Hadoop Metrics</to>
+      <from>Process Hadoop Metrics</from>
+      <to>Process PDI Metrics</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>

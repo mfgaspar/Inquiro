@@ -1,4 +1,4 @@
-<Schema name="BigMet">
+<Schema name="BiGMET">
 
     <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Date">
         <Hierarchy name="Year Month Day" visible="true" hasAll="true" primaryKey="date_tk">
@@ -119,8 +119,8 @@
                 <Property name="Type" column="type"/>
                 <Property name="SubType" column="subtype"/>
                 <Property name="Status" column="status"/>
-                <Property name="Hostname" column="hostname"/>
                 <Property name="Priority" column="priority"/>
+                <Property name="Hostname" column="hostname"/>
                 <Property name="Username" column="username"/>
                 <Property name="Start Time" column="start_time"/>
                 <Property name="Finish Time" column="finish_time"/>
@@ -141,8 +141,8 @@
                 <Property name="Type" column="type"/>
                 <Property name="SubType" column="subtype"/>
                 <Property name="Status" column="status"/>
-                <Property name="Hostname" column="hostname"/>
                 <Property name="Priority" column="priority"/>
+                <Property name="Hostname" column="hostname"/>
                 <Property name="Username" column="username"/>
                 <Property name="Start Time" column="start_time"/>
                 <Property name="Finish Time" column="finish_time"/>
@@ -151,13 +151,21 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Metrics">
-        <Hierarchy name="Metrics" visible="true" hasAll="true" primaryKey="metric_id">
-            <Table name="dim_metrics" />
-            <Level name="Counter Group" visible="true" column="counter_group" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Hadoop Metrics">
+        <Hierarchy name="Hadoop Metrics" visible="true" hasAll="true" primaryKey="hadoop_metric_id">
+            <Table name="dim_hadoop_metrics" />
+            <Level name="Hadop Metric Group" visible="true" column="hadoop_metric_group" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
             </Level>
-            <Level name="Counter Name" visible="true" column="counter_name" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
-                <Property name="Counter Description" column="counter_desc"/>
+            <Level name="Hadop Metric Name" visible="true" column="hadoop_metric_name" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+                <Property name="Counter Description" column="hadoop_metric_desc"/>
+            </Level>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="PDI Metrics">
+        <Hierarchy name="PDI Metrics" visible="true" hasAll="true" primaryKey="pdi_metric_id">
+            <Table name="dim_pdi_metrics" />
+            <Level name="Metric Name" visible="true" column="pdi_metric_name" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
             </Level>
         </Hierarchy>
     </Dimension>
@@ -170,7 +178,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Cube name="BigMet - Hadoop Metrics" visible="true" cache="true" enabled="true">
+    <Cube name="BiGMET - Hadoop Metrics" visible="true" cache="true" enabled="true">
         <Table name="fact_hadoop_metrics" />
             <DimensionUsage source="Time" name="Time" visible="true" foreignKey="hadoop_id_start_time" highCardinality="false">
             </DimensionUsage>
@@ -178,22 +186,22 @@
             </DimensionUsage>
             <DimensionUsage source="Jobs and Tasks" name="Jobs and Tasks" visible="true" foreignKey="hadoop_task_id" highCardinality="false">
             </DimensionUsage>
-            <DimensionUsage source="Metrics" name="Metrics" visible="true" foreignKey="metric_id" highCardinality="false">
+            <DimensionUsage source="Hadoop Metrics" name="Hadoop Metrics" visible="true" foreignKey="hadoop_metric_id" highCardinality="false">
             </DimensionUsage>
 
-            <Measure name="Total" column="counter_val" formatString="0" datatype="Numeric" aggregator="sum">
+            <Measure name="Total" column="value" formatString="0" datatype="Numeric" aggregator="sum">
             </Measure>
-            <Measure name="Average" column="counter_val" formatString="0" datatype="Numeric" aggregator="avg">
+            <Measure name="Average" column="value" formatString="0" datatype="Numeric" aggregator="avg">
             </Measure>
-            <Measure name="Count" column="counter_val" formatString="0" datatype="Numeric" aggregator="count">
+            <Measure name="Count" column="value" formatString="0" datatype="Numeric" aggregator="count">
             </Measure>
-            <Measure name="Maximum" column="counter_val" formatString="0" datatype="Numeric" aggregator="max">
+            <Measure name="Maximum" column="value" formatString="0" datatype="Numeric" aggregator="max">
             </Measure>
-            <Measure name="Minimum" column="counter_val" formatString="0" datatype="Numeric" aggregator="min">
+            <Measure name="Minimum" column="value" formatString="0" datatype="Numeric" aggregator="min">
             </Measure>
     </Cube>
 
-       <Cube name="BigMet - PDI Metrics" visible="true" cache="true" enabled="true">
+       <Cube name="BiGMET - PDI Metrics" visible="true" cache="true" enabled="true">
         <Table name="fact_pdi_metrics" />
             <DimensionUsage source="Time" name="Time" visible="true" foreignKey="hadoop_id_start_time" highCardinality="false">
             </DimensionUsage>
@@ -201,39 +209,21 @@
             </DimensionUsage>
             <DimensionUsage source="Jobs and Tasks" name="Jobs and Tasks" visible="true" foreignKey="hadoop_task_id" highCardinality="false">
             </DimensionUsage>
-            <DimensionUsage source="Steps" name="Metrics" visible="true" foreignKey="step_type_id" highCardinality="false">
+            <DimensionUsage source="Steps" name="PDI Steps" visible="true" foreignKey="step_type_id" highCardinality="false">
+            </DimensionUsage>
+            <DimensionUsage source="PDI Metrics" name="PDI Metrics" visible="true" foreignKey="pdi_metric_id" highCardinality="false">
             </DimensionUsage>
 
-            <Measure name="Lines Input (Sum)" column="lines_input" formatString="0" datatype="Numeric" aggregator="sum">
+            <Measure name="Total" column="value" formatString="0" datatype="Numeric" aggregator="sum">
             </Measure>
-            <Measure name="Lines Output (Sum)" column="lines_output" formatString="0" datatype="Numeric" aggregator="sum">
+            <Measure name="Average" column="value" formatString="0" datatype="Numeric" aggregator="avg">
             </Measure>
-            <Measure name="Lines Readed (Sum)" column="lines_readed" formatString="0" datatype="Numeric" aggregator="sum">
+            <Measure name="Count" column="value" formatString="0" datatype="Numeric" aggregator="count">
             </Measure>
-            <Measure name="Lines Updated (Sum)" column="lines_updated" formatString="0" datatype="Numeric" aggregator="sum">
+            <Measure name="Maximum" column="value" formatString="0" datatype="Numeric" aggregator="max">
             </Measure>
-            <Measure name="Lines Written (Sum)" column="lines_written" formatString="0" datatype="Numeric" aggregator="sum">
+            <Measure name="Minimum" column="value" formatString="0" datatype="Numeric" aggregator="min">
             </Measure>
-            <Measure name="Lines Rejected (Sum)" column="lines_rejected" formatString="0" datatype="Numeric" aggregator="sum">
-            </Measure>
-            <Measure name="Duration (Sum)" column="duration" formatString="0" datatype="Numeric" aggregator="sum">
-            </Measure>
-
-            <Measure name="Lines Input (Avg)" column="lines_input" formatString="0" datatype="Numeric" aggregator="avg">
-            </Measure>
-            <Measure name="Lines Output (Avg)" column="lines_output" formatString="0" datatype="Numeric" aggregator="avg">
-            </Measure>
-            <Measure name="Lines Readed (Avg)" column="lines_readed" formatString="0" datatype="Numeric" aggregator="avg">
-            </Measure>
-            <Measure name="Lines Updated (Avg)" column="lines_updated" formatString="0" datatype="Numeric" aggregator="avg">
-            </Measure>
-            <Measure name="Lines Written (Avg)" column="lines_written" formatString="0" datatype="Numeric" aggregator="avg">
-            </Measure>
-            <Measure name="Lines Rejected (Avg)" column="lines_rejected" formatString="0" datatype="Numeric" aggregator="avg">
-            </Measure>
-            <Measure name="Duration (Avg)" column="duration" formatString="0" datatype="Numeric" aggregator="avg">
-            </Measure>
-       
     </Cube>
 
     <Role name="Administrator">
@@ -242,9 +232,9 @@
     </Role>
     <Role name="Pentaho Operations">
         <SchemaGrant access="none">
-            <CubeGrant cube="BigMet - PDI Metrics" access="all">
+            <CubeGrant cube="BiGMET - PDI Metrics" access="all">
             </CubeGrant>
-            <CubeGrant cube="BigMet - Hadoop Metrics" access="all">
+            <CubeGrant cube="BiGMET - Hadoop Metrics" access="all">
             </CubeGrant>
         </SchemaGrant>
     </Role>

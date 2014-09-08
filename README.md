@@ -86,3 +86,6 @@ Run the script "bigmet.sql" inside db_scripts folders (it will create the databa
 	- Comparator (compare multiple jobs/tasks)
 	- Links to the hadoop logs file (to leverage the process of development and debug)
 	- 
+	
+	
+	- Start date on Hadoop mad PDI taks is wrong. Need to fix it on the ETL.

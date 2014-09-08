@@ -111,7 +111,7 @@
     </attributes>
   </connection>
   <connection>
-    <name>bigmet</name>
+    <name>Inquiro</name>
     <server/>
     <type>GENERIC</type>
     <access>Native</access>
@@ -182,7 +182,6 @@
   <hop> <from>Row denormaliser job 2</from><to>Job Timestamp to Date 2</to><enabled>Y</enabled> </hop>
   <hop> <from>jobs</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
   <hop> <from>tasks</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculator 2</from><to>Select values job 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Finish Time</from><to>Merge Jobs&#x26;Tasks</to><enabled>Y</enabled> </hop>
   <hop> <from>Job Timestamp to Date 2 2</from><to>Calculator 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Merge All</from><to>Job Timestamp to Date 2 2</to><enabled>Y</enabled> </hop>
@@ -197,12 +196,13 @@
   <hop> <from>Sort jobs&#x26;tasks 2</from><to>Merge All</to><enabled>Y</enabled> </hop>
   <hop> <from>closure_generator</from><to>insert_closure_table</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values job 2</from><to>closure_generator</to><enabled>Y</enabled> </hop>
-  <hop> <from>Calculator 2</from><to>Write to log</to><enabled>Y</enabled> </hop>
   <hop> <from>Select values job 2</from><to>Add constants</to><enabled>Y</enabled> </hop>
   <hop> <from>Add constants</from><to>dim_job_table 2</to><enabled>Y</enabled> </hop>
   <hop> <from>Select Cols</from><to>Dimension lookup&#x2f;update</to><enabled>Y</enabled> </hop>
   <hop> <from>Dimension lookup&#x2f;update</from><to>Fact table</to><enabled>Y</enabled> </hop>
   <hop> <from>Read Hadoop Metrics </from><to>Filter Empty Rows</to><enabled>N</enabled> </hop>
+  <hop> <from>Calculator 2</from><to>Job Timestamp to Date 2 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Job Timestamp to Date 2 2 2</from><to>Select values job 2</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Add constants</name>
@@ -232,7 +232,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>392</xloc>
-      <yloc>1549</yloc>
+      <yloc>1597</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -283,7 +283,7 @@
            </partitioning>
       <schema/>
       <table>dim_hadoop_metrics</table>
-      <connection>bigmet</connection>
+      <connection>Inquiro</connection>
       <commit>100</commit>
       <update>Y</update>
       <fields>
@@ -359,8 +359,8 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>bigmet</connection>
-    <schema>bigmet</schema>
+    <connection>Inquiro</connection>
+    <schema/>
     <table>fact_hadoop_metrics</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
@@ -660,7 +660,7 @@
     <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;&#xa;var name &#x3d; name_1&#x3b;&#xa;var username &#x3d; username_1&#x3b;&#xa;&#xa;var priority &#x3d; priority&#x3b;&#xa;if &#x28;priority &#x3d;&#x3d; null&#x29; priority &#x3d; &#x22;N&#x2f;A&#x22;&#x3b;&#xa;&#xa;var finish_time &#x3d; finish_time&#x3b;&#xa;if &#x28;spent_time &#x3d;&#x3d; 0&#x29; finish_time &#x3d; finish_time_1&#x3b;&#xa;&#xa;if &#x28;parent_hadoop_id_1 &#x21;&#x3d; null&#x29; &#xa;	var parent_hadoop_id &#x3d; &#x22;&#x22;&#x3b;&#xa;&#xa;&#xa;</jsScript_script>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;&#xa;var name &#x3d; name_1&#x3b;&#xa;var username &#x3d; username_1&#x3b;&#xa;&#xa;var priority &#x3d; priority&#x3b;&#xa;if &#x28;priority &#x3d;&#x3d; null&#x29; priority &#x3d; &#x22;N&#x2f;A&#x22;&#x3b;&#xa;&#xa;var finish_time &#x3d; finish_time&#x3b;&#xa;if &#x28;spent_time &#x3d;&#x3d; 0&#x29; finish_time &#x3d; finish_time_1&#x3b;&#xa;&#xa;if &#x28;parent_hadoop_id_1 &#x21;&#x3d; null&#x29; &#xa;	var parent_hadoop_id &#x3d; &#x22;&#x22;&#x3b;&#xa;&#xa;var log_path &#x3d; hadoopLogPath.replace&#x28;&#x27;TASK&#x27;, hadoop_id&#x29;&#x3b;&#xa;&#xa;</jsScript_script>
       </jsScript>    </jsScripts>    <fields>      <field>        <name>name</name>
         <rename>name</rename>
         <type>String</type>
@@ -697,10 +697,88 @@
         <length>-1</length>
         <precision>-1</precision>
         <replace>Y</replace>
+      </field>      <field>        <name>log_path</name>
+        <rename>log_path</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
       </field>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>395</xloc>
       <yloc>1312</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Job Timestamp to Date 2 2 2</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;&#xa;var name &#x3d; name_1&#x3b;&#xa;var username &#x3d; username_1&#x3b;&#xa;&#xa;var priority &#x3d; priority&#x3b;&#xa;if &#x28;priority &#x3d;&#x3d; null&#x29; priority &#x3d; &#x22;N&#x2f;A&#x22;&#x3b;&#xa;&#xa;var finish_time &#x3d; finish_time&#x3b;&#xa;if &#x28;spent_time &#x3d;&#x3d; 0&#x29; finish_time &#x3d; finish_time_1&#x3b;&#xa;&#xa;if &#x28;parent_hadoop_id_1 &#x21;&#x3d; null&#x29; &#xa;	var parent_hadoop_id &#x3d; &#x22;&#x22;&#x3b;&#xa;&#xa;var log_path &#x3d; hadoopLogPath.replace&#x28;&#x27;TASK&#x27;, hadoop_id&#x29;&#x3b;&#xa;&#xa;var groupname &#x3d; name.split&#x28;&#x27;_&#x27;&#x29;&#x5b;0&#x5d;&#x3b; &#xa;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>name</name>
+        <rename>name</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>username</name>
+        <rename>username</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>priority</name>
+        <rename>priority</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>finish_time</name>
+        <rename>finish_time</rename>
+        <type>Date</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>spent_time</name>
+        <rename>spent_time</rename>
+        <type>BigNumber</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>parent_hadoop_id</name>
+        <rename>parent_hadoop_id</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>log_path</name>
+        <rename>log_path</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>groupname</name>
+        <rename>groupname</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>392</xloc>
+      <yloc>1458</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -1330,6 +1408,36 @@
         <trim_type>none</trim_type>
         <repeat>N</repeat>
       </field>
+      <field>
+        <name>hdfsPath</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <ifnull/>
+        <position>-1</position>
+        <length>70</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>hadoopLogPath</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal>.</decimal>
+        <group>,</group>
+        <nullif/>
+        <ifnull/>
+        <position>-1</position>
+        <length>70</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+        <repeat>N</repeat>
+      </field>
     </fields>
     <limit>0</limit>
     <error_ignored>N</error_ignored>
@@ -1784,6 +1892,10 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
+      </field>      <field>        <name>hadoopLogPath</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -1820,6 +1932,10 @@
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
+      </field>      <field>        <name>groupname</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
       </field>      <field>        <name>name</name>
         <rename/>
         <length>-2</length>
@@ -1848,11 +1964,15 @@
         <rename>spent_time</rename>
         <length>-2</length>
         <precision>-2</precision>
+      </field>      <field>        <name>log_path</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>
     </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>392</xloc>
-      <yloc>1456</yloc>
+      <yloc>1524</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2171,38 +2291,6 @@
     </step>
 
   <step>
-    <name>Write to log</name>
-    <type>WriteToLog</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <loglevel>log_level_detailed</loglevel>
-      <displayHeader>Y</displayHeader>
-      <limitRows>N</limitRows>
-      <limitRowsNumber>0</limitRowsNumber>
-      <logmessage/>
-    <fields>
-      <field>
-        <name>hadoop_id</name>
-        </field>
-      <field>
-        <name>parent_hadoop_id</name>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>483</xloc>
-      <yloc>1386</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
     <name>closure_generator</name>
     <type>ClosureGenerator</type>
     <description/>
@@ -2220,7 +2308,7 @@
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>494</xloc>
-      <yloc>1455</yloc>
+      <yloc>1523</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2236,14 +2324,14 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>bigmet</connection>
+    <connection>Inquiro</connection>
     <schema/>
     <table>dim_jobs_and_tasks</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
+    <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
@@ -2254,11 +2342,63 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
+        <field>
+          <column_name>type</column_name>
+          <stream_name>type</stream_name>
+        </field>
+        <field>
+          <column_name>subtype</column_name>
+          <stream_name>subtype</stream_name>
+        </field>
+        <field>
+          <column_name>hadoop_id</column_name>
+          <stream_name>hadoop_id</stream_name>
+        </field>
+        <field>
+          <column_name>parent_hadoop_id</column_name>
+          <stream_name>parent_hadoop_id</stream_name>
+        </field>
+        <field>
+          <column_name>groupname</column_name>
+          <stream_name>groupname</stream_name>
+        </field>
+        <field>
+          <column_name>name</column_name>
+          <stream_name>name</stream_name>
+        </field>
+        <field>
+          <column_name>status</column_name>
+          <stream_name>status</stream_name>
+        </field>
+        <field>
+          <column_name>priority</column_name>
+          <stream_name>priority</stream_name>
+        </field>
+        <field>
+          <column_name>username</column_name>
+          <stream_name>username</stream_name>
+        </field>
+        <field>
+          <column_name>start_time</column_name>
+          <stream_name>start_time</stream_name>
+        </field>
+        <field>
+          <column_name>finish_time</column_name>
+          <stream_name>finish_time</stream_name>
+        </field>
+        <field>
+          <column_name>spent_time</column_name>
+          <stream_name>spent_time</stream_name>
+        </field>
+        <field>
+          <column_name>hadoop_attempt_id</column_name>
+          <stream_name>hadoop_attempt_id</stream_name>
+        </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>392</xloc>
-      <yloc>1658</yloc>
+      <yloc>1672</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2274,14 +2414,14 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <connection>bigmet</connection>
-    <schema>bigmet</schema>
+    <connection>Inquiro</connection>
+    <schema/>
     <table>dim_jobs_and_tasks_closure</table>
     <commit>1000</commit>
     <truncate>Y</truncate>
     <ignore_errors>N</ignore_errors>
     <use_batch>Y</use_batch>
-    <specify_fields>N</specify_fields>
+    <specify_fields>Y</specify_fields>
     <partitioning_enabled>N</partitioning_enabled>
     <partitioning_field/>
     <partitioning_daily>N</partitioning_daily>
@@ -2292,11 +2432,23 @@
     <return_keys>N</return_keys>
     <return_field/>
     <fields>
+        <field>
+          <column_name>parent_hadoop_id</column_name>
+          <stream_name>parent_hadoop_id</stream_name>
+        </field>
+        <field>
+          <column_name>hadoop_id</column_name>
+          <stream_name>hadoop_id</stream_name>
+        </field>
+        <field>
+          <column_name>level</column_name>
+          <stream_name>level</stream_name>
+        </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>593</xloc>
-      <yloc>1455</yloc>
+      <yloc>1523</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -2353,6 +2505,10 @@
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>spent_time</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>hadoopLogPath</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>
@@ -2449,6 +2605,10 @@
         <length>-2</length>
         <precision>-2</precision>
       </field>      <field>        <name>spent_time</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>hadoopLogPath</name>
         <rename/>
         <length>-2</length>
         <precision>-2</precision>

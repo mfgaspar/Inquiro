@@ -1,8 +1,8 @@
-CREATE DATABASE  IF NOT EXISTS `bigmet` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `bigmet`;
+CREATE DATABASE  IF NOT EXISTS `Inquiro` /*!40100 DEFAULT CHARACTER SET utf8 */;
+USE `Inquiro`;
 -- MySQL dump 10.13  Distrib 5.6.13, for osx10.6 (i386)
 --
--- Host: 127.0.0.1    Database: bigmet
+-- Host: 127.0.0.1    Database: Inquiro
 -- ------------------------------------------------------
 -- Server version	5.6.15
 
@@ -78,12 +78,13 @@ CREATE TABLE `dim_jobs_and_tasks` (
   `hadoop_id` varchar(50) NOT NULL,
   `parent_hadoop_id` varchar(50) DEFAULT NULL,
   `hadoop_attempt_id` varchar(50) DEFAULT NULL,
+  `groupname` varchar(50) DEFAULT NULL,
   `name` varchar(50) DEFAULT NULL,
   `status` varchar(20) DEFAULT NULL,
   `priority` varchar(20) DEFAULT NULL,
   `username` varchar(20) DEFAULT NULL,
-  `start_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `finish_time` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `start_time` varchar(30) DEFAULT NULL,
+  `finish_time` varchar(30) DEFAULT NULL,
   `spent_time` bigint(20) DEFAULT NULL,
   `hostname` varchar(30) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

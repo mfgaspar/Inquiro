@@ -1,4 +1,4 @@
-<Schema name="BiGMET">
+<Schema name="Inquiro">
 
     <Dimension type="TimeDimension" visible="true" highCardinality="false" name="Date">
         <Hierarchy name="Year Month Day" visible="true" hasAll="true" primaryKey="date_tk">
@@ -123,8 +123,8 @@
                 <Property name="Priority" column="priority" type="String"/>
                 <Property name="Hostname" column="hostname" type="String"/>
                 <Property name="Username" column="username" type="String"/>
-                <Property name="Start Time" column="start_time" type="Time"/>
-                <Property name="Finish Time" column="finish_time" type="Time"/>
+                <Property name="Start Time" column="start_time" type="String"/>
+                <Property name="Finish Time" column="finish_time" type="String"/>
                 <Property name="Spent Time" column="spent_time" type="Numeric"/>
             </Level>       
         </Hierarchy>
@@ -133,12 +133,15 @@
     <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Jobs and Tasks">
         <Hierarchy name="Jobs and Tasks" visible="true" hasAll="true" primaryKey="hadoop_id">
             <Table name="dim_jobs_and_tasks" />
-            <Level name="Type" visible="true" column="type" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+            <Level name="Group" visible="true" column="groupname" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
             </Level>
-            <Level name="Subtype" visible="true" column="subtype" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+            <Level name="Type" visible="true" column="type" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
             </Level>
-            <Level name="ID" visible="true" column="hadoop_id" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+            <Level name="Subtype" visible="true" column="subtype" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
+            </Level>
+            <Level name="ID" visible="true" column="hadoop_id" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
                 <Property name="Parent Job ID" column="parent_hadoop_id" type="String"/>
+                <Property name="Group" column="groupname" type="String"/>
                 <Property name="Job Name" column="name" type="String"/>
                 <Property name="Type" column="type" type="String"/>
                 <Property name="SubType" column="subtype" type="String"/>
@@ -146,8 +149,8 @@
                 <Property name="Priority" column="priority" type="String"/>
                 <Property name="Hostname" column="hostname" type="String"/>
                 <Property name="Username" column="username" type="String"/>
-                <Property name="Start Time" column="start_time" type="Time"/>
-                <Property name="Finish Time" column="finish_time" type="Time"/>
+                <Property name="Start Time" column="start_time" type="String"/>
+                <Property name="Finish Time" column="finish_time" type="String"/>
                 <Property name="Spent Time" column="spent_time" type="Numeric"/>
             </Level>
         </Hierarchy>
@@ -156,9 +159,9 @@
     <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Hadoop Metrics">
         <Hierarchy name="Hadoop Metrics" visible="true" hasAll="true" primaryKey="hadoop_metric_id">
             <Table name="dim_hadoop_metrics" />
-            <Level name="Hadop Metric Group" visible="true" column="hadoop_metric_group" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+            <Level name="Hadoop Metric Group" visible="true" column="hadoop_metric_group" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
             </Level>
-            <Level name="Hadop Metric Name" visible="true" column="hadoop_metric_name" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+            <Level name="Hadoop Metric Name" visible="true" column="hadoop_metric_name" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
                 <Property name="Counter Description" column="hadoop_metric_desc"/>
             </Level>
         </Hierarchy>
@@ -180,7 +183,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Cube name="BiGMET - Hadoop Metrics" visible="true" cache="true" enabled="true">
+    <Cube name="Inquiro - Hadoop Metrics" visible="true" cache="true" enabled="true">
         <Table name="fact_hadoop_metrics" />
             <DimensionUsage source="Time" name="Time" visible="true" foreignKey="hadoop_id_start_time" highCardinality="false">
             </DimensionUsage>
@@ -203,7 +206,7 @@
             </Measure>
     </Cube>
 
-       <Cube name="BiGMET - PDI Metrics" visible="true" cache="true" enabled="true">
+       <Cube name="Inquiro - PDI Metrics" visible="true" cache="true" enabled="true">
         <Table name="fact_pdi_metrics" />
             <DimensionUsage source="Time" name="Time" visible="true" foreignKey="hadoop_id_start_time" highCardinality="false">
             </DimensionUsage>
@@ -234,9 +237,9 @@
     </Role>
     <Role name="Pentaho Operations">
         <SchemaGrant access="none">
-            <CubeGrant cube="BiGMET - PDI Metrics" access="all">
+            <CubeGrant cube="Inquiro - PDI Metrics" access="all">
             </CubeGrant>
-            <CubeGrant cube="BiGMET - Hadoop Metrics" access="all">
+            <CubeGrant cube="Inquiro - Hadoop Metrics" access="all">
             </CubeGrant>
         </SchemaGrant>
     </Role>

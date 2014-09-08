@@ -206,7 +206,7 @@
         </field>
         <field>
           <variable_name>db_connection_url</variable_name>
-          <variable_value>jdbc&#x3a;mysql&#x3a;&#x2f;&#x2f;localhost&#x3a;3306&#x2f;bigmet</variable_value>
+          <variable_value>jdbc&#x3a;mysql&#x3a;&#x2f;&#x2f;localhost&#x3a;3306&#x2f;Inquiro</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>

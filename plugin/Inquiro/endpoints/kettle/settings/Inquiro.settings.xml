@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+     <database>
+         <type> mysql </type>
+         <host> localhost </host>
+         <port> 3360 </port>
+         <login> root </login>
+         <password> password </password>
+         <schema> inquiro </schema>
+     </database>
+
+    <baserver>
+         <protocol> http </protocol>
+         <host> localhost </host>
+         <port> 8080 </port>
+         <login> admin </login>
+         <password> password </password>
+         <path> /public/Inquiro </path>
+    </baserver>
+
+    <kettle>
+         <path> /opt/data-integration </path>
+    </kettle>
+
+    <hadoop>
+         <host> hostname </host>
+         <login> root </login>
+         <password> password </password>
+         <port> 5432 </port>
+         <logs> http://localhost:8888/... </logs>
+         
+    </hadoop>
+
+    <inquiro>
+
+    </inquiro>
+
+
+</settings>

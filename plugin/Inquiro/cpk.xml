@@ -22,10 +22,10 @@
     </elementTypes> 
     <info>
         <CPK_version>5</CPK_version>
-        <description>Hadoop / PDI Performance Analytics</description>
+        <description>Inquiro - Hadoop and Pentaho Data Integration Performance Analysis</description>
         <name>Inquiro</name>
         <author_email>mgaspar@pentaho.com</author_email>
-        <author_name>Miguel Gaspar & Hemal Govind</author_name>
+        <author_name>Miguel Gaspar and Hemal Govind</author_name>
         <creation_date>2014-08-26</creation_date>
         <version>0.0.1</version>
     </info>

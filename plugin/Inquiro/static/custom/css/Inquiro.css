@@ -1,0 +1,42 @@
+.vco-storyjs div.container div p:first-child {
+    margin-top: 10px;
+}
+
+.vco-storyjs div.container div p {
+    margin-bottom: 2px;
+}
+
+.vco-storyjs div.container div p:last-child {
+    margin-top: 10px;
+}
+
+/* Theme of tooltip */
+
+/*
+.qtip .qtip-tip {
+  margin-left: 100px;
+}
+*/
+
+.qtip-bootstrap {
+  border: 1px solid #0088CC;
+  box-shadow: none;
+  margin-left: 30px;
+}
+
+.tipsy-inner {
+  /*  shadow */
+  box-shadow: 0 0 5px #000000;
+  -webkit-box-shadow: 0 0 5px #000000;
+  -moz-box-shadow: 0 0 5px #000000;
+  border: 1px solid #0088CC;
+}
+
+.tipsy-s {
+  color: white;
+}
+
+.tipsy-inner {
+  color: black;
+  background: white;
+}

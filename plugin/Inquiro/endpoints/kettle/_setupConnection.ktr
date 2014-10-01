@@ -199,7 +199,7 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 
 	String jsonString = "";
 	
-	String dbType = getVariable("INQUIRODATABASETYPE", "postgresql");
+	String dbType = getVariable("INQUIRODATABASETYPE", "postgres");
 	String dbHostname = getVariable("INQUIRODATABASEHOST", "localhost");
 	String dbPortnumber = getVariable("INQUIRODATABASEPORT", "5432");
 	String dbUsername = getVariable("INQUIRODATABASELOGIN", "postgres");
@@ -211,12 +211,10 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 	String baUsername = getVariable("INQUIROBASERVERLOGIN", "admin");
 	String baPassword = getVariable("INQUIROBASERVERPASSWORD", "passsword");
 
+	dbType = dbType.trim().toLowerCase();
 
-	int dbTypeChoice = (dbType=="mysql")?1:(dbType=="oracle")?2:0;
-
-	switch(dbTypeChoice) {
-	case 1: 
-		jsonString = "{ accessType: \"NATIVE\","
+	if (dbType.equals("mysql")) {
+			jsonString = "{ accessType: \"NATIVE\","
    								+"attributes: {},"
 							    +"changed: true,"
     						    +"connectSql: \"\","
@@ -224,7 +222,7 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
    							    +"databaseName: \"Inquiro\","
     							+"databasePort: \""+dbPortnumber+"\","
     						    +"databaseType: {"
-        						    +"defaultDatabasePort: 5432,"
+        						    +"defaultDatabasePort: 3306,"
   								    +"extraOptionsHelpUrl: \"\","
         							+"name: \"MySQL\","
         						    +"shortName: \"MYSQL\","
@@ -236,9 +234,8 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
     						    +"password: \""+dbPassword+"\","
     						    +"username: \""+dbUsername+"\","
 							    +"}";	
-		break;
-	case 2: 
-		jsonString = "{ accessType: \"NATIVE\","
+	} else if (dbType.equals("oracle")) {
+			jsonString = "{ accessType: \"NATIVE\","
    								+"attributes: {},"
 							    +"changed: true,"
     						    +"connectSql: \"\","
@@ -258,9 +255,9 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
     						    +"password: \""+dbPassword+"\","
     						    +"username: \""+dbUsername+"\","
 							    +"}";	
-		break;
-	default: 
-		jsonString = "{ accessType: \"NATIVE\","
+	
+	} else {
+			jsonString = "{ accessType: \"NATIVE\","
    								+"attributes: {},"
 							    +"changed: true,"
     						    +"connectSql: \"\","
@@ -280,11 +277,11 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
     						    +"password: \""+dbPassword+"\","
     						    +"username: \""+dbUsername+"\","
 							    +"}";	
-		break;
 	}
 
 	String urlToConnect = baProtocol+"://"+baHostname+":"+baPortnumber+"/pentaho/plugin/data-access/api/connection/add";
 	
+	logBasic("creating datasource "+dbType);
 	logBasic("creating datasource "+jsonString);
 
 	HttpClient httpClient = new HttpClient();
@@ -342,8 +339,8 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 <parameter_description/>
 </usage_parameter></usage_parameters>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>358</xloc>
-      <yloc>67</yloc>
+      <xloc>360</xloc>
+      <yloc>68</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

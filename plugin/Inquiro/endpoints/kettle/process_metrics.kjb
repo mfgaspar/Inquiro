@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>setupPlugin</name>
+  <name>process-metrics</name>
     <description/>
     <extended_description/>
     <job_version/>
-    <job_status>0</job_status>
   <directory>&#x2f;</directory>
   <created_user>-</created_user>
-  <created_date>2014&#x2f;09&#x2f;09 10&#x3a;02&#x3a;15.285</created_date>
+  <created_date>2014&#x2f;07&#x2f;23 10&#x3a;27&#x3a;13.978</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2014&#x2f;09&#x2f;09 10&#x3a;02&#x3a;15.285</modified_date>
+  <modified_date>2014&#x2f;07&#x2f;23 10&#x3a;27&#x3a;13.978</modified_date>
     <parameters>
     </parameters>
   <connection>
@@ -33,6 +32,32 @@
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>bigmet</name>
+    <server/>
+    <type>GENERIC</type>
+    <access>Native</access>
+    <database/>
+    <port>1521</port>
+    <username>&#x24;&#x7b;db_connection_username&#x7d;</username>
+    <password>&#x24;&#x7b;db_connection_password&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;db_connection_driver&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;db_connection_url&#x7d;</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1521</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
     </attributes>
   </connection>
   <connection>
@@ -119,16 +144,6 @@
    <shared_objects_file/>
   <entries>
     <entry>
-      <name>Success</name>
-      <description/>
-      <type>SUCCESS</type>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>972</xloc>
-      <yloc>60</yloc>
-      </entry>
-    <entry>
       <name>START</name>
       <description/>
       <type>SPECIAL</type>
@@ -145,8 +160,144 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>80</xloc>
-      <yloc>60</yloc>
+      <xloc>53</xloc>
+      <yloc>59</yloc>
+      </entry>
+    <entry>
+      <name>Set variables &#x28;REPLACE&#x2f;REMOVE&#x29;</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <replacevars>Y</replacevars>
+      <filename/>
+      <file_variable_type>JVM</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>hadoop_jobtracker_host</variable_name>
+          <variable_value>localhost</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>hadoop_jobtracker_port</variable_name>
+          <variable_value>8021</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>hadoop_hdfs_host</variable_name>
+          <variable_value>localhost</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>hadoop_hdfs_port</variable_name>
+          <variable_value>8020</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>hdfs_input_path</variable_name>
+          <variable_value>hdfs&#x3a;&#x2f;&#x2f;&#x24;&#x7b;hadoop_hdfs_host&#x7d;&#x3a;&#x24;&#x7b;hadoop_hdfs_port&#x7d;&#x2f;pdi_hadoop_metrics&#x2f;input</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>hdfs_output_path</variable_name>
+          <variable_value>hdfs&#x3a;&#x2f;&#x2f;&#x24;&#x7b;hadoop_hdfs_host&#x7d;&#x3a;&#x24;&#x7b;hadoop_hdfs_port&#x7d;&#x2f;pdi_hadoop_metrics&#x2f;output</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>hdfs_metrics_output_path</variable_name>
+          <variable_value>hdfs&#x3a;&#x2f;&#x2f;&#x24;&#x7b;hadoop_hdfs_host&#x7d;&#x3a;&#x24;&#x7b;hadoop_hdfs_port&#x7d;&#x2f;pdi_hadoop_metrics&#x2f;metrics</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>hadoop_log_file_path</variable_name>
+          <variable_value>hdfs&#x3a;&#x2f;&#x2f;&#x24;&#x7b;hadoop_hdfs_host&#x7d;&#x3a;50030&#x2f;logs&#x2f;userlogs&#x2f;JOB&#x2f;TASK&#x2f;stdout</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>fileFolder</variable_name>
+          <variable_value>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;logs</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>solutionFolder</variable_name>
+          <variable_value>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;..&#x2f;..&#x2f;..&#x2f;..&#x2f;</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>systemFolder</variable_name>
+          <variable_value>&#x24;&#x7b;solutionFolder&#x7d;&#x2f;system</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>498</xloc>
+      <yloc>128</yloc>
+      </entry>
+    <entry>
+      <name>Process PDI Metrics</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_processPdiMetricsLogs.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>825</xloc>
+      <yloc>56</yloc>
+      </entry>
+    <entry>
+      <name>Process Hadoop Metrics</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_processHadoopMetricsLogs.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>648</xloc>
+      <yloc>56</yloc>
       </entry>
     <entry>
       <name>readSettings</name>
@@ -178,8 +329,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>249</xloc>
-      <yloc>60</yloc>
+      <xloc>283</xloc>
+      <yloc>58</yloc>
       </entry>
     <entry>
       <name>Set variables</name>
@@ -218,19 +369,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>156</xloc>
-      <yloc>60</yloc>
-      </entry>
-    <entry>
-      <name>Abort job</name>
-      <description/>
-      <type>ABORT</type>
-      <message/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>524</xloc>
-      <yloc>327</yloc>
+      <xloc>168</xloc>
+      <yloc>59</yloc>
       </entry>
     <entry>
       <name>Error RS</name>
@@ -242,8 +382,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>249</xloc>
-      <yloc>165</yloc>
+      <xloc>287</xloc>
+      <yloc>161</yloc>
       </entry>
     <entry>
       <name>Log RS</name>
@@ -255,193 +395,84 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>330</xloc>
-      <yloc>60</yloc>
+      <xloc>368</xloc>
+      <yloc>57</yloc>
       </entry>
     <entry>
-      <name>setupDatabase</name>
+      <name>Success</name>
       <description/>
-      <type>JOB</type>
-      <specification_method>filename</specification_method>
-      <job_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_setupDatabase.kjb</filename>
-      <jobname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <slave_server_name/>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <expand_remote_job>N</expand_remote_job>
-      <create_parent_folder>N</create_parent_folder>
-      <pass_export>N</pass_export>
-      <force_separate_logging>N</force_separate_logging>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <set_append_logfile>N</set_append_logfile>
+      <type>SUCCESS</type>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>431</xloc>
-      <yloc>60</yloc>
+      <xloc>962</xloc>
+      <yloc>59</yloc>
       </entry>
     <entry>
-      <name>setupDatasource</name>
+      <name>Abort job</name>
       <description/>
-      <type>JOB</type>
-      <specification_method>filename</specification_method>
-      <job_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_setupDatasource.kjb</filename>
-      <jobname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <slave_server_name/>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <expand_remote_job>N</expand_remote_job>
-      <create_parent_folder>N</create_parent_folder>
-      <pass_export>N</pass_export>
-      <force_separate_logging>N</force_separate_logging>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <set_append_logfile>N</set_append_logfile>
+      <type>ABORT</type>
+      <message/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>608</xloc>
-      <yloc>60</yloc>
+      <xloc>648</xloc>
+      <yloc>326</yloc>
       </entry>
     <entry>
-      <name>uploadFiles</name>
-      <description/>
-      <type>JOB</type>
-      <specification_method>filename</specification_method>
-      <job_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_uploadFiles.kjb</filename>
-      <jobname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Nothing</loglevel>
-      <slave_server_name/>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <expand_remote_job>N</expand_remote_job>
-      <create_parent_folder>N</create_parent_folder>
-      <pass_export>N</pass_export>
-      <force_separate_logging>N</force_separate_logging>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-      </parameters>      <set_append_logfile>N</set_append_logfile>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>779</xloc>
-      <yloc>60</yloc>
-      </entry>
-    <entry>
-      <name>Error DB</name>
+      <name>Error Hadoop metrics</name>
       <description/>
       <type>WRITE_TO_LOG</type>
-      <logmessage>ERROR&#x3a;  preparing database</logmessage>
+      <logmessage>ERROR&#x3a; processing hadoop metrics</logmessage>
       <loglevel>Basic</loglevel>
       <logsubject/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>430</xloc>
-      <yloc>165</yloc>
+      <xloc>646</xloc>
+      <yloc>157</yloc>
       </entry>
     <entry>
-      <name>Log DB</name>
+      <name>Error PDI metrics</name>
       <description/>
       <type>WRITE_TO_LOG</type>
-      <logmessage>SUCCESS&#x3a; preparing database</logmessage>
+      <logmessage>ERROR&#x3a; processing pdi metrics</logmessage>
       <loglevel>Basic</loglevel>
       <logsubject/>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>505</xloc>
-      <yloc>60</yloc>
-      </entry>
-    <entry>
-      <name>Log DS</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <logmessage>SUCCESS&#x3a; publishing connections and datasources</logmessage>
-      <loglevel>Basic</loglevel>
-      <logsubject/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>684</xloc>
-      <yloc>60</yloc>
-      </entry>
-    <entry>
-      <name>Log UF</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <logmessage>SUCCESS&#x3a; uploading files to repository</logmessage>
-      <loglevel>Basic</loglevel>
-      <logsubject/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>855</xloc>
-      <yloc>60</yloc>
-      </entry>
-    <entry>
-      <name>Error DS</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <logmessage>ERROR&#x3a; publishing connections and datasources</logmessage>
-      <loglevel>Basic</loglevel>
-      <logsubject/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>608</xloc>
-      <yloc>165</yloc>
-      </entry>
-    <entry>
-      <name>Error UF</name>
-      <description/>
-      <type>WRITE_TO_LOG</type>
-      <logmessage>ERROR&#x3a; uploading files to repository</logmessage>
-      <loglevel>Basic</loglevel>
-      <logsubject/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>779</xloc>
-      <yloc>160</yloc>
+      <xloc>827</xloc>
+      <yloc>153</yloc>
       </entry>
   </entries>
   <hops>
     <hop>
-      <from>START</from>
-      <to>Set variables</to>
+      <from>Set variables &#x28;REPLACE&#x2f;REMOVE&#x29;</from>
+      <to>Process Hadoop Metrics</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
       <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Process Hadoop Metrics</from>
+      <to>Process PDI Metrics</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Log RS</from>
+      <to>Set variables &#x28;REPLACE&#x2f;REMOVE&#x29;</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
     </hop>
     <hop>
       <from>readSettings</from>
@@ -453,6 +484,33 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
+      <from>readSettings</from>
+      <to>Log RS</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>START</from>
+      <to>Set variables</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Set variables</from>
+      <to>readSettings</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
       <from>Error RS</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
@@ -462,52 +520,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Set variables</from>
-      <to>readSettings</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>readSettings</from>
-      <to>Log RS</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Log RS</from>
-      <to>setupDatabase</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>setupDatabase</from>
-      <to>Error DB</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>uploadFiles</from>
-      <to>Log UF</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Log UF</from>
+      <from>Process PDI Metrics</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -516,44 +529,8 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>setupDatasource</from>
-      <to>Log DS</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Log DS</from>
-      <to>uploadFiles</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>setupDatabase</from>
-      <to>Log DB</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>Y</unconditional>
-    </hop>
-    <hop>
-      <from>Log DB</from>
-      <to>setupDatasource</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>uploadFiles</from>
-      <to>Error UF</to>
+      <from>Process Hadoop Metrics</from>
+      <to>Error Hadoop metrics</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -561,16 +538,7 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>setupDatasource</from>
-      <to>Error DS</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>N</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>Error DB</from>
+      <from>Error Hadoop metrics</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -579,16 +547,16 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Error UF</from>
-      <to>Abort job</to>
+      <from>Process PDI Metrics</from>
+      <to>Error PDI metrics</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
+      <evaluation>N</evaluation>
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Error DS</from>
+      <from>Error PDI metrics</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -599,9 +567,5 @@
   </hops>
   <notepads>
   </notepads>
-<attributes><group><name>JobRestart</name>
-<attribute><key>UniqueConnections</key>
-<value>N</value>
-</attribute></group></attributes>
 
 </job>

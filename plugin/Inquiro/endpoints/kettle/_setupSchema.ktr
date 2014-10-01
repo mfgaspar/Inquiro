@@ -217,7 +217,7 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 			File fileToUpload = new File(fileName);
 			Part[] parts = {
 				new FilePart("uploadAnalysis", fileToUpload.getName(), fileToUpload, "text/xml", "UTF-8"),
-				new StringPart("parameters", "Datasource=Inquiro;overwrite=true")
+				new StringPart("parameters", "Datasource=Inquiro;overwrite=false")
 			};
 			postMethod.setRequestEntity(new MultipartRequestEntity(parts, postMethod.getParams()));
 			int status = httpClient.executeMethod(postMethod);

@@ -2,12 +2,12 @@
 <settings>
 
      <database>
-         <type> postgres </type>
+         <type> mysql </type>
          <host> localhost </host>
-         <port> 5432 </port>
-         <login> postgres </login>
-         <password> password </password>
-         <schema> inquiro </schema>
+         <port> 3306 </port>
+         <login> root </login>
+         <password></password>
+         <schema> Inquiro </schema>
      </database>
 
     <baserver>

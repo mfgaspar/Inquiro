@@ -2,10 +2,10 @@
 <settings>
 
      <database>
-         <type> mysql </type>
+         <type> postgres </type>
          <host> localhost </host>
-         <port> 3360 </port>
-         <login> root </login>
+         <port> 5432 </port>
+         <login> postgres </login>
          <password> password </password>
          <schema> inquiro </schema>
      </database>

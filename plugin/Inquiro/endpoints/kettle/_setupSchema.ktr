@@ -79,7 +79,7 @@
     <type>MONETDB</type>
     <access>Native</access>
     <database>pentaho-instaview</database>
-    <port>50007</port>
+    <port>50006</port>
     <username>monetdb</username>
     <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
     <servername/>
@@ -90,7 +90,7 @@
       <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
       <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
       <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>50007</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50006</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
@@ -103,14 +103,14 @@
     <access>Native</access>
     <database/>
     <port>1521</port>
-    <username>&#x24;&#x7b;db_connection_username&#x7d;</username>
-    <password>&#x24;&#x7b;db_connection_password&#x7d;</password>
+    <username>&#x24;&#x7b;INQUIRODATABASELOGIN&#x7d;</username>
+    <password>&#x24;&#x7b;INQUIRODATABASEPASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;db_connection_driver&#x7d;</attribute></attribute>
-      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;db_connection_url&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;INQUIRODATABASEDRIVER&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;INQUIRODATABASEURL&#x7d;</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
@@ -147,12 +147,11 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Get data from XML</from><to>Set Variables</to><enabled>Y</enabled> </hop>
-  <hop> <from>Set Variables</from><to>OUTPUT</to><enabled>Y</enabled> </hop>
+  <hop> <from>Generate Rows</from><to>Datasource&#x3a; Publish analysis schema</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Get data from XML</name>
-    <type>getXMLData</type>
+    <name>Datasource&#x3a; Publish analysis schema</name>
+    <type>UserDefinedJavaClass</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -161,234 +160,153 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <include>N</include>
-    <include_field/>
-    <rownum>N</rownum>
-    <addresultfile>N</addresultfile>
-    <namespaceaware>N</namespaceaware>
-    <ignorecomments>N</ignorecomments>
-    <readurl>N</readurl>
-    <validating>N</validating>
-    <usetoken>N</usetoken>
-    <IsIgnoreEmptyFile>N</IsIgnoreEmptyFile>
-    <doNotFailIfNoFile>Y</doNotFailIfNoFile>
-    <rownum_field/>
-    <encoding>UTF-8</encoding>
-    <file>
-      <name>&#x24;&#x7b;inquiroSettingsFilePath&#x7d;</name>
-      <filemask/>
-      <exclude_filemask/>
-      <file_required>N</file_required>
-      <include_subfolders>N</include_subfolders>
-    </file>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[import java.io.File;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.methods.multipart.FilePart;
+import org.apache.commons.httpclient.methods.multipart.StringPart;
+import org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity;
+import org.apache.commons.httpclient.methods.multipart.Part;
+import org.apache.commons.httpclient.UsernamePasswordCredentials;
+import org.apache.commons.httpclient.auth.AuthScope;
+
+int row = 0;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException { 
+
+
+	// First, get a row from the default input hop
+	Object[] r = getRow();
+
+    // If the row object is null, we are done processing.
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+	row++;
+	logBasic("Start processing row: "+row);
+
+	String baProtocol = getVariable("INQUIROBASERVERPROTOCOL", "http");
+	String baHostname = getVariable("INQUIROBASERVERHOST", "localhost");
+	String baPortnumber = getVariable("INQUIROBASERVERPORT", "8080");
+	String baUsername = getVariable("INQUIROBASERVERLOGIN", "postgres");
+	String baPassword = getVariable("INQUIROBASERVERPASSWORD", "passsword");
+
+    String transPath = getVariable("Internal.Transformation.Filename.Directory", "");
+	transPath = transPath.replaceAll("file://", "");
+	String fileName = transPath+"/schema/Inquiro.mondrian.xml";
+	String urlToConnect = baProtocol+"://"+baHostname+":"+baPortnumber+"/pentaho/plugin/data-access/api/mondrian/postAnalysis";
+	
+	HttpClient httpClient = new HttpClient();
+	PostMethod postMethod = new PostMethod(urlToConnect); 
+
+	UsernamePasswordCredentials defaultcreds = new UsernamePasswordCredentials(baUsername, baPassword);
+	httpClient.getState().setCredentials(new AuthScope(baHostname, Integer.parseInt(baPortnumber), AuthScope.ANY_REALM), defaultcreds);
+
+    try
+		{
+			File fileToUpload = new File(fileName);
+			Part[] parts = {
+				new FilePart("uploadAnalysis", fileToUpload.getName(), fileToUpload, "text/xml", "UTF-8"),
+				new StringPart("parameters", "Datasource=Inquiro;overwrite=true")
+			};
+			postMethod.setRequestEntity(new MultipartRequestEntity(parts, postMethod.getParams()));
+			int status = httpClient.executeMethod(postMethod);
+
+			
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			logBasic("exception: "+e.getMessage());
+		}
+		finally
+		{
+			postMethod.releaseConnection();
+			logBasic("responseString:"+postMethod.getStatusCode());
+			logBasic("responseString:"+postMethod.getResponseBodyAsString());
+		}
+
+	logBasic("Finish processing row: "+row);
+	return true;
+}]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>responseCode</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters><usage_parameter><parameter_tag>fileSystemPath</parameter_tag>
+<parameter_value>&#x24;&#x7b;fileSystemPath&#x7d;</parameter_value>
+<parameter_description/>
+</usage_parameter><usage_parameter><parameter_tag>pentahoPath</parameter_tag>
+<parameter_value>&#x24;&#x7b;pentahoPath&#x7d;</parameter_value>
+<parameter_description/>
+</usage_parameter><usage_parameter><parameter_tag>file.separator</parameter_tag>
+<parameter_value>&#x24;&#x7b;file.separator&#x7d;</parameter_value>
+<parameter_description/>
+</usage_parameter><usage_parameter><parameter_tag>fileName</parameter_tag>
+<parameter_value>&#x24;&#x7b;fileName&#x7d;</parameter_value>
+<parameter_description/>
+</usage_parameter></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>406</xloc>
+      <yloc>113</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Generate Rows</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
     <fields>
       <field>
-        <name>inquiroDatabaseType</name>
-        <xpath>database&#x2f;databaseType</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
+        <name>line</name>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
+        <nullif/>
         <length>-1</length>
         <precision>-1</precision>
-        <trim_type>both</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>inquiroDatabaseHost</name>
-        <xpath>database&#x2f;databaseHost</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>both</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>inquiroDatabaseLogin</name>
-        <xpath>database&#x2f;databaseLogin</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>both</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>inquiroDatabasePassword</name>
-        <xpath>database&#x2f;databasePassword</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>both</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>inquiroDatabasePort</name>
-        <xpath>database&#x2f;databasePort</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>both</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>inquiroKettlePath</name>
-        <xpath>database&#x2f;kettlePath</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>both</trim_type>
-        <repeat>N</repeat>
-      </field>
-      <field>
-        <name>inquiroRepositoryPath</name>
-        <xpath>database&#x2f;repositoryPath</xpath>
-        <element_type>node</element_type>
-        <result_type>valueof</result_type>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <trim_type>both</trim_type>
-        <repeat>N</repeat>
+        <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-    <limit>0</limit>
-    <loopxpath>&#x2f;settings</loopxpath>
-    <IsInFields>N</IsInFields>
-    <IsAFile>N</IsAFile>
-    <XmlField/>
-    <prunePath/>
-    <shortFileFieldName/>
-    <pathFieldName/>
-    <hiddenFieldName/>
-    <lastModificationTimeFieldName/>
-    <uriNameFieldName/>
-    <rootUriNameFieldName/>
-    <extensionFieldName/>
-    <sizeFieldName/>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>84</xloc>
-      <yloc>58</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>OUTPUT</name>
-    <type>Dummy</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>380</xloc>
-      <yloc>58</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Set Variables</name>
-    <type>SetVariable</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <fields>
-      <field>
-        <field_name>inquiroDatabaseType</field_name>
-        <variable_name>INQUIRODATABASETYPE</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value/>
-        </field>
-      <field>
-        <field_name>inquiroDatabaseHost</field_name>
-        <variable_name>INQUIRODATABASEHOST</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value/>
-        </field>
-      <field>
-        <field_name>inquiroDatabaseLogin</field_name>
-        <variable_name>INQUIRODATABASELOGIN</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value/>
-        </field>
-      <field>
-        <field_name>inquiroDatabasePassword</field_name>
-        <variable_name>INQUIRODATABASEPASSWORD</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value/>
-        </field>
-      <field>
-        <field_name>inquiroDatabasePort</field_name>
-        <variable_name>INQUIRODATABASEPORT</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value/>
-        </field>
-      <field>
-        <field_name>inquiroKettlePath</field_name>
-        <variable_name>INQUIROKETTLEPATH</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value/>
-        </field>
-      <field>
-        <field_name>inquiroRepositoryPath</field_name>
-        <variable_name>INQUIROREPOSITORYPATH</variable_name>
-        <variable_type>JVM</variable_type>
-        <default_value/>
-        </field>
-      </fields>
-    <use_formatting>Y</use_formatting>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>230</xloc>
-      <yloc>57</yloc>
+      <xloc>144</xloc>
+      <yloc>113</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -399,10 +317,6 @@
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
 <attributes><group><name>DataService</name>
-<attribute><key>name</key>
-<value/>
-</attribute><attribute><key>stepname</key>
-<value/>
-</attribute></group></attributes>
+</group></attributes>
 
 </transformation>

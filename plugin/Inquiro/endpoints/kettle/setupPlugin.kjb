@@ -18,7 +18,7 @@
     <type>MONETDB</type>
     <access>Native</access>
     <database>pentaho-instaview</database>
-    <port>50007</port>
+    <port>50006</port>
     <username>monetdb</username>
     <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
     <servername/>
@@ -29,7 +29,7 @@
       <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
       <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
       <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>50007</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50006</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
@@ -42,14 +42,14 @@
     <access>Native</access>
     <database/>
     <port>1521</port>
-    <username>&#x24;&#x7b;db_connection_username&#x7d;</username>
-    <password>&#x24;&#x7b;db_connection_password&#x7d;</password>
+    <username>&#x24;&#x7b;INQUIRODATABASELOGIN&#x7d;</username>
+    <password>&#x24;&#x7b;INQUIRODATABASEPASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;db_connection_driver&#x7d;</attribute></attribute>
-      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;db_connection_url&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;INQUIRODATABASEDRIVER&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;INQUIRODATABASEURL&#x7d;</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
@@ -125,7 +125,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>888</xloc>
+      <xloc>972</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -145,7 +145,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>128</xloc>
+      <xloc>80</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -178,7 +178,7 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>280</xloc>
+      <xloc>249</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -190,30 +190,35 @@
       <file_variable_type>JVM</file_variable_type>
       <fields>
         <field>
-          <variable_name>inquiroSettingsFileName</variable_name>
+          <variable_name>INQUIROSETTINGSFILENAME</variable_name>
           <variable_value>Inquiro.settings.xml</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
-          <variable_name>inquiroSettingsFolderPath</variable_name>
+          <variable_name>INQUIROSETTINGSFOLDERPATH</variable_name>
           <variable_value>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x24;&#x7b;file.separator&#x7d;settings&#x24;&#x7b;file.separator&#x7d;</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
-          <variable_name>inquiroUserName</variable_name>
+          <variable_name>INQUIROUSERNAME</variable_name>
           <variable_value>&#x24;&#x7b;user.name&#x7d;</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
-          <variable_name>inquiroSettingsFilePath</variable_name>
-          <variable_value>&#x24;&#x7b;inquiroSettingsFolderPath&#x7d;&#x24;&#x7b;inquiroSettingsFileName&#x7d;</variable_value>
+          <variable_name>INQUIROSETTINGSFILEPATH</variable_name>
+          <variable_value>&#x24;&#x7b;INQUIROSETTINGSFOLDERPATH&#x7d;&#x24;&#x7b;INQUIROSETTINGSFILENAME&#x7d;</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>INQUIROJOBPATH</variable_name>
+          <variable_value>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;</variable_value>
           <variable_type>JVM</variable_type>
         </field>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>204</xloc>
+      <xloc>156</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -237,7 +242,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>280</xloc>
+      <xloc>249</xloc>
       <yloc>165</yloc>
       </entry>
     <entry>
@@ -250,7 +255,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>356</xloc>
+      <xloc>330</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -282,7 +287,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>432</xloc>
+      <xloc>430</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -314,7 +319,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>584</xloc>
+      <xloc>608</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -346,7 +351,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>736</xloc>
+      <xloc>779</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -359,7 +364,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>432</xloc>
+      <xloc>430</xloc>
       <yloc>165</yloc>
       </entry>
     <entry>
@@ -372,7 +377,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>508</xloc>
+      <xloc>505</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -385,7 +390,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>660</xloc>
+      <xloc>684</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -398,7 +403,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>812</xloc>
+      <xloc>855</xloc>
       <yloc>60</yloc>
       </entry>
     <entry>
@@ -411,7 +416,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>584</xloc>
+      <xloc>608</xloc>
       <yloc>165</yloc>
       </entry>
     <entry>
@@ -424,7 +429,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>736</xloc>
+      <xloc>779</xloc>
       <yloc>160</yloc>
       </entry>
   </entries>

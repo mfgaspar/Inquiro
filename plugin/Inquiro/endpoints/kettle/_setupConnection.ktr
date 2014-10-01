@@ -79,7 +79,7 @@
     <type>MONETDB</type>
     <access>Native</access>
     <database>pentaho-instaview</database>
-    <port>50007</port>
+    <port>50006</port>
     <username>monetdb</username>
     <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
     <servername/>
@@ -90,7 +90,7 @@
       <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
       <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
       <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>50007</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50006</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
@@ -103,14 +103,14 @@
     <access>Native</access>
     <database/>
     <port>1521</port>
-    <username>&#x24;&#x7b;db_connection_username&#x7d;</username>
-    <password>&#x24;&#x7b;db_connection_password&#x7d;</password>
+    <username>&#x24;&#x7b;INQUIRODATABASELOGIN&#x7d;</username>
+    <password>&#x24;&#x7b;INQUIRODATABASEPASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;db_connection_driver&#x7d;</attribute></attribute>
-      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;db_connection_url&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;INQUIRODATABASEDRIVER&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;INQUIRODATABASEURL&#x7d;</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
@@ -147,14 +147,212 @@
     </attributes>
   </connection>
   <order>
-  <hop> <from>Data Grid</from><to>REST Client</to><enabled>Y</enabled> </hop>
-  <hop> <from>Modified Java Script Value</from><to>REST Client 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Generate Rows</from><to>Datasource&#x3a; Publish database connection</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>Data Grid</name>
-    <type>DataGrid</type>
+    <name>Datasource&#x3a; Publish database connection</name>
+    <type>UserDefinedJavaClass</type>
     <description/>
     <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+
+    <definitions>
+        <definition>
+        <class_type>TRANSFORM_CLASS</class_type>
+
+        <class_name>Processor</class_name>
+
+        <class_source><![CDATA[
+import java.io.File;
+
+import org.apache.commons.httpclient.HttpClient;
+import org.apache.commons.httpclient.methods.StringRequestEntity;
+import org.apache.commons.httpclient.methods.PostMethod;
+import org.apache.commons.httpclient.methods.multipart.FilePart;
+import org.apache.commons.httpclient.methods.multipart.StringPart;
+import org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity;
+import org.apache.commons.httpclient.methods.multipart.Part;
+import org.apache.commons.httpclient.UsernamePasswordCredentials;
+import org.apache.commons.httpclient.auth.AuthScope;
+
+int row = 0;
+
+public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException { 
+
+
+	// First, get a row from the default input hop
+	Object[] r = getRow();
+
+    // If the row object is null, we are done processing.
+	if (r == null) {
+		setOutputDone();
+		return false;
+	}
+
+	row++;
+	logBasic("Start processing row: "+row);
+
+	String jsonString = "";
+	
+	String dbType = getVariable("INQUIRODATABASETYPE", "postgresql");
+	String dbHostname = getVariable("INQUIRODATABASEHOST", "localhost");
+	String dbPortnumber = getVariable("INQUIRODATABASEPORT", "5432");
+	String dbUsername = getVariable("INQUIRODATABASELOGIN", "postgres");
+	String dbPassword = getVariable("INQUIRODATABASEPASSWORD", "password");
+	
+	String baProtocol = getVariable("INQUIROBASERVERPROTOCOL", "http");
+	String baHostname = getVariable("INQUIROBASERVERHOST", "localhost");
+	String baPortnumber = getVariable("INQUIROBASERVERPORT", "8080");
+	String baUsername = getVariable("INQUIROBASERVERLOGIN", "admin");
+	String baPassword = getVariable("INQUIROBASERVERPASSWORD", "passsword");
+
+
+	int dbTypeChoice = (dbType=="mysql")?1:(dbType=="oracle")?2:0;
+
+	switch(dbTypeChoice) {
+	case 1: 
+		jsonString = "{ accessType: \"NATIVE\","
+   								+"attributes: {},"
+							    +"changed: true,"
+    						    +"connectSql: \"\","
+    						    +"connectionPoolingProperties: {},"
+   							    +"databaseName: \"Inquiro\","
+    							+"databasePort: \""+dbPortnumber+"\","
+    						    +"databaseType: {"
+        						    +"defaultDatabasePort: 5432,"
+  								    +"extraOptionsHelpUrl: \"\","
+        							+"name: \"MySQL\","
+        						    +"shortName: \"MYSQL\","
+    							    +"supportedAccessTypes: [NATIVE, ODBC, JNDI],"
+    					    	+"},"
+    							+"extraOptions: {},"
+    							+"hostname: \""+dbHostname+"\","
+    						    +"name: \"Inquiro\","
+    						    +"password: \""+dbPassword+"\","
+    						    +"username: \""+dbUsername+"\","
+							    +"}";	
+		break;
+	case 2: 
+		jsonString = "{ accessType: \"NATIVE\","
+   								+"attributes: {},"
+							    +"changed: true,"
+    						    +"connectSql: \"\","
+    						    +"connectionPoolingProperties: {},"
+   							    +"databaseName: \"Inquiro\","
+    							+"databasePort: \""+dbPortnumber+"\","
+    						    +"databaseType: {"
+        						    +"defaultDatabasePort: 1521,"
+  								    +"extraOptionsHelpUrl: \"\","
+        							+"name: \"Oracle\","
+        						    +"shortName: \"ORACLE\","
+    							    +"supportedAccessTypes: [NATIVE, ODBC, JNDI],"
+    					    	+"},"
+    							+"extraOptions: {},"
+    							+"hostname: \""+dbHostname+"\","
+    						    +"name: \"Inquiro\","
+    						    +"password: \""+dbPassword+"\","
+    						    +"username: \""+dbUsername+"\","
+							    +"}";	
+		break;
+	default: 
+		jsonString = "{ accessType: \"NATIVE\","
+   								+"attributes: {},"
+							    +"changed: true,"
+    						    +"connectSql: \"\","
+    						    +"connectionPoolingProperties: {},"
+   							    +"databaseName: \"inquiro\","
+    							+"databasePort: \""+dbPortnumber+"\","
+    						    +"databaseType: {"
+        						    +"defaultDatabasePort: 5432,"
+  								    +"extraOptionsHelpUrl: \"\","
+        							+"name: \"PostgreSQL\","
+        						    +"shortName: \"POSTGRESQL\","
+    							    +"supportedAccessTypes: [NATIVE, ODBC, JNDI],"
+    					    	+"},"
+    							+"extraOptions: {},"
+    							+"hostname: \""+dbHostname+"\","
+    						    +"name: \"Inquiro\","
+    						    +"password: \""+dbPassword+"\","
+    						    +"username: \""+dbUsername+"\","
+							    +"}";	
+		break;
+	}
+
+	String urlToConnect = baProtocol+"://"+baHostname+":"+baPortnumber+"/pentaho/plugin/data-access/api/connection/add";
+	
+	logBasic("creating datasource "+jsonString);
+
+	HttpClient httpClient = new HttpClient();
+	PostMethod postMethod = new PostMethod(urlToConnect); 
+
+	UsernamePasswordCredentials defaultcreds = new UsernamePasswordCredentials(baUsername, baPassword);
+	httpClient.getState().setCredentials(new AuthScope(baHostname, Integer.parseInt(baPortnumber), AuthScope.ANY_REALM), defaultcreds);
+
+    try
+		{
+			postMethod.setRequestEntity(new StringRequestEntity(jsonString, "application/json", "UTF-8"));
+			int status = httpClient.executeMethod(postMethod);
+
+			logBasic("responseString:"+postMethod.getStatusCode());
+			logBasic("responseString:"+postMethod.getResponseBodyAsString());
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+			logBasic("exception: "+e.getMessage());
+		}
+		finally
+		{
+			postMethod.releaseConnection();
+		}
+
+	logBasic("Finish processing row: "+row);
+	return true;
+}]]></class_source>
+        </definition>
+    </definitions>
+    <fields>
+        <field>
+        <field_name>responseCode</field_name>
+
+        <field_type>Integer</field_type>
+
+        <field_length>-1</field_length>
+
+        <field_precision>-1</field_precision>
+
+        </field>
+    </fields><clear_result_fields>N</clear_result_fields>
+<info_steps></info_steps><target_steps></target_steps><usage_parameters><usage_parameter><parameter_tag>fileSystemPath</parameter_tag>
+<parameter_value>&#x24;&#x7b;fileSystemPath&#x7d;</parameter_value>
+<parameter_description/>
+</usage_parameter><usage_parameter><parameter_tag>pentahoPath</parameter_tag>
+<parameter_value>&#x24;&#x7b;pentahoPath&#x7d;</parameter_value>
+<parameter_description/>
+</usage_parameter><usage_parameter><parameter_tag>file.separator</parameter_tag>
+<parameter_value>&#x24;&#x7b;file.separator&#x7d;</parameter_value>
+<parameter_description/>
+</usage_parameter><usage_parameter><parameter_tag>fileName</parameter_tag>
+<parameter_value>&#x24;&#x7b;fileName&#x7d;</parameter_value>
+<parameter_description/>
+</usage_parameter></usage_parameters>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>358</xloc>
+      <yloc>67</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Generate Rows</name>
+    <type>RowGenerator</type>
+    <description/>
+    <distribute>N</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
@@ -163,162 +361,27 @@
            </partitioning>
     <fields>
       <field>
-        <name>dummy</name>
+        <name>line</name>
         <type>String</type>
         <format/>
         <currency/>
         <decimal/>
         <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>Request Payload</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
-        <length>-1</length>
-        <precision>-1</precision>
-        <set_empty_string>N</set_empty_string>
-      </field>
-      <field>
-        <name>source</name>
-        <type>String</type>
-        <format/>
-        <currency/>
-        <decimal/>
-        <group/>
+        <nullif/>
         <length>-1</length>
         <precision>-1</precision>
         <set_empty_string>N</set_empty_string>
       </field>
     </fields>
-    <data>
-      <line> <item>request</item><item>&#x7b; accessType&#x3a; &#x22;NATIVE&#x22;, attributes&#x3a; &#x7b;&#x7d;, changed&#x3a; true, connectSql&#x3a; &#x22;&#x22;, connectionPoolingProperties&#x3a; &#x7b;&#x7d;, databaseName&#x3a; &#x22;Inquiro&#x22;, databasePort&#x3a; &#x22;3306&#x22;, databaseType&#x3a; &#x7b; defaultDatabasePort&#x3a; 3306, extraOptionsHelpUrl&#x3a; &#x22;http&#x3a;&#x2f;&#x2f;dev.mysql.com&#x2f;doc&#x2f;refman&#x2f;5.0&#x2f;en&#x2f;connector-j-reference-configuration-properties.html&#x22;, name&#x3a; &#x22;MySQL&#x22;, shortName&#x3a; &#x22;MYSQL&#x22;, supportedAccessTypes&#x3a; &#x5b;NATIVE, ODBC, JNDI&#x5d; &#x7d;, extraOptions&#x3a; &#x7b;&#x7d;, ostname&#x3a; &#x22;localhost&#x22;, name&#x3a; &#x22;InquiroConnection1&#x22;, password&#x3a; &#x22;password&#x22;, username&#x3a; &#x22;root&#x22; &#x7d;</item><item>&#x7b;&#xa;    accessType&#x3a; &#x22;NATIVE&#x22;,&#xa;    attributes&#x3a; &#x7b;&#x7d;,&#xa;    changed&#x3a; true,&#xa;    connectSql&#x3a; &#x22;&#x22;,&#xa;    connectionPoolingProperties&#x3a; &#x7b;&#x7d;,&#xa;    databaseName&#x3a; &#x22;Inquiro&#x22;,&#xa;    databasePort&#x3a; &#x22;3306&#x22;,&#xa;    databaseType&#x3a; &#x7b;&#xa;        defaultDatabasePort&#x3a; 3306,&#xa;        extraOptionsHelpUrl&#x3a; &#x22;http&#x3a;&#x2f;&#x2f;dev.mysql.com&#x2f;doc&#x2f;refman&#x2f;5.0&#x2f;en&#x2f;connector-j-reference-configuration-properties.html&#x22;,&#xa;        name&#x3a; &#x22;MySQL&#x22;,&#xa;        shortName&#x3a; &#x22;MYSQL&#x22;,&#xa;        supportedAccessTypes&#x3a; &#x5b;NATIVE, ODBC, JNDI&#x5d;,&#xa;    &#x7d;,&#xa;    extraOptions&#x3a; &#x7b;&#x7d;,&#xa;    hostname&#x3a; &#x22;localhost&#x22;,&#xa;    name&#x3a; &#x22;InquiroConnection&#x22;,&#xa;    password&#x3a; &#x22;password&#x22;,&#xa;    username&#x3a; &#x22;root&#x22;,&#xa;&#x7d;</item> </line>
-    </data>
+    <limit>1</limit>
+    <never_ending>N</never_ending>
+    <interval_in_ms>5000</interval_in_ms>
+    <row_time_field>now</row_time_field>
+    <last_time_field>FiveSecondsAgo</last_time_field>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>279</xloc>
-      <yloc>132</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>REST Client</name>
-    <type>Rest</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <applicationType>JSON</applicationType>
-    <method>POST</method>
-    <url>&#x24;&#x7b;INQUIROBASERVERPROTOCOL&#x7d;&#x3a;&#x2f;&#x2f;&#x24;&#x7b;INQUIROBASERVERHOST&#x7d;&#x3a;&#x24;&#x7b;INQUIROBASERVERPORT&#x7d;&#x2f;pentaho&#x2f;plugin&#x2f;data-access&#x2f;api&#x2f;connection&#x2f;add</url>
-    <urlInField>N</urlInField>
-    <dynamicMethod>N</dynamicMethod>
-    <methodFieldName/>
-    <urlField/>
-    <bodyField>source</bodyField>
-    <httpLogin>&#x24;&#x7b;INQUIROBASERVERLOGIN&#x7d;</httpLogin>
-    <httpPassword>&#x24;&#x7b;INQUIROBASERVERPASSWORD&#x7d;</httpPassword>
-    <proxyHost/>
-    <proxyPort/>
-    <preemptive>N</preemptive>
-    <trustStoreFile/>
-    <trustStorePassword>Encrypted </trustStorePassword>
-    <headers>
-      </headers>
-    <parameters>
-      </parameters>
-    <result>
-      <name>result</name>
-      <code/>
-      <response_time/>
-      </result>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>401</xloc>
-      <yloc>133</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Modified Java Script Value</name>
-    <type>ScriptValueMod</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <compatible>N</compatible>
-    <optimizationLevel>9</optimizationLevel>
-    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
-        <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#xa;bodyJson &#x3d; &#x7b;&#xa;	&#x22;changed&#x22;&#x3a;true,&#xa;	&#x22;connectSql&#x22;&#x3a;&#x22;&#x22;,&#xa;	&#x22;databaseName&#x22;&#x3a;&#x22;&#x22;,&#xa;	&#x22;databasePort&#x22;&#x3a;&#x22;&#x22;,&#xa;	&#x22;hostname&#x22;&#x3a;&#x22;&#x22;,&#xa;	&#x22;name&#x22;&#x3a;&#x22;&#x22;,&#xa;	&#x22;password&#x22;&#x3a;&#x22;&#x22;,&#xa;	&#x22;username&#x22;&#x3a;&#x22;&#x22;,&#xa;	&#x22;attributes&#x22;&#x3a;&#x7b;&#x7d;,&#xa;	&#x22;connectionPoolingProperties&#x22;&#x3a;&#x7b;&#x7d;,&#xa;	&#x22;extraOptions&#x22;&#x3a;&#x7b;&#x7d;,&#xa;	&#x22;accessType&#x22;&#x3a;&#x22;NATIVE&#x22;,&#xa;	&#x22;databaseType&#x22;&#x3a;&#x7b;&#xa;		&#x22;defaultDatabasePort&#x22;&#x3a;0,&#xa;		&#x22;extraOptionsHelpUrl&#x22;&#x3a;&#x22;&#x22;,&#xa;		&#x22;name&#x22;&#x3a;&#x22;&#x22;,&#xa;		&#x22;shortName&#x22;&#x3a;&#x22;&#x22;,&#xa;		&#x22;supportedAccessTypes&#x22;&#x3a;&#x5b;&#x22;NATIVE&#x22;,&#x22;ODBC&#x22;,&#x22;JNDI&#x22;&#x5d;&#x7d;&#x7d;&#x3b;&#xa;&#xa;if &#x28;getVariable&#x28;&#x22;databaseType&#x22;,&#x22;&#x22;&#x29; &#x3d;&#x3d; &#x22;PostgreSql&#x22;&#x29; &#x7b;&#xa;	bodyJson.databaseName &#x3d; getVariable&#x28;&#x22;databaseSchemaAAAR&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.databasePort &#x3d; getVariable&#x28;&#x22;databasePort&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.hostname &#x3d; getVariable&#x28;&#x22;databaseHost&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.name &#x3d; getVariable&#x28;&#x22;databaseSchemaAAAR&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.password &#x3d; getVariable&#x28;&#x22;databasePassword&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.username &#x3d; getVariable&#x28;&#x22;databaseLogin&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.databaseType.defaultDatabasePort &#x3d; getVariable&#x28;&#x22;databasePort&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.databaseType.extraOptionsHelpUrl &#x3d; &#x22;http&#x3a;&#x2f;&#x2f;jdbc.postgresql.org&#x2f;documentation&#x2f;83&#x2f;connect.html&#x23;connection-parameters&#x22;&#x3b;&#xa;	bodyJson.databaseType.name &#x3d; &#x22;PostgreSQL&#x22;&#x3b;&#xa;	bodyJson.databaseType.shortName &#x3d; &#x22;POSTGRESQL&#x22;&#x3b;&#xa;&#x7d;&#xa;if &#x28;getVariable&#x28;&#x22;databaseType&#x22;,&#x22;&#x22;&#x29; &#x3d;&#x3d; &#x22;MySql&#x22;&#x29; &#x7b;&#xa;	bodyJson.databaseName &#x3d; getVariable&#x28;&#x22;databaseSchemaAAAR&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.databasePort &#x3d; getVariable&#x28;&#x22;databasePort&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.hostname &#x3d; getVariable&#x28;&#x22;databaseHost&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.name &#x3d; getVariable&#x28;&#x22;databaseSchemaAAAR&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.password &#x3d; getVariable&#x28;&#x22;databasePassword&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.username &#x3d; getVariable&#x28;&#x22;databaseLogin&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.databaseType.defaultDatabasePort &#x3d; getVariable&#x28;&#x22;databasePort&#x22;,&#x22;&#x22;&#x29;&#x3b;&#xa;	bodyJson.databaseType.extraOptionsHelpUrl &#x3d; &#x22;http&#x3a;&#x2f;&#x2f;dev.mysql.com&#x2f;doc&#x2f;refman&#x2f;5.0&#x2f;en&#x2f;connector-j-reference-configuration-properties.html&#x22;&#x3b;&#xa;	bodyJson.databaseType.name &#x3d; &#x22;MySQL&#x22;&#x3b;&#xa;	bodyJson.databaseType.shortName &#x3d; &#x22;MYSQL&#x22;&#x3b;&#xa;&#x7d;&#xa;&#xa;body &#x3d; JSON.stringify&#x28;&#xa;	bodyJson, &#xa;	function&#x28;key, value&#x29; &#x7b;&#xa;    	if &#x28;typeof value &#x3d;&#x3d;&#x3d; &#x27;number&#x27; &#x26;&#x26; &#x21;isFinite&#x28;value&#x29;&#x29; &#x7b;&#xa;    	    return String&#x28;value&#x29;&#x3b;&#xa;    	&#x7d;&#xa;    	return value&#x3b;&#xa;	&#x7d;&#x29;&#x3b;</jsScript_script>
-      </jsScript>    </jsScripts>    <fields>      <field>        <name>body</name>
-        <rename>body</rename>
-        <type>String</type>
-        <length>-1</length>
-        <precision>-1</precision>
-        <replace>N</replace>
-      </field>    </fields>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>311</xloc>
-      <yloc>258</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>REST Client 2</name>
-    <type>Rest</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-    <applicationType>JSON</applicationType>
-    <method>POST</method>
-    <url>&#x24;&#x7b;pentahoUrl&#x7d;&#x2f;plugin&#x2f;data-access&#x2f;api&#x2f;connection&#x2f;add</url>
-    <urlInField>N</urlInField>
-    <dynamicMethod>N</dynamicMethod>
-    <methodFieldName/>
-    <urlField/>
-    <bodyField>body</bodyField>
-    <httpLogin>&#x24;&#x7b;pentahoLogin&#x7d;</httpLogin>
-    <httpPassword>&#x24;&#x7b;pentahoPassword&#x7d;</httpPassword>
-    <proxyHost/>
-    <proxyPort/>
-    <preemptive>N</preemptive>
-    <trustStoreFile/>
-    <trustStorePassword>Encrypted </trustStorePassword>
-    <headers>
-      </headers>
-    <parameters>
-      </parameters>
-    <result>
-      <name/>
-      <code>result</code>
-      <response_time/>
-      </result>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>485</xloc>
-      <yloc>259</yloc>
+      <xloc>111</xloc>
+      <yloc>67</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

@@ -79,7 +79,7 @@
     <type>MONETDB</type>
     <access>Native</access>
     <database>pentaho-instaview</database>
-    <port>50007</port>
+    <port>50006</port>
     <username>monetdb</username>
     <password>Encrypted 2be98afc86aa7f2e4cb14a17edb86abd8</password>
     <servername/>
@@ -90,7 +90,7 @@
       <attribute><code>EXTRA_OPTION_INFOBRIGHT.characterEncoding</code><attribute>UTF-8</attribute></attribute>
       <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
       <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
-      <attribute><code>PORT_NUMBER</code><attribute>50007</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>50006</attribute></attribute>
       <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
       <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
@@ -103,14 +103,14 @@
     <access>Native</access>
     <database/>
     <port>1521</port>
-    <username>&#x24;&#x7b;db_connection_username&#x7d;</username>
-    <password>&#x24;&#x7b;db_connection_password&#x7d;</password>
+    <username>&#x24;&#x7b;INQUIRODATABASELOGIN&#x7d;</username>
+    <password>&#x24;&#x7b;INQUIRODATABASEPASSWORD&#x7d;</password>
     <servername/>
     <data_tablespace/>
     <index_tablespace/>
     <attributes>
-      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;db_connection_driver&#x7d;</attribute></attribute>
-      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;db_connection_url&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_DRIVER_CLASS</code><attribute>&#x24;&#x7b;INQUIRODATABASEDRIVER&#x7d;</attribute></attribute>
+      <attribute><code>CUSTOM_URL</code><attribute>&#x24;&#x7b;INQUIRODATABASEURL&#x7d;</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
       <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
@@ -148,7 +148,6 @@
   </connection>
   <order>
   <hop> <from>Generate Rows</from><to>Repository&#x3a; Import ZIP file</to><enabled>Y</enabled> </hop>
-  <hop> <from>Generate Rows</from><to>Datasource&#x3a; Publish analysis schema</to><enabled>Y</enabled> </hop>
   </order>
   <step>
     <name>Generate Rows</name>
@@ -235,14 +234,23 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 	row++;
 	logBasic("Start processing row: "+row);
 
-	String urlToConnect = "http://localhost:8080/pentaho/api/repo/files/import";
-	String fileName = "/Users/gaspar/Downloads/upload.zip";
+	String baProtocol = getVariable("INQUIROBASERVERPROTOCOL", "http");
+	String baHostname = getVariable("INQUIROBASERVERHOST", "localhost");
+	String baPortnumber = getVariable("INQUIROBASERVERPORT", "8080");
+	String baUsername = getVariable("INQUIROBASERVERLOGIN", "admin");
+	String baPassword = getVariable("INQUIROBASERVERPASSWORD", "passsword");
 
+    String transPath = getVariable("Internal.Transformation.Filename.Directory", "");
+	transPath = transPath.replaceAll("file://", "");
+	String fileName = transPath+"/reports/reports.zip";
+
+	String urlToConnect = baProtocol+"://"+baHostname+":"+baPortnumber+"/pentaho/api/repo/files/import";
+	
 	HttpClient httpClient = new HttpClient();
 	PostMethod postMethod = new PostMethod(urlToConnect); 
 
-	UsernamePasswordCredentials defaultcreds = new UsernamePasswordCredentials("admin", "password");
-	httpClient.getState().setCredentials(new AuthScope("localhost", 8080, AuthScope.ANY_REALM), defaultcreds);
+	UsernamePasswordCredentials defaultcreds = new UsernamePasswordCredentials(baUsername, baPassword);
+	httpClient.getState().setCredentials(new AuthScope(baHostname, Integer.parseInt(baPortnumber), AuthScope.ANY_REALM), defaultcreds);
 
     try
 		{
@@ -253,7 +261,7 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 				new StringPart("overwriteFile", "WARN"),
 				new StringPart("logLevel", "WARN"),
 				new StringPart("retainOwnership", "true"),
-				new StringPart("importDir", "/public/test")
+				new StringPart("importDir", "/public/Inquiro")
 			};
 			postMethod.setRequestEntity(new MultipartRequestEntity(parts, postMethod.getParams()));
 			int status = httpClient.executeMethod(postMethod);
@@ -264,6 +272,7 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 		catch (Exception e)
 		{
 			e.printStackTrace();
+			logBasic("exception: "+e.getMessage());
 		}
 		finally
 		{
@@ -301,123 +310,8 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 <parameter_description/>
 </usage_parameter></usage_parameters>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>246</xloc>
-      <yloc>67</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Datasource&#x3a; Publish analysis schema</name>
-    <type>UserDefinedJavaClass</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-
-    <definitions>
-        <definition>
-        <class_type>TRANSFORM_CLASS</class_type>
-
-        <class_name>Processor</class_name>
-
-        <class_source><![CDATA[
-import java.io.File;
-
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.methods.PostMethod;
-import org.apache.commons.httpclient.methods.multipart.FilePart;
-import org.apache.commons.httpclient.methods.multipart.StringPart;
-import org.apache.commons.httpclient.methods.multipart.MultipartRequestEntity;
-import org.apache.commons.httpclient.methods.multipart.Part;
-import org.apache.commons.httpclient.UsernamePasswordCredentials;
-import org.apache.commons.httpclient.auth.AuthScope;
-
-int row = 0;
-
-public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws KettleException { 
-
-
-	// First, get a row from the default input hop
-	Object[] r = getRow();
-
-    // If the row object is null, we are done processing.
-	if (r == null) {
-		setOutputDone();
-		return false;
-	}
-
-	row++;
-	logBasic("Start processing row: "+row);
-
-	String urlToConnect = "http://localhost:8080/pentaho/plugin/data-access/api/mondrian/postAnalysis";
-	String fileName = "/Users/gaspar/Downloads/Vul.xml";
-
-	HttpClient httpClient = new HttpClient();
-	PostMethod postMethod = new PostMethod(urlToConnect); 
-
-	UsernamePasswordCredentials defaultcreds = new UsernamePasswordCredentials("admin", "password");
-	httpClient.getState().setCredentials(new AuthScope("localhost", 8080, AuthScope.ANY_REALM), defaultcreds);
-
-    try
-		{
-			File fileToUpload = new File(fileName);
-			Part[] parts = {
-				new FilePart("uploadAnalysis", fileToUpload.getName(), fileToUpload, "text/xml", "UTF-8"),
-				new StringPart("parameters", "Datasource=Apple_demo;overwrite=false")
-			};
-			postMethod.setRequestEntity(new MultipartRequestEntity(parts, postMethod.getParams()));
-			int status = httpClient.executeMethod(postMethod);
-
-			logBasic("responseString:"+postMethod.getStatusCode());
-			logBasic("responseString:"+postMethod.getResponseBodyAsString());
-		}
-		catch (Exception e)
-		{
-			e.printStackTrace();
-		}
-		finally
-		{
-			postMethod.releaseConnection();
-		}
-
-	logBasic("Finish processing row: "+row);
-	return true;
-}]]></class_source>
-        </definition>
-    </definitions>
-    <fields>
-        <field>
-        <field_name>responseCode</field_name>
-
-        <field_type>Integer</field_type>
-
-        <field_length>-1</field_length>
-
-        <field_precision>-1</field_precision>
-
-        </field>
-    </fields><clear_result_fields>N</clear_result_fields>
-<info_steps></info_steps><target_steps></target_steps><usage_parameters><usage_parameter><parameter_tag>fileSystemPath</parameter_tag>
-<parameter_value>&#x24;&#x7b;fileSystemPath&#x7d;</parameter_value>
-<parameter_description/>
-</usage_parameter><usage_parameter><parameter_tag>pentahoPath</parameter_tag>
-<parameter_value>&#x24;&#x7b;pentahoPath&#x7d;</parameter_value>
-<parameter_description/>
-</usage_parameter><usage_parameter><parameter_tag>file.separator</parameter_tag>
-<parameter_value>&#x24;&#x7b;file.separator&#x7d;</parameter_value>
-<parameter_description/>
-</usage_parameter><usage_parameter><parameter_tag>fileName</parameter_tag>
-<parameter_value>&#x24;&#x7b;fileName&#x7d;</parameter_value>
-<parameter_description/>
-</usage_parameter></usage_parameters>     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>249</xloc>
-      <yloc>143</yloc>
+      <xloc>257</xloc>
+      <yloc>66</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -428,10 +322,6 @@ public boolean processRow(StepMetaInterface smi, StepDataInterface sdi) throws K
 </slave-step-copy-partition-distribution>
    <slave_transformation>N</slave_transformation>
 <attributes><group><name>DataService</name>
-<attribute><key>name</key>
-<value/>
-</attribute><attribute><key>stepname</key>
-<value/>
-</attribute></group></attributes>
+</group></attributes>
 
 </transformation>

@@ -137,9 +137,11 @@
             </Level>
             <Level name="Type" visible="true" column="type" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
             </Level>
-            <Level name="Subtype" visible="true" column="subtype" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
+            <Level name="Subtype" visible="true" column="subtype" type="String" internalType="String" uniqueMembers="false" levelType="Regular">
             </Level>
-            <Level name="ID" visible="true" column="hadoop_id" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
+            <Level name="Job ID" visible="true" column="parent_hadoop_id" type="String" internalType="String" uniqueMembers="false" levelType="Regular">
+            </Level>
+            <Level name="Task ID" visible="true" column="hadoop_id" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
                 <Property name="Parent Job ID" column="parent_hadoop_id" type="String"/>
                 <Property name="Group" column="groupname" type="String"/>
                 <Property name="Job Name" column="name" type="String"/>

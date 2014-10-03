@@ -40,3 +40,100 @@
   color: black;
   background: white;
 }
+
+/* Timeline */
+
+/*
+.vco-slider .nav-previous, .vco-slider .nav-next {
+  width: 158px;
+}
+
+.vco-slider .nav-previous .nav-container, .vco-slider .nav-next .nav-container {
+  width: 100%;
+}
+*/
+
+.vco-timeline .vco-navigation .timenav-background {
+  background-color: #fcfcfc;
+}
+
+.vco-timeline .vco-navigation .timenav .content .marker .flag {
+  height: 56px;
+  background-color: #efefef;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 160px;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: 1px;
+  box-shadow: 2px 2px 7px #ddd;
+}
+
+.vco-timeline .vco-navigation .timenav .content .marker .flag:hover {
+  height: 56px;
+  background-color: #efefef;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 160px;
+  height: 30px;
+  border: 1px solid #ddd;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: 1px;
+  box-shadow: 2px 2px 7px #ddd;
+}
+
+.vco-timeline .vco-navigation .timenav .content .marker.active .flag {
+  height: 56px;
+  background-color: #ffffff;
+  background-image: none;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 160px;
+  height: 30px;
+  border: 1px solid transparent;
+  border-radius: 0px 5px 5px 0px;
+  margin-left: 1px;
+  box-shadow: 2px 2px 7px #ddd;
+}
+
+
+.vco-notouch .vco-navigation .timenav .content .marker .flag .flag-content h3, 
+.vco-notouch .vco-navigation .timenav .content .marker .flag-small .flag-content h3 {
+  font-weight: normal;
+}
+
+.vco-notouch .vco-navigation .timenav .content .marker .flag:hover .flag-content h3, 
+.vco-notouch .vco-navigation .timenav .content .marker .flag-small:hover .flag-content h3 {
+  font-weight: normal;
+}
+
+.vco-notouch .vco-navigation .timenav .content .marker.active .flag .flag-content h3, 
+.vco-notouch .vco-navigation .timenav .content .marker.active .flag-small .flag-content h3 {
+  font-weight: bold;
+}
+
+.vco-timeline .vco-navigation .timenav .content .marker .line .event-line {
+  position: absolute;
+  z-index: 22;
+  left: 0;
+  height: 1px;
+  width: 1px;
+  background: red;
+  filter: alpha(opacity=15);
+  -khtml-opacity: .15;
+  -moz-opacity: .15;
+  opacity: .15;
+}
+
+.vco-timeline .vco-navigation .timenav .content .marker.active .line .event-line {
+  opacity: .75;
+}
+
+/* execution time chart */
+
+.executionsTimeChartContent {
+  margin-top: 60px;
+}

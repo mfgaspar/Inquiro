@@ -230,8 +230,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>498</xloc>
-      <yloc>128</yloc>
+      <xloc>505</xloc>
+      <yloc>28</yloc>
       </entry>
     <entry>
       <name>Process PDI Metrics</name>

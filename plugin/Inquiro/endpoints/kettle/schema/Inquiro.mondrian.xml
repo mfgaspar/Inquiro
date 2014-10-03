@@ -125,7 +125,7 @@
                 <Property name="Username" column="username" type="String"/>
                 <Property name="Start Time" column="start_time" type="String"/>
                 <Property name="Finish Time" column="finish_time" type="String"/>
-                <Property name="Spent Time" column="spent_time" type="Numeric"/>
+                <Property name="Spent Time (ms)" column="spent_time" type="Numeric"/>
             </Level>       
         </Hierarchy>
     </Dimension>
@@ -137,9 +137,11 @@
             </Level>
             <Level name="Type" visible="true" column="type" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
             </Level>
-            <Level name="Subtype" visible="true" column="subtype" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
+            <Level name="Subtype" visible="true" column="subtype" type="String" internalType="String" uniqueMembers="false" levelType="Regular">
             </Level>
-            <Level name="ID" visible="true" column="hadoop_id" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
+            <Level name="Job ID" visible="true" column="parent_hadoop_id" type="String" internalType="String" uniqueMembers="false" levelType="Regular">
+            </Level>
+            <Level name="Task ID" visible="true" column="hadoop_id" type="String" internalType="String" uniqueMembers="false" levelType="Regular"> 
                 <Property name="Parent Job ID" column="parent_hadoop_id" type="String"/>
                 <Property name="Group" column="groupname" type="String"/>
                 <Property name="Job Name" column="name" type="String"/>
@@ -151,7 +153,7 @@
                 <Property name="Username" column="username" type="String"/>
                 <Property name="Start Time" column="start_time" type="String"/>
                 <Property name="Finish Time" column="finish_time" type="String"/>
-                <Property name="Spent Time" column="spent_time" type="Numeric"/>
+                <Property name="Spent Time (ms)" column="spent_time" type="Numeric"/>
             </Level>
         </Hierarchy>
     </Dimension>
@@ -183,6 +185,22 @@
         </Hierarchy>
     </Dimension>
 
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Clusters and Nodes">
+        <Hierarchy name="Clusters and nodes" visible="true" hasAll="true" primaryKey="hadoop_id">
+            <Table name="dim_jobs_and_tasks" />
+            <Level name="Node Name" visible="true" column="hostname" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+            </Level>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension type="StandardDimension" visible="true" highCardinality="false" name="Users">
+        <Hierarchy name="Users" visible="true" hasAll="true" primaryKey="hadoop_id">
+            <Table name="dim_jobs_and_tasks" />
+            <Level name="Users" visible="true" column="username" type="String" internalType="String" uniqueMembers="true" levelType="Regular"> 
+            </Level>
+        </Hierarchy>
+    </Dimension>
+
     <Cube name="Inquiro - Hadoop Metrics" visible="true" cache="true" enabled="true">
         <Table name="fact_hadoop_metrics" />
             <DimensionUsage source="Time" name="Time" visible="true" foreignKey="hadoop_id_start_time" highCardinality="false">
@@ -193,16 +211,20 @@
             </DimensionUsage>
             <DimensionUsage source="Hadoop Metrics" name="Hadoop Metrics" visible="true" foreignKey="hadoop_metric_id" highCardinality="false">
             </DimensionUsage>
+            <DimensionUsage source="Clusters and Nodes" name="Clusters and Nodes" visible="true" foreignKey="hadoop_task_id" highCardinality="false">
+            </DimensionUsage>
+            <DimensionUsage source="Users" name="Users" visible="true" foreignKey="hadoop_task_id" highCardinality="false">
+            </DimensionUsage>
 
-            <Measure name="Total" column="value" formatString="0" datatype="Numeric" aggregator="sum">
+            <Measure name="Metric Total" column="value" formatString="0" datatype="Numeric" aggregator="sum">
             </Measure>
-            <Measure name="Average" column="value" formatString="0" datatype="Numeric" aggregator="avg">
+            <Measure name="Metric Average" column="value" formatString="0" datatype="Numeric" aggregator="avg">
             </Measure>
-            <Measure name="Count" column="value" formatString="0" datatype="Numeric" aggregator="count">
+            <Measure name="Metric Maximum" column="value" formatString="0" datatype="Numeric" aggregator="max">
             </Measure>
-            <Measure name="Maximum" column="value" formatString="0" datatype="Numeric" aggregator="max">
+            <Measure name="Metric Minimum" column="value" formatString="0" datatype="Numeric" aggregator="min">
             </Measure>
-            <Measure name="Minimum" column="value" formatString="0" datatype="Numeric" aggregator="min">
+            <Measure name="Task Count" column="hadoop_task_id" formatString="0" datatype="Numeric" aggregator="distinct count">
             </Measure>
     </Cube>
 
@@ -218,16 +240,20 @@
             </DimensionUsage>
             <DimensionUsage source="PDI Metrics" name="PDI Metrics" visible="true" foreignKey="pdi_metric_id" highCardinality="false">
             </DimensionUsage>
+            <DimensionUsage source="Clusters and Nodes" name="Clusters and Nodes" visible="true" foreignKey="hadoop_task_id" highCardinality="false">
+            </DimensionUsage>
+            <DimensionUsage source="Users" name="Users" visible="true" foreignKey="hadoop_task_id" highCardinality="false">
+            </DimensionUsage>
 
-            <Measure name="Total" column="value" formatString="0" datatype="Numeric" aggregator="sum">
+            <Measure name="Metric Total" column="value" formatString="0" datatype="Numeric" aggregator="sum">
             </Measure>
-            <Measure name="Average" column="value" formatString="0" datatype="Numeric" aggregator="avg">
+            <Measure name="Metric Average" column="value" formatString="0" datatype="Numeric" aggregator="avg">
             </Measure>
-            <Measure name="Count" column="value" formatString="0" datatype="Numeric" aggregator="count">
+            <Measure name="Metric Maximum" column="value" formatString="0" datatype="Numeric" aggregator="max">
             </Measure>
-            <Measure name="Maximum" column="value" formatString="0" datatype="Numeric" aggregator="max">
+            <Measure name="Metric Minimum" column="value" formatString="0" datatype="Numeric" aggregator="min">
             </Measure>
-            <Measure name="Minimum" column="value" formatString="0" datatype="Numeric" aggregator="min">
+            <Measure name="Task Count" column="hadoop_task_id" formatString="0" datatype="Numeric" aggregator="distinct count">
             </Measure>
     </Cube>
 

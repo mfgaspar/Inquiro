@@ -1,10 +1,2386 @@
 {
  "layout": {
   "title": "setup",
-  "rows": []
+  "rows": [
+   {
+    "id": "e191dbc9-450d-0235-9c56-17331aea1f22",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "inquiroCSS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "p, div, * {\n    font-family: 'Open Sans', sans-serif;\n    color: #ffffff;\n} \n\n@media (min-width: 1200px) {\n    .container {\n        width: 100%;\n    }\n}\n\nbody {\n    background-color: #C8CED3;\n}\n\n.inLineHeaderGroup {\n    background-color: #485163; \n    padding: 5px 0px;\n}\n\n.inLineHeaderGroup span {\n    font-weight: bold;\n    font-size: 40px;\n}\n\n.inLineHeaderGroup span:last-child {\n    font-weight: normal;\n    font-size: 40px;\n    color: #C8CED3;\n}\n\n\n.logout {\n    background-color: #39404D;\n}\n\n\n.inLineGroup {\n    padding: 5px 0px;\n} \n\n.inButton button{\n    background-color: #fd7a2b;\n    box-shadow: 2px 2px 10px #39404D;\n    border: 1px solid #fd7a2b;\n    padding: 10px 30px;\n    border-radius: 5px;\n}\n\n.inButton button:hover{\n    background-color: #ed5f07;\n}\n\n/*\n.inBreakdown select2-drop-mask {\n    background-color: #eaecec;\n    color: #485163;\n    width: 300px;\n}\n*/\n\n.inLineGroup .title {\n    margin-top: 4px;\n}\n\n.inInput input {\n    background-color: #eaecec;\n    color: #485163;\n    border: none;\n    padding: 5px 10px;\n    border-radius: 5px;\n    width: 300px;\n}\n\n ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "87402712-f188-476c-4744-f0ae87cc4b67",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "logo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ea0bc6d4-6395-45e5-1a89-2066980cf994",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "87402712-f188-476c-4744-f0ae87cc4b67",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineHeaderGroup\">\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n            <div class=\"pluginTitle\">\n                <span>INQUIRO</span><span>PLUGIN</span>\n            </div>\n        </div>\n    \n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n            <div class=\"pluginDescription\">Inquiro is a plugin to ... </div> \n        </div>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0776c9de-1132-9a3b-d226-5566e03e414d",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "84ccf4d7-8b7d-c9a1-33e5-64fd7d552c5d",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "0776c9de-1132-9a3b-d226-5566e03e414d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Type </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbType\" class=\"inDropdown dbType\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbHostname\" class=\"inInput dbHostname\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbPortnumber\" class=\"inInput dbPortnumber\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbUsername\" class=\"inInput dbUsername\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbPassword\" class=\"inInput dbPassword\"> </div>        \n    </div>\n</div>    \n\n ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d3d0fa4d-6d3b-0625-b57a-9af07789751c",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "94d999a6-6b66-267d-5e4f-afaacfb5178f",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "d3d0fa4d-6d3b-0625-b57a-9af07789751c",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baProtocol\" class=\"inInput baProtocol\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baHostname\" class=\"inInput baHostname\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baPortnumber\" class=\"inInput baPortnumber\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baUsername\" class=\"inInput baUsername\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baPassword\" class=\"inInput baPassword\"> </div>        \n    </div>\n</div>    \n\n ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "66408251-f433-d0a8-ebbe-3f2b1e061be3",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installPluginInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "800e72f9-c30d-a2fb-947d-1bced475fb15",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "66408251-f433-d0a8-ebbe-3f2b1e061be3",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div id=\"setupPluginButton\" class=\"inButton setupPluginButton\"> </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"setupPluginResult\" class=\"setupPluginButtonMsg\"> </div>        \n    </div>\n</div>\n\n\n ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ed64c00a-cbfa-d545-2b04-a3fbcb191131",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "hadoopInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0e82c808-0713-2af9-5952-a20d1ad42383",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "ed64c00a-cbfa-d545-2b04-a3fbcb191131",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"metricsPath\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "b81f9798-cbee-7172-d30e-f9ef3767d4b7",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetricsInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "de4f4f6e-d8aa-548f-ef98-082b481942c0",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "b81f9798-cbee-7172-d30e-f9ef3767d4b7",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div id=\"processMetricsButton\" class=\"inButton processMetricsButton\"> </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"processMetricsResult\" class=\"processMetricsResult\"> </div>        \n    </div>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
  },
  "components": {
-  "rows": []
+  "rows": [
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Generic",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "a555723f-f0f8-35d2-e5c2-eb83d1b2141c",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbTypeParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "mysql",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "202b3734-5fac-0390-643d-e71b2a2db67d",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbHostnameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "localhost",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "a7dccfe6-bef3-f90a-5807-911773422276",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "3306",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "9089cf95-22c1-ec02-0472-8f00303d59fc",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbSchemaParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "inquiro",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "e3ee64c1-f3ae-b305-7bd6-78009a871f9c",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbUsernameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "root",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "1c662eae-f9d9-e73c-8765-90beafbe7159",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbPasswordParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "78f5ebea-6b63-674a-c6fb-1ee7fe02d55f",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baProtocolParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "http",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "d73ee52b-fe4e-3d73-747b-50bd2317c33a",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baHostnameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "localhost",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "4822db24-18c0-ddda-8c80-fa5b40a71615",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "8080",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "d2b38494-82d3-3bea-be24-1858d65cc3a5",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baUsernameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "admin",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "ad65ecae-2046-e684-fd03-f36858f35cf1",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baPasswordParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "password",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "18a96d4e-136e-fd28-0992-64e89693eed5",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installPluginParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "2be113f0-2a2c-343b-331d-778d75adb2e2",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetricsParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "49358e71-643a-37b1-4d03-12aa4de37d37",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "metricsPathParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "hdfs://localhost:...",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "SELECTORS",
+    "name": "Selects",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Selects",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "532762c6-6e35-909f-03f9-b8acae47ed64",
+    "type": "ComponentsSelect",
+    "typeDesc": "Select Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbType",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbTypeParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "valueAsId",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "externalPlugin",
+      "value": "select2",
+      "type": "externalPluginCustom"
+     },
+     {
+      "name": "dataSource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "valuesArray",
+      "value": "[[\"postgres\",\"postgres\"],[\"mysql\",\"mysql\"],[\"oracle\",\"oracle\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:dbType}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "OptionArray"
+     }
+    ]
+   },
+   {
+    "id": "07b6a60c-40b2-0fbe-bb08-1a6be3b1646e",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbHostname",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbHostnameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbHostname}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "e75c3cae-8070-cb5b-6e4a-88bd595dcd5d",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbPortnumber",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbPortnumberParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbPortnumber}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "01fe6962-1cb0-cc12-58d1-d717f97a9932",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbSchema",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbSchemaParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbSchema}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "03b5a946-8e8e-9500-9cbf-86ea305e8b3c",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbUsername",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbUsernameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbUsername}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "387bb666-7665-1220-df23-4650128789c2",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbPassword",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbPasswordParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbPassword}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "a348e922-f168-9168-33b7-81e2f30dd723",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baProtocol",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baProtocolParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baProtocol}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "4bc42127-75e7-c6c5-1484-99703928eaf0",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baHostname",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baHostnameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baHostname}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "b6d3e34b-1f64-e044-de84-2a8be9b613d2",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baPortnumber",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baPortnumberParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baPortnumber}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "6d0df5ce-6375-66de-a7d9-e4e7fb537f45",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baUsername",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baUsernameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baUsername}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "6aba132f-6b91-fe4a-fe07-788d0f41f03e",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baPassword",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baPasswordParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baPassword}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "c297b009-68aa-ff7f-254d-c46adc90b953",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "metricsPath",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "metricsPathParam",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:metricsPath}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Others",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "1d349b98-24bc-3a9e-121c-b0f4bd807ed6",
+    "type": "ComponentsbuttonComponent",
+    "typeDesc": "Button Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "setupPlugin",
+      "type": "Id"
+     },
+     {
+      "name": "label",
+      "value": "Setup Plugin",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "successCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "expression",
+      "value": "function () {\n    Dashboards.fireChange(\"${p:installPluginParam}\", 1);    \n}\n ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "actionParameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "failureCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "Datasource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "buttonStyle",
+      "value": "themeroller",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:setupPluginButton}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "a6b28b8a-53c4-402c-9c07-218b6e2cfc06",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installPluginResult",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:installPluginParam}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"dbType\",\"dbTypeParam\"],[\"dbHostname\",\"dbHostnameParam\"],[\"dbPortnumber\",\"dbPortnumberParam\"],[\"dbSchema\",\"dbSchemaParam\"],[\"dbUsername\",\"dbUsernameParam\"],[\"dbPassword\",\"dbPasswordParam\"],[\"baProtocol\",\"baProtocolParam\"],[\"baHostname\",\"baHostnameParam\"],[\"baPortnumber\",\"baPortnumberParam\"],[\"baUsername\",\"baUsernameParam\"],[\"baPassword\",\"baPasswordParam\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "installPluginResult",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "setupPlugin",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:setupPluginResult}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function (data) {\n    var msg = \"Plugin installed with \";\n    var result = (data.result)?'success':'errors.';\n    (this.placeholder().empty().html(msg+result));\n    return data;\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "c396c2c6-ed8e-9b1c-cbd8-5017f28d18c1",
+    "type": "ComponentsbuttonComponent",
+    "typeDesc": "Button Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetrics",
+      "type": "Id"
+     },
+     {
+      "name": "label",
+      "value": "Process Metrics",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "successCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "expression",
+      "value": "function () {\n    Dashboards.fireChange(\"${p:processMetricsParam}\", Dashboards.getParameterValue(\"${p:processMetricsParam}\")+1);    \n}\n ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "actionParameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "failureCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "Datasource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "buttonStyle",
+      "value": "themeroller",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:processMetricsButton}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "ca7ac16e-0522-95d1-bc9f-bb042d1bc860",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetricsResult",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:processMetricsParam}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"dbType\",\"dbTypeParam\"],[\"dbHostname\",\"dbHostnameParam\"],[\"dbPortnumber\",\"dbPortnumberParam\"],[\"dbSchema\",\"dbSchemaParam\"],[\"dbUsername\",\"dbUsernameParam\"],[\"dbPassword\",\"dbPasswordParam\"],[\"baProtocol\",\"baProtocolParam\"],[\"baHostname\",\"baHostnameParam\"],[\"baPortnumber\",\"baPortnumberParam\"],[\"baUsername\",\"baUsernameParam\"],[\"baPassword\",\"baPasswordParam\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "processMetricsResult",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "processMetrics",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:processMetricsResult}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function (data) {\n    var msg = \"Metrics processed with \";\n    var result = (data.result)?'success':'errors.';\n    (this.placeholder().empty().html(msg+result));\n    return data;\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   }
+  ]
  },
  "datasources": {
   "rows": [
@@ -87,8 +2463,74 @@
       "type": "Boolean"
      }
     ]
+   },
+   {
+    "id": "INQUIRO_CPKENDPOINTS",
+    "name": "INQUIRO Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "INQUIRO Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "f4eaf07f-9d68-bf76-7199-af5bce271eab",
+    "type": "ComponentsInquiro_setupPlugin_CPKENDPOINT",
+    "typeDesc": "setupPlugin Endpoint",
+    "parent": "INQUIRO_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "setupPlugin",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "Inquiro",
+    "meta_endpoint": "setupPlugin"
+   },
+   {
+    "id": "cf9fc491-ebd4-5e22-5aa3-a702ef07b137",
+    "type": "ComponentsInquiro_processMetrics_CPKENDPOINT",
+    "typeDesc": "processMetrics Endpoint",
+    "parent": "INQUIRO_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetrics",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "Inquiro",
+    "meta_endpoint": "processMetrics"
    }
   ]
  },
- "filename": "file:///Users/gaspar/Work/Pentaho-EE/Pentaho-5.0.3/biserver-ee/pentaho-solutions/system/BigMET/dashboards/admin/setup.cdfde"
+ "filename": "/system/Inquiro/dashboards/admin/setup.cdfde"
 }

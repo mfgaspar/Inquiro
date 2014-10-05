@@ -27,7 +27,7 @@
       <Parameters/>
       <Query></Query>
    </DataAccess>
-   <DataAccess access="public" cache="true" cacheDuration="3600" connection="jobsQuery"
+   <DataAccess access="public" cache="false" cacheDuration="3600" connection="jobsQuery"
                id="jobsQuery"
                type="mdx">
       <BandedMode>compact</BandedMode>
@@ -50,7 +50,7 @@ NON EMPTY MEASURES ON COLUMNS,
 NON EMPTY JOBS ON ROWS
 FROM [Inquiro - Hadoop Metrics]</Query>
    </DataAccess>
-   <DataAccess access="public" cache="true" cacheDuration="3600"
+   <DataAccess access="public" cache="false" cacheDuration="3600"
                connection="hadoopMetricsQuery"
                id="hadoopMetricsQuery"
                type="mdx">
@@ -79,7 +79,7 @@ SELECT
  NON EMPTY TASKS * METRICS ON ROWS
 FROM [Inquiro - Hadoop Metrics]</Query>
    </DataAccess>
-   <DataAccess access="public" cache="true" cacheDuration="3600" connection="pdiMetricsQuery"
+   <DataAccess access="public" cache="false" cacheDuration="3600" connection="pdiMetricsQuery"
                id="pdiMetricsQuery"
                type="mdx">
       <BandedMode>compact</BandedMode>
@@ -105,7 +105,7 @@ SELECT
  NON EMPTY TASKS * STEPS *  METRICS ON ROWS
 FROM [Inquiro - PDI Metrics]</Query>
    </DataAccess>
-   <DataAccess access="public" cache="true" cacheDuration="3600"
+   <DataAccess access="public" cache="false" cacheDuration="3600"
                connection="jobsExecutionTimeQuery"
                id="jobsExecutionTimeQuery"
                type="mdx">

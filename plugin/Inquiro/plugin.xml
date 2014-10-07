@@ -3,7 +3,7 @@
 <overlays>
 		<overlay id="startup.Inquiro" resourcebundle="content/Inquiro/resources/lang/messages">
 			<menubar id="toolsmenu">
-	        	<menuitem id="Inquiro" label="${Launcher.Inquiro}" command="mantleXulHandler.openUrl('${Launcher.Inquiro}','${Launcher.Inquiro_TOOLTIP}','plugin/Inquiro/api/default')"/>
+                <menuitem id="Inquiro" label="${Launcher.Inquiro}" command="mantleXulHandler.openUrl('${Launcher.Inquiro}','${Launcher.Inquiro_TOOLTIP}','plugin/Inquiro/api/timeline')"/>
 	      	</menubar>
 	    </overlay>
 	</overlays>

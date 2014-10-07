@@ -3,6 +3,52 @@
   "title": "timeline",
   "rows": [
    {
+    "id": "2772d18c-450b-7098-e4d8-bd3c978ae60d",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "qtipJS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "/pentaho/api/repos/Inquiro/static/custom/js/jquery.qtip.min.js",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "63dcfc2c-dc83-28f2-df2e-5dd8b512b3fc",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "qtipCSS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "/pentaho/api/repos/Inquiro/static/custom/css/jquery.qtip.min.css",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
     "id": "a7793362-d4d4-7ea7-899e-1a2ed3cd22f9",
     "type": "LayoutResourceFile",
     "typeDesc": "Resource",
@@ -786,7 +832,7 @@
      },
      {
       "name": "resultvar",
-      "value": "jobsQueryResults",
+      "value": "jobsQueryResultsVar",
       "type": "Result"
      },
      {
@@ -869,7 +915,7 @@
      },
      {
       "name": "resultvar",
-      "value": "hadoopMetricsResults",
+      "value": "hadoopMetricsResultsVar",
       "type": "Result"
      },
      {
@@ -952,7 +998,7 @@
      },
      {
       "name": "resultvar",
-      "value": "pdiMetricsResults",
+      "value": "pdiMetricsResultsVar",
       "type": "Result"
      },
      {
@@ -1030,7 +1076,7 @@
      },
      {
       "name": "expression",
-      "value": "function f() {\n\n    _.each(jobsQueryResults, function(row, ridx){\n        jobsQueryObj[row[0]] = {\n            \"ID\": row[0], \n            \"Name\": row[3], \n            \"Username\": row[4], \n            \"Status\": row[5], \n            \"Start Date/Time\": row[6], \n            \"End Date/Time\": row[7], \n            \"Duration (seconds)\": row[8],\n            \"task\": {\n                \"mapper\": {},\n                \"combiner\": {},\n                \"reducer\": {}\n            }\n        };\n    });\n\n    _.each(pdiMetricsResults, function(row, idx){\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]] = jobsQueryObj[row[11]][row[12]][row[13]][row[0]] || {\n            'hostname': row[4],\n            'username': row[5],\n            'startTime': row[7],\n            'endTime': row[8],\n            'duration': row[9],\n            'status': row[6].toLowerCase(),\n            'hadoop': [],\n            'pdi': []\n        };\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]]['pdi'].push({\n            'metricName': row[1],\n            'metricValue': row[3],\n            'metricUnit': row[2].toLowerCase()\n        });\n    });\n    \n    _.each(hadoopMetricsResults, function(row, idx){\n        jobsQueryObj[row[10]][row[11]][row[12]][row[0]]['hadoop'].push({\n            'metricName': row[13],\n            'metricValue': row[2],\n            'metricUnit': row[14].toLowerCase()\n        });\n    });\n    \n    var data = [];\n    _.each(jobsQueryObj, function(elem, key) {\n        \n        var text =   \"<div class='job' title='\"+elem['ID']+\"'>\" +\n                            \"<p>Job \"+elem['ID']+\" started by user \"+elem['Username']+\", \"+elem['Status'].toLowerCase()+\" and took \"+elem['Duration']+\" seconds to execute</p>\"+\n                            \"<p>Executed: \"+_.keys(elem.task.mapper).length+\" Mapper(s) and \"+_.keys(elem.task.reducer).length+\" Reducer(s)</p>\"+\n                            \"<p><a href='#\"+key+\"'>Click here to get details.</a></p>\"+\n                        \"</div>\";\n                        \n        var mapperPH = \"\";                \n        _.each(elem.task.mapper, function(mapper, mkey) {\n            \n        });\n        \n        var reducerPH = \"\";                \n        _.each(elem.task.reducer, function(reducer, rkey) {\n            \n        });\n        \n        var details =   \"<div class='jobDetails'>\" +\n                            \"<div></div>\" +\n                        \"</div>\";\n                        \n        var tmpData = {\n            \"startDate\": moment(elem['Start Date/Time']).format('YYYY,MM,DD,hh,mm,ss'),\n            \"endDate\": moment(elem['End Date/Time']).format('YYYY,MM,DD,hh,mm,ss'),\n            //\"tag\": \"job\",\n            \"headline\": key,\n            \"text\": text,\n            \"asset\": {\n                //\"media\": \"\",\n                //\"thumbnail\": \"\",\n                \"credit\": \"<p>\"+elem['ID']+\"</p>\",\n                \"caption\": \"<p>\"+elem['ID']+\"</p>\"\n            }\n            /*\n            \"era\": [\n                {\n                    \"startDate\":\"2011,12,10\",\n                    \"endDate\":\"2011,12,20\",\n                    \"headline\":\"Headline Goes Here\",\n                    //\"tag\":\"This is Optional\"\n                }\n            ]\n            */\n        };\n        data.push(tmpData);\n    });\n\n    dataObject = { \n        \"timeline\": {\n            \"headline\":\"Inquiro\",\n            \"type\":\"default\",\n            \"text\":\"<p> Pentaho Data Integration and Hadoop performance analytics. Select the job from which you want to get details. </p>\",\n            \"asset\": {\n                //\"media\":\"http://yourdomain_or_socialmedialink_goes_here.jpg\",\n                \"credit\":\"Miguel Gaspar and Hemal Govind\",\n                \"caption\":\"Evaluate Performance\"\n            },\n            \"date\": data\n        }\n    }\n    \n    createStoryJS({\n                type:               'timeline',              \n                source:             dataObject,\n                width:              '100%',\n                height:             '550',\n                embed_id:           'timelineContent',             //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED\n                start_at_end:       true,                          //OPTIONAL START AT LATEST DATE\n                //start_at_slide:     '4',                            //OPTIONAL START AT SPECIFIC SLIDE\n                start_zoom_adjust:  '-1',                            //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL\n                hash_bookmark:      true,                           //OPTIONAL LOCATION BAR HASHES\n                font:               'Bevan-PotanoSans',             //OPTIONAL FONT\n                debug:              false,                           //OPTIONAL DEBUG TO CONSOLE\n                lang:               'en',                           //OPTIONAL LANGUAGE\n                maptype:            'toner',                   //OPTIONAL MAP STYLE\n                css:                '/pentaho/api/repos/Inquiro/static/custom/css/timeline.css',     //OPTIONAL PATH TO CSS\n                js:                 '/pentaho/api/repos/Inquiro/static/custom/js/timeline-min.js'    //OPTIONAL PATH TO JS\n    });\n    \n    return \"\";\n} ",
+      "value": "function f() {\n    \n    var myself = this;\n\n    _.each(jobsQueryResultsVar, function(row, ridx){\n        jobsQueryObj[row[0]] = {\n            \"ID\": row[0], \n            \"Name\": row[3], \n            \"Username\": row[4], \n            \"Status\": row[5], \n            \"Start Date/Time\": row[6], \n            \"End Date/Time\": row[7], \n            \"Duration (seconds)\": row[8],\n            \"task\": {\n                \"mapper\": {},\n                \"combiner\": {},\n                \"reducer\": {}\n            }\n        };\n    });\n\n    _.each(pdiMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]] = jobsQueryObj[row[11]][row[12]][row[13]][row[0]] || {\n            'hostname': row[4],\n            'username': row[5],\n            'startTime': row[7],\n            'endTime': row[8],\n            'duration': row[9],\n            'status': row[6].toLowerCase(),\n            'hadoop': [],\n            'pdi': []\n        };\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]]['pdi'].push({\n            'metricName': row[1],\n            'metricValue': row[3],\n            'metricUnit': row[2].toLowerCase()\n        });\n    });\n    \n    _.each(hadoopMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[10]][row[11]][row[12]][row[0]]['hadoop'].push({\n            'metricName': row[13],\n            'metricValue': row[2],\n            'metricUnit': row[14].toLowerCase()\n        });\n    });\n    \n    var data = [];\n    _.each(jobsQueryObj, function(elem, key) {\n        \n        var text =  \"<div class='job' title='\"+elem['ID']+\"'>\" +\n                        \"<p>Job \"+elem['ID']+\" started by user \"+elem['Username']+\", \"+elem['Status'].toLowerCase()+\" and took \"+elem['Duration']+\" seconds to execute</p>\"+\n                        \"<p>Executed: \"+_.keys(elem.task.mapper).length+\" Mapper(s), \"+_.keys(elem.task.combiner).length+\" Combiner(s) and \"+_.keys(elem.task.reducer).length+\" Reducer(s)</p>\"+\n                        //\"<p><a href='#\"+key+\"'>Hover me to get details.</a></p>\"+\n                        \"<div id='detailedInfo' title='\"+elem['ID']+\"' class='detailedInfo'><p>Hover me to get details</p></div>\"+\n                    \"</div>\";                \n                        \n        var mapperPH = \"\";                \n        _.each(elem.task.mapper, function(mapper, mkey) {\n            \n        });\n        \n        var reducerPH = \"\";                \n        _.each(elem.task.reducer, function(reducer, rkey) {\n            \n        });\n        \n        var details =   \"<div class='jobDetails'>\" +\n                            \"<div></div>\" +\n                        \"</div>\";\n                        \n        var tmpData = {\n            \"startDate\": moment(elem['Start Date/Time']).format('YYYY,MM,DD,hh,mm,ss'),\n            \"endDate\": moment(elem['End Date/Time']).format('YYYY,MM,DD,hh,mm,ss'),\n            //\"tag\": \"job\",\n            \"headline\": key,\n            \"text\": text,\n            \"asset\": {\n                //\"media\": \"\",\n                //\"thumbnail\": \"\",\n                \"credit\": \"<p>\"+elem['ID']+\"</p>\",\n                \"caption\": \"<p>\"+elem['ID']+\"</p>\"\n            }\n            /*\n            \"era\": [\n                {\n                    \"startDate\":\"2011,12,10\",\n                    \"endDate\":\"2011,12,20\",\n                    \"headline\":\"Headline Goes Here\",\n                    //\"tag\":\"This is Optional\"\n                }\n            ]\n            */\n        };\n        data.push(tmpData);\n         \n    });\n\n    dataObject = { \n        \"timeline\": {\n            \"headline\":\"Inquiro\",\n            \"type\":\"default\",\n            \"text\":\"<p> Pentaho Data Integration and Hadoop performance analytics. Select the job from which you want to get details. </p>\",\n            \"asset\": {\n                //\"media\":\"http://yourdomain_or_socialmedialink_goes_here.jpg\",\n                \"credit\":\"Miguel Gaspar and Hemal Govind\",\n                \"caption\":\"Evaluate Performance\"\n            },\n            \"date\": data\n        }\n    }\n    \n    createStoryJS({\n                type:               'timeline',              \n                source:             dataObject,\n                width:              '100%',\n                height:             '400',\n                embed_id:           'timelineContent',             //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED\n                start_at_end:       true,                          //OPTIONAL START AT LATEST DATE\n                //start_at_slide:     '4',                            //OPTIONAL START AT SPECIFIC SLIDE\n                start_zoom_adjust:  '-1',                            //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL\n                hash_bookmark:      true,                           //OPTIONAL LOCATION BAR HASHES\n                font:               'Bevan-PotanoSans',             //OPTIONAL FONT\n                debug:              false,                           //OPTIONAL DEBUG TO CONSOLE\n                lang:               'en',                           //OPTIONAL LANGUAGE\n                maptype:            'toner',                   //OPTIONAL MAP STYLE\n                css:                '/pentaho/api/repos/Inquiro/static/custom/css/timeline.css',     //OPTIONAL PATH TO CSS\n                js:                 '/pentaho/api/repos/Inquiro/static/custom/js/timeline-min.js'    //OPTIONAL PATH TO JS\n    });\n    \n    \n    return \"\";\n} ",
       "type": "JavaScript"
      },
      {
@@ -1060,7 +1106,7 @@
      },
      {
       "name": "postExecution",
-      "value": "",
+      "value": "function f() {\n    this.placeholder().find('.detailedInfo').qtip();\n} ",
       "type": "JavaScript"
      },
      {
@@ -1093,7 +1139,7 @@
      },
      {
       "name": "resultvar",
-      "value": "processMetricsResult",
+      "value": "processMetricsResultVar",
       "type": "Result"
      },
      {
@@ -1128,7 +1174,7 @@
      },
      {
       "name": "postExecution",
-      "value": "",
+      "value": "function f(){\n    if (processMetricsResultVar.result)\n        location.reload();\n} ",
       "type": "JavaScript"
      },
      {
@@ -1268,7 +1314,7 @@
      },
      {
       "name": "javaScript",
-      "value": "Dashboards.listenTo( Dashboards, 'cdf:postInit', function(){\n    setTimeout(function() {\n        $('.slider-container .content h3').qtip({\n        content: 'Test',\n        position: {\n            my: 'top left',\n            at: 'bottom left'\n        },\n        hide: {\n            fixed: true, \n            delay: 200\n        },\n        style: {\n            classes: 'qtip-bootstrap',\n            tip: {\n                corner: true,\n                width: 20,\n                height: 6,\n                border: 1\n            }\n        }\n    });}, 2000);\n});",
+      "value": "Dashboards.listenTo( Dashboards, 'cdf:postInit', function(){\n    \n    var buildTooltipContent = function(job) {\n        \n        if (typeof jobsQueryObj[job] != undefined)\n            return jobsQueryObj[job]['Duration (seconds)'];\n        else\n            return \"\";\n            \n    }\n    setTimeout(function() {\n        _.each($('.detailedInfo'), function(elem) {\n            var myself = elem;\n            $(elem).qtip({\n                content: buildTooltipContent($(myself).attr('title')),\n                position: {\n                    my: 'center left',\n                    at: 'center right'\n                },\n                hide: {\n                    fixed: true, \n                    delay: 200\n                },\n                style: {\n                    classes: 'qtip-bootstrap',\n                    tip: {\n                        corner: true,\n                        width: 20,\n                        height: 6,\n                        border: 1\n                    }\n                }\n            });\n        });\n    }, 2000);\n}); ",
       "type": "JavaScript"
      }
     ]
@@ -1319,23 +1365,23 @@
       "type": "Datasource"
      },
      {
-      "name": "width",
-      "value": "",
-      "type": "Integer"
-     },
-     {
       "name": "refreshPeriod",
       "value": "",
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
+      "name": "width",
+      "value": "",
       "type": "Integer"
      },
      {
       "name": "height",
       "value": "200",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
       "type": "Integer"
      },
      {
@@ -2850,7 +2896,7 @@
      },
      {
       "name": "query",
-      "value": "WITH\n SET JOBS AS FILTER([Jobs and Tasks].[Task ID].Members, [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Type') = 'task') \n SET METRICS AS HIERARCHIZE({{[Hadoop Metrics].[Hadoop Metric Group].Members}, {[Hadoop Metrics].[Hadoop Metric Name].Members}})\n SET MEASURES AS {[Measures].[Job ID], [Measures].[Spent Time (ms)]}\n MEMBER [Measures].[Job Name] AS [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Job Name')\n MEMBER [Measures].[Spent Time (ms)] AS [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Spent Time (ms)')+0 \nSELECT\n NON EMPTY MEASURES ON COLUMNS,\n NON EMPTY JOBS ON ROWS\nFROM [Inquiro - Hadoop Metrics]",
+      "value": "WITH\n SET JOBS AS FILTER([Jobs and Tasks].[Task ID].Members, [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Type') = 'job') \n SET METRICS AS HIERARCHIZE({{[Hadoop Metrics].[Hadoop Metric Group].Members}, {[Hadoop Metrics].[Hadoop Metric Name].Members}})\n SET MEASURES AS {[Measures].[Job ID], [Measures].[Spent Time (ms)]}\n MEMBER [Measures].[Job Name] AS [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Job Name')\n MEMBER [Measures].[Spent Time (ms)] AS [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Spent Time (ms)')+0 \nSELECT\n NON EMPTY MEASURES ON COLUMNS,\n NON EMPTY JOBS ON ROWS\nFROM [Inquiro - Hadoop Metrics]",
       "type": "SqlQuery"
      },
      {

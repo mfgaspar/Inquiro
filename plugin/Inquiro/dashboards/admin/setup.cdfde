@@ -20,7 +20,7 @@
      },
      {
       "name": "resourceCode",
-      "value": "p, div, * {\n    font-family: 'Open Sans', sans-serif;\n    color: #ffffff;\n} \n\n@media (min-width: 1200px) {\n    .container {\n        width: 100%;\n    }\n}\n\nbody {\n    background-color: #C8CED3;\n}\n\n.pluginDescription {\n    font-size: 19.7px;\n    color: #fd7a2b;\n}\n\n.inLineHeaderGroup {\n    background-color: #485163; \n    padding: 5px 0px;\n}\n\n.inLineHeaderGroup span {\n    font-weight: bold;\n    font-size: 40px;\n}\n\n.inLineHeaderGroup span:last-child {\n    font-weight: normal;\n    font-size: 40px;\n    color: #C8CED3;\n}\n\n\n.logout {\n    background-color: #39404D;\n}\n\n\n.inLineGroup {\n    padding: 5px 0px;\n} \n\n.inButton button{\n    background-color: #fd7a2b;\n    box-shadow: 2px 2px 10px #39404D;\n    border: 1px solid #fd7a2b;\n    padding: 10px 30px;\n    border-radius: 5px;\n}\n\n.inButton button:hover{\n    background-color: #ed5f07;\n}\n\n/*\n.inBreakdown select2-drop-mask {\n    background-color: #eaecec;\n    color: #485163;\n    width: 300px;\n}\n*/\n\n.inLineGroup .title {\n    margin-top: 4px;\n}\n\n.inInput input {\n    background-color: #eaecec;\n    color: #485163;\n    border: none;\n    padding: 5px 10px;\n    border-radius: 5px;\n    width: 100%;\n}\n\n.inDropdown span, .inDropdown li {\n    color: #485163;\n}\n\n.chzn-select {\n    width: 200px;\n}\n\n.chzn-search {\n    display: none;\n}\n ",
+      "value": "p, div, * {\n    font-family: 'Open Sans', sans-serif;\n    color: #ffffff;\n} \n\n@media (min-width: 1200px) {\n    .container {\n        width: 100%;\n    }\n}\n\nbody {\n    background-color: #C8CED3;\n}\n\n.pluginDescription {\n    font-size: 19.7px;\n    color: #fd7a2b;\n}\n\n.inLineHeaderGroup {\n    background-color: #485163; \n    padding: 5px 0px;\n}\n\n.inLineHeaderGroup span {\n    font-weight: bold;\n    font-size: 40px;\n}\n\n.inLineHeaderGroup span:last-child {\n    font-weight: normal;\n    font-size: 40px;\n    color: #C8CED3;\n}\n\n.titleGroup {\n    font-size: 18px;\n    font-weight: bold;\n    color: #485163;\n    margin-top: 15px;\n}\n\n\n.logout {\n    background-color: #39404D;\n}\n\n\n.inLineGroup {\n    padding: 5px 0px;\n} \n\n.inButton button{\n    background-color: #fd7a2b;\n    box-shadow: 2px 2px 10px #39404D;\n    border: 1px solid #fd7a2b;\n    padding: 10px 30px;\n    border-radius: 5px;\n    margin-top: 10px;\n}\n\n.inButton button:hover{\n    background-color: #ed5f07;\n}\n\n/*\n.inBreakdown select2-drop-mask {\n    background-color: #eaecec;\n    color: #485163;\n    width: 300px;\n}\n*/\n\n.inLineGroup .title {\n    margin-top: 4px;\n}\n\n.inInput input {\n    background-color: #eaecec;\n    color: #485163;\n    border: none;\n    padding: 5px 10px;\n    border-radius: 5px;\n    width: 100%;\n}\n\n.operationsResult {\n    line-height: 65px;\n}\n\n.inDropdown span, .inDropdown li {\n    color: #485163;\n}\n\n.chzn-select {\n    width: 200px;\n}\n\n.chzn-search {\n    display: none;\n}\n ",
       "type": "Resource"
      }
     ]
@@ -235,7 +235,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Type </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbType\" class=\"inDropdown dbType\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbHostname\" class=\"inInput dbHostname\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbPortnumber\" class=\"inInput dbPortnumber\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Schema </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbSchema\" class=\"inInput dbSchema\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbUsername\" class=\"inInput dbUsername\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbPassword\" class=\"inInput dbPassword\"> </div>        \n    </div>\n</div>    \n\n ",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n        <div class=\"titleDatabase titleGroup\"> Database settings </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Type </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbType\" class=\"inDropdown dbType\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbHostname\" class=\"inInput dbHostname\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbPortnumber\" class=\"inInput dbPortnumber\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Schema </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbSchema\" class=\"inInput dbSchema\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbUsername\" class=\"inInput dbUsername\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbPassword\" class=\"inInput dbPassword\"> </div>        \n    </div>\n</div>    \n\n ",
       "type": "Html"
      },
      {
@@ -331,7 +331,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baProtocol\" class=\"inInput baProtocol\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baHostname\" class=\"inInput baHostname\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baPortnumber\" class=\"inInput baPortnumber\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baUsername\" class=\"inInput baUsername\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baPassword\" class=\"inInput baPassword\"> </div>        \n    </div>\n</div>    \n\n ",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n        <div class=\"titleBAServer titleGroup\"> BA Server settings </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baProtocol\" class=\"inInput baProtocol\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baHostname\" class=\"inInput baHostname\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baPortnumber\" class=\"inInput baPortnumber\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baUsername\" class=\"inInput baUsername\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baPassword\" class=\"inInput baPassword\"> </div>        \n    </div>\n</div>    \n\n ",
       "type": "Html"
      },
      {
@@ -551,7 +551,7 @@
     "properties": [
      {
       "name": "name",
-      "value": "installPluginInfo",
+      "value": "buttons",
       "type": "Id"
      },
      {
@@ -619,7 +619,7 @@
      },
      {
       "name": "html",
-      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div id=\"setupPluginButton\" class=\"inButton setupPluginButton\"> </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"setupPluginResult\" class=\"setupPluginButtonMsg\"> </div>        \n    </div>\n</div>\n\n\n ",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-12 col-sm-4 col-md-2 col-lg-2\">\n        <div id=\"setupPluginButton\" class=\"inButton setupPluginButton\"> </div>        \n    </div>\n    <div class=\"col-xs-12 col-sm-4 col-md-2 col-lg-2\">\n        <div id=\"processMetricsButton\" class=\"inButton processMetricsButton\"> </div>        \n    </div>\n    <div class=\"col-xs-12 col-sm-4 col-md-8 col-lg-8\">\n        <div id=\"operationsResult\" class=\"operationsResult\"> </div>        \n    </div>\n</div>\n\n ",
       "type": "Html"
      },
      {
@@ -640,91 +640,18 @@
     ]
    },
    {
-    "id": "b81f9798-cbee-7172-d30e-f9ef3767d4b7",
-    "type": "LayoutBootstrapColumn",
-    "typeDesc": "Column",
-    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "id": "37d3afdf-8c0f-6bb8-ffc5-aaadeddd9b53",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
     "properties": [
      {
-      "name": "name",
-      "value": "processMetricsInfo",
-      "type": "Id"
-     },
-     {
-      "name": "bootstrapExtraSmall",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapSmall",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapMedium",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapLarge",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapCssClass",
-      "value": "",
-      "type": "String"
-     },
-     {
       "name": "height",
-      "value": "",
+      "value": "50",
       "type": "Integer"
      },
      {
       "name": "backgroundColor",
-      "value": "",
-      "type": "Color"
-     },
-     {
-      "name": "roundCorners",
-      "value": "",
-      "type": "RoundCorners"
-     },
-     {
-      "name": "textAlign",
-      "value": "",
-      "type": "TextAlign"
-     },
-     {
-      "name": "cssClass",
-      "value": "",
-      "type": "String"
-     }
-    ]
-   },
-   {
-    "id": "de4f4f6e-d8aa-548f-ef98-082b481942c0",
-    "type": "LayoutHtml",
-    "typeDesc": "Html",
-    "parent": "b81f9798-cbee-7172-d30e-f9ef3767d4b7",
-    "properties": [
-     {
-      "name": "name",
-      "value": "",
-      "type": "Id"
-     },
-     {
-      "name": "html",
-      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div id=\"processMetricsButton\" class=\"inButton processMetricsButton\"> </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"processMetricsResult\" class=\"processMetricsResult\"> </div>        \n    </div>\n</div> ",
-      "type": "Html"
-     },
-     {
-      "name": "fontSize",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "color",
       "value": "",
       "type": "Color"
      },
@@ -4392,7 +4319,7 @@
      },
      {
       "name": "htmlObject",
-      "value": "${h:setupPluginResult}",
+      "value": "${h:operationsResult}",
       "type": "HtmlObject"
      },
      {
@@ -4475,7 +4402,7 @@
      },
      {
       "name": "htmlObject",
-      "value": "${h:setupPluginResult}",
+      "value": "${h:operationsResult}",
       "type": "HtmlObject"
      },
      {
@@ -4558,7 +4485,7 @@
      },
      {
       "name": "htmlObject",
-      "value": "${h:processMetricsResult}",
+      "value": "${h:operationsResult}",
       "type": "HtmlObject"
      },
      {

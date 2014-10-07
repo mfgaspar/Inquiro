@@ -113,7 +113,7 @@ FROM [Inquiro - PDI Metrics]</Query>
       <Columns/>
       <Parameters/>
       <Query>WITH
- SET JOBS AS FILTER([Jobs and Tasks].[Task ID].Members, [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Type') = 'task') 
+ SET JOBS AS FILTER([Jobs and Tasks].[Task ID].Members, [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Type') = 'job') 
  SET METRICS AS HIERARCHIZE({{[Hadoop Metrics].[Hadoop Metric Group].Members}, {[Hadoop Metrics].[Hadoop Metric Name].Members}})
  SET MEASURES AS {[Measures].[Job ID], [Measures].[Spent Time (ms)]}
  MEMBER [Measures].[Job Name] AS [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Job Name')

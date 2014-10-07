@@ -1319,8 +1319,13 @@
       "type": "Datasource"
      },
      {
-      "name": "height",
-      "value": "200",
+      "name": "width",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -1329,13 +1334,8 @@
       "type": "Integer"
      },
      {
-      "name": "width",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "refreshPeriod",
-      "value": "",
+      "name": "height",
+      "value": "200",
       "type": "Integer"
      },
      {
@@ -1359,13 +1359,13 @@
       "type": "JavaScript"
      },
      {
-      "name": "postExecution",
-      "value": "",
+      "name": "postFetch",
+      "value": "function f(data) {\n    data.metadata[0].colName = \"Task\";\n    return data;\n} ",
       "type": "JavaScript"
      },
      {
-      "name": "postFetch",
-      "value": "function f(data) {\n    data.metadata[0].colName = \"Task\";\n    return data;\n} ",
+      "name": "postExecution",
+      "value": "",
       "type": "JavaScript"
      },
      {

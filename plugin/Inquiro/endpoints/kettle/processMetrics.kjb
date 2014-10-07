@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <job>
-  <name>process-metrics</name>
+  <name>processMetrics</name>
     <description/>
     <extended_description/>
     <job_version/>
+    <job_status>0</job_status>
   <directory>&#x2f;</directory>
   <created_user>-</created_user>
   <created_date>2014&#x2f;07&#x2f;23 10&#x3a;27&#x3a;13.978</created_date>
@@ -160,11 +161,11 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>53</xloc>
-      <yloc>59</yloc>
+      <xloc>40</xloc>
+      <yloc>147</yloc>
       </entry>
     <entry>
-      <name>Set variables &#x28;REPLACE&#x2f;REMOVE&#x29;</name>
+      <name>&#x28;REPLACE&#x2f;REMOVE&#x29;</name>
       <description/>
       <type>SET_VARIABLES</type>
       <replacevars>Y</replacevars>
@@ -230,8 +231,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>505</xloc>
-      <yloc>28</yloc>
+      <xloc>483</xloc>
+      <yloc>145</yloc>
       </entry>
     <entry>
       <name>Process PDI Metrics</name>
@@ -239,7 +240,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_processPdiMetricsLogs.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_processPdiMetricsLogsFS.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -263,8 +264,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>825</xloc>
-      <yloc>56</yloc>
+      <xloc>993</xloc>
+      <yloc>118</yloc>
       </entry>
     <entry>
       <name>Process Hadoop Metrics</name>
@@ -272,7 +273,7 @@
       <type>TRANS</type>
       <specification_method>filename</specification_method>
       <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_processHadoopMetricsLogs.ktr</filename>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_processHadoopMetricsLogsFS.ktr</filename>
       <transname/>
       <arg_from_previous>N</arg_from_previous>
       <params_from_previous>N</params_from_previous>
@@ -296,8 +297,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>648</xloc>
-      <yloc>56</yloc>
+      <xloc>766</xloc>
+      <yloc>116</yloc>
       </entry>
     <entry>
       <name>readSettings</name>
@@ -329,8 +330,8 @@
       </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>283</xloc>
-      <yloc>58</yloc>
+      <xloc>270</xloc>
+      <yloc>146</yloc>
       </entry>
     <entry>
       <name>Set variables</name>
@@ -369,8 +370,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>168</xloc>
-      <yloc>59</yloc>
+      <xloc>155</xloc>
+      <yloc>147</yloc>
       </entry>
     <entry>
       <name>Error RS</name>
@@ -382,8 +383,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>287</xloc>
-      <yloc>161</yloc>
+      <xloc>271</xloc>
+      <yloc>249</yloc>
       </entry>
     <entry>
       <name>Log RS</name>
@@ -395,8 +396,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>368</xloc>
-      <yloc>57</yloc>
+      <xloc>355</xloc>
+      <yloc>145</yloc>
       </entry>
     <entry>
       <name>Success</name>
@@ -405,19 +406,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>962</xloc>
-      <yloc>59</yloc>
-      </entry>
-    <entry>
-      <name>Abort job</name>
-      <description/>
-      <type>ABORT</type>
-      <message/>
-      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>648</xloc>
-      <yloc>326</yloc>
+      <xloc>1159</xloc>
+      <yloc>155</yloc>
       </entry>
     <entry>
       <name>Error Hadoop metrics</name>
@@ -429,8 +419,8 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>646</xloc>
-      <yloc>157</yloc>
+      <xloc>765</xloc>
+      <yloc>16</yloc>
       </entry>
     <entry>
       <name>Error PDI metrics</name>
@@ -442,20 +432,147 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>827</xloc>
-      <yloc>153</yloc>
+      <xloc>993</xloc>
+      <yloc>22</yloc>
+      </entry>
+    <entry>
+      <name>Simple evaluation</name>
+      <description/>
+      <type>SIMPLE_EVAL</type>
+      <valuetype>variable</valuetype>
+      <fieldname/>
+      <variablename>&#x24;&#x7b;INQUIROMETRICSREADFROM&#x7d;</variablename>
+      <fieldtype>string</fieldtype>
+      <mask/>
+      <comparevalue>filesystem</comparevalue>
+      <minvalue/>
+      <maxvalue/>
+      <successcondition>equal</successcondition>
+      <successnumbercondition>equal</successnumbercondition>
+      <successbooleancondition>false</successbooleancondition>
+      <successwhenvarset>N</successwhenvarset>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>618</xloc>
+      <yloc>145</yloc>
+      </entry>
+    <entry>
+      <name>Process PDI Metrics from HDFS</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_processPdiMetricsLogsHDFS.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>996</xloc>
+      <yloc>194</yloc>
+      </entry>
+    <entry>
+      <name>Process Hadoop Metrics from HDFS</name>
+      <description/>
+      <type>TRANS</type>
+      <specification_method>filename</specification_method>
+      <trans_object_id/>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;_processHadoopMetricsLogsHDFS.ktr</filename>
+      <transname/>
+      <arg_from_previous>N</arg_from_previous>
+      <params_from_previous>N</params_from_previous>
+      <exec_per_row>N</exec_per_row>
+      <clear_rows>N</clear_rows>
+      <clear_files>N</clear_files>
+      <set_logfile>N</set_logfile>
+      <logfile/>
+      <logext/>
+      <add_date>N</add_date>
+      <add_time>N</add_time>
+      <loglevel>Basic</loglevel>
+      <cluster>N</cluster>
+      <slave_server_name/>
+      <set_append_logfile>N</set_append_logfile>
+      <wait_until_finished>Y</wait_until_finished>
+      <follow_abort_remote>N</follow_abort_remote>
+      <create_parent_folder>N</create_parent_folder>
+      <logging_remote_work>N</logging_remote_work>
+      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
+      </parameters>      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>768</xloc>
+      <yloc>194</yloc>
+      </entry>
+    <entry>
+      <name>Error Hadoop metrics from HDFS</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <logmessage>ERROR&#x3a; processing hadoop metrics</logmessage>
+      <loglevel>Basic</loglevel>
+      <logsubject/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>771</xloc>
+      <yloc>297</yloc>
+      </entry>
+    <entry>
+      <name>Error PDI metrics from HDFS</name>
+      <description/>
+      <type>WRITE_TO_LOG</type>
+      <logmessage>ERROR&#x3a; processing pdi metrics</logmessage>
+      <loglevel>Basic</loglevel>
+      <logsubject/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>993</xloc>
+      <yloc>296</yloc>
+      </entry>
+    <entry>
+      <name>Abort job</name>
+      <description/>
+      <type>ABORT</type>
+      <message/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>905</xloc>
+      <yloc>385</yloc>
+      </entry>
+    <entry>
+      <name>Abort job 2</name>
+      <description/>
+      <type>ABORT</type>
+      <message/>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>883</xloc>
+      <yloc>18</yloc>
       </entry>
   </entries>
   <hops>
-    <hop>
-      <from>Set variables &#x28;REPLACE&#x2f;REMOVE&#x29;</from>
-      <to>Process Hadoop Metrics</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
     <hop>
       <from>Process Hadoop Metrics</from>
       <to>Process PDI Metrics</to>
@@ -467,7 +584,7 @@
     </hop>
     <hop>
       <from>Log RS</from>
-      <to>Set variables &#x28;REPLACE&#x2f;REMOVE&#x29;</to>
+      <to>&#x28;REPLACE&#x2f;REMOVE&#x29;</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
       <enabled>Y</enabled>
@@ -511,15 +628,6 @@
       <unconditional>Y</unconditional>
     </hop>
     <hop>
-      <from>Error RS</from>
-      <to>Abort job</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Process PDI Metrics</from>
       <to>Success</to>
       <from_nr>0</from_nr>
@@ -538,15 +646,6 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
-      <from>Error Hadoop metrics</from>
-      <to>Abort job</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
       <from>Process PDI Metrics</from>
       <to>Error PDI metrics</to>
       <from_nr>0</from_nr>
@@ -556,7 +655,106 @@
       <unconditional>N</unconditional>
     </hop>
     <hop>
+      <from>&#x28;REPLACE&#x2f;REMOVE&#x29;</from>
+      <to>Simple evaluation</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>Simple evaluation</from>
+      <to>Process Hadoop Metrics from HDFS</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Simple evaluation</from>
+      <to>Process Hadoop Metrics</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Process Hadoop Metrics from HDFS</from>
+      <to>Process PDI Metrics from HDFS</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Process PDI Metrics from HDFS</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Process PDI Metrics from HDFS</from>
+      <to>Error PDI metrics from HDFS</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Process Hadoop Metrics from HDFS</from>
+      <to>Error Hadoop metrics from HDFS</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error Hadoop metrics</from>
+      <to>Abort job 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
       <from>Error PDI metrics</from>
+      <to>Abort job 2</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error Hadoop metrics from HDFS</from>
+      <to>Abort job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error PDI metrics from HDFS</from>
+      <to>Abort job</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Error RS</from>
       <to>Abort job</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -567,5 +765,9 @@
   </hops>
   <notepads>
   </notepads>
+<attributes><group><name>JobRestart</name>
+<attribute><key>UniqueConnections</key>
+<value>N</value>
+</attribute></group></attributes>
 
 </job>

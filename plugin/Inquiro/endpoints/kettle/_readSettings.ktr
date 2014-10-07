@@ -349,8 +349,293 @@
         <repeat>N</repeat>
       </field>
       <field>
-        <name>inquiroBAServerPath</name>
-        <xpath>baserver&#x2f;path</xpath>
+        <name>inquiroBAServerInquiro</name>
+        <xpath>baserver&#x2f;inquiro</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodeHostname</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;hostname</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodeUsername</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;username</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodePassword</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;password</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodeIPCProtocol</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;ipc&#x2f;protocol</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodeIPCPortnumber</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;ipc&#x2f;portnumber</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodeIPCMetrics</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;ipc&#x2f;metrics</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodeWEBProtocol</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;webui&#x2f;protocol</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodeWEBPortnumber</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;webui&#x2f;portnumber</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroNamenodeWEBLogs</name>
+        <xpath>hadoop&#x2f;namenode&#x2f;webui&#x2f;logs</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroJobtrackerHostname</name>
+        <xpath>hadoop&#x2f;jobtracker&#x2f;hostname</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroJobtrackerUsername</name>
+        <xpath>hadoop&#x2f;jobtracker&#x2f;username</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroJobtrackerPassword</name>
+        <xpath>hadoop&#x2f;jobtracker&#x2f;password</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroJobtrackerIPCProtocol</name>
+        <xpath>hadoop&#x2f;jobtracker&#x2f;ipc&#x2f;protocol</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroJobtrackerIPCPortnumber</name>
+        <xpath>hadoop&#x2f;jobtracker&#x2f;ipc&#x2f;portnumber</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroJobtrackerWEBProtocol</name>
+        <xpath>hadoop&#x2f;jobtracker&#x2f;webui&#x2f;protocol</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroJobtrackerWEBPortnumber</name>
+        <xpath>hadoop&#x2f;jobtracker&#x2f;webui&#x2f;portnumber</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroJobtrackerWEBLogs</name>
+        <xpath>hadoop&#x2f;jobtracker&#x2f;webui&#x2f;logs</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroFilesystemMetrics</name>
+        <xpath>hadoop&#x2f;filesystem&#x2f;metric</xpath>
+        <element_type>node</element_type>
+        <result_type>valueof</result_type>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>both</trim_type>
+        <repeat>N</repeat>
+      </field>
+      <field>
+        <name>inquiroMetricsReadFrom</name>
+        <xpath>metrics&#x2f;readfrom</xpath>
         <element_type>node</element_type>
         <result_type>valueof</result_type>
         <type>String</type>
@@ -380,8 +665,8 @@
     <sizeFieldName/>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>84</xloc>
-      <yloc>58</yloc>
+      <xloc>87</xloc>
+      <yloc>63</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -401,7 +686,7 @@
     <optimizationLevel>9</optimizationLevel>
     <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
         <jsScript_name>Script 1</jsScript_name>
-        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var dbURL &#x3d; &#x22;&#x22;&#x3b;&#xa;var dbDriver &#x3d; &#x22;&#x22;&#x3b;&#xa;var cdbURL &#x3d; &#x22;&#x22;&#x3b;&#xa;writeToLog&#x28;&#x22;inquiroDatabaseType&#x22;&#x29;&#x3b;&#xa;if &#x28;inquiroDatabaseType &#x3d;&#x3d; &#x27;mysql&#x27;&#x29; &#x7b; &#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;mysql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x2b;&#x22;&#x2f;&#x22;&#x2b;inquiroDatabaseSchema&#x3b;&#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;mysql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x3b;&#xa;		dbDriver &#x3d; &#x22;com.mysql.jdbc.Driver&#x22;&#x3b;&#xa;&#x7d; else &#x7b;&#xa;	if &#x28;inquiroDatabaseType &#x3d;&#x3d; &#x27;oracle&#x27;&#x29; &#x7b; &#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;oracle&#x3a;thin&#x3a;&#x40;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabaseSchema&#x3b;&#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;oracle&#x3a;thin&#x3a;&#x40;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#xa;		dbDriver &#x3d; &#x22;oracle.jdbc.driver.OracleDriver&#x22;&#x3b;&#xa;	&#x7d; else &#x7b;&#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;postgresql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x2b;&#x22;&#x2f;&#x22;&#x2b;inquiroDatabaseSchema&#x3b; &#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;postgresql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x3b;&#xa;		dbDriver &#x3d; &#x22;org.postgresql.Driver&#x22;&#x3b;	&#xa;	&#x7d;&#xa;&#x7d;&#xa;&#xa;&#x2f;&#x2a;&#xa;		break&#x3b;&#xa;	case &#x27;postgres&#x27;&#x3a; &#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;postgresql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x2b;&#x22;&#x2f;&#x22;&#x2b;inquiroDatabaseSchema&#x3b; &#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;postgresql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x3b;&#xa;		dbDriver &#x3d; &#x22;org.postgresql.Driver&#x22;&#x3b;	&#xa;		break&#x3b;&#xa;	case &#x27;oracle&#x27;&#x3a; &#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;oracle&#x3a;thin&#x3a;&#x40;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabaseSchema&#x3b;&#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;oracle&#x3a;thin&#x3a;&#x40;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#xa;		dbDriver &#x3d; &#x22;oracle.jdbc.driver.OracleDriver&#x22;&#x3b;&#xa;		break&#x3b;&#xa;	default&#x3a; &#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;postgresql&#x3a;&#x2f;&#x2f;localhost&#x3a;5432&#x22;&#x3b; &#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;postgresql&#x3a;&#x2f;&#x2f;localhost&#x3a;5432&#x2f;inquiro&#x22;&#x3b; &#xa;		dbDriver &#x3d; &#x22;org.postgresql.Driver&#x22;&#x3b;&#xa;&#x7d;&#xa;&#x2a;&#x2f;&#xa;var inquiroCreateConnnectionURL &#x3d; cdbURL&#x3b;&#xa;var inquiroConnectionURL &#x3d; dbURL&#x3b;&#xa;var inquiroConnectionDriver &#x3d; dbDriver&#x3b;&#xa;var ddlScriptFileName &#x3d; inquiroDatabaseType&#x2b;&#x22;.sql&#x22;&#x3b;</jsScript_script>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xa;&#xa;var dbURL &#x3d; &#x22;&#x22;&#x3b;&#xa;var dbDriver &#x3d; &#x22;&#x22;&#x3b;&#xa;var cdbURL &#x3d; &#x22;&#x22;&#x3b;&#xa;writeToLog&#x28;&#x22;inquiroDatabaseType&#x22;&#x29;&#x3b;&#xa;if &#x28;inquiroDatabaseType &#x3d;&#x3d; &#x27;mysql&#x27;&#x29; &#x7b; &#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;mysql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x2b;&#x22;&#x2f;&#x22;&#x2b;inquiroDatabaseSchema&#x3b;&#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;mysql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x3b;&#xa;		dbDriver &#x3d; &#x22;com.mysql.jdbc.Driver&#x22;&#x3b;&#xa;&#x7d; else &#x7b;&#xa;	if &#x28;inquiroDatabaseType &#x3d;&#x3d; &#x27;oracle&#x27;&#x29; &#x7b; &#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;oracle&#x3a;thin&#x3a;&#x40;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabaseSchema&#x3b;&#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;oracle&#x3a;thin&#x3a;&#x40;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#xa;		dbDriver &#x3d; &#x22;oracle.jdbc.driver.OracleDriver&#x22;&#x3b;&#xa;	&#x7d; else &#x7b;&#xa;		dbURL &#x3d; &#x22;jdbc&#x3a;postgresql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x2b;&#x22;&#x2f;&#x22;&#x2b;inquiroDatabaseSchema&#x3b; &#xa;		cdbURL &#x3d; &#x22;jdbc&#x3a;postgresql&#x3a;&#x2f;&#x2f;&#x22;&#x2b;inquiroDatabaseHost&#x2b;&#x22;&#x3a;&#x22;&#x2b;inquiroDatabasePort&#x3b;&#xa;		dbDriver &#x3d; &#x22;org.postgresql.Driver&#x22;&#x3b;	&#xa;	&#x7d;&#xa;&#x7d;&#xa;var inquiroCreateConnnectionURL &#x3d; cdbURL&#x3b;&#xa;var inquiroConnectionURL &#x3d; dbURL&#x3b;&#xa;var inquiroConnectionDriver &#x3d; dbDriver&#x3b;&#xa;var ddlScriptFileName &#x3d; inquiroDatabaseType&#x2b;&#x22;.sql&#x22;&#x3b;</jsScript_script>
       </jsScript>    </jsScripts>    <fields>      <field>        <name>inquiroConnectionURL</name>
         <rename>inquiroConnectionURL</rename>
         <type>String</type>
@@ -428,8 +713,8 @@
         <replace>N</replace>
       </field>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>240</xloc>
-      <yloc>59</yloc>
+      <xloc>241</xloc>
+      <yloc>63</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -447,8 +732,8 @@
            </partitioning>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>539</xloc>
-      <yloc>58</yloc>
+      <xloc>504</xloc>
+      <yloc>63</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -532,8 +817,8 @@
         <default_value/>
         </field>
       <field>
-        <field_name>inquiroBAServerPath</field_name>
-        <variable_name>INQUIROBASERVERPATH</variable_name>
+        <field_name>inquiroBAServerInquiro</field_name>
+        <variable_name>INQUIROBASERVERINQUIRO</variable_name>
         <variable_type>JVM</variable_type>
         <default_value/>
         </field>
@@ -561,12 +846,126 @@
         <variable_type>JVM</variable_type>
         <default_value/>
         </field>
+      <field>
+        <field_name>inquiroNamenodeHostname</field_name>
+        <variable_name>INQUIRONAMENODEHOSTNAME</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroNamenodeUsername</field_name>
+        <variable_name>INQUIRONAMENODEUSERNAME</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroNamenodePassword</field_name>
+        <variable_name>INQUIRONAMENODEPASSWORD</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroNamenodeIPCProtocol</field_name>
+        <variable_name>INQUIRONAMENODEIPCPROTOCOL</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroNamenodeIPCPortnumber</field_name>
+        <variable_name>INQUIRONAMENODEIPCPORTNUMBER</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroNamenodeIPCMetrics</field_name>
+        <variable_name>INQUIRONAMENODEIPCMETRICS</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroNamenodeWEBProtocol</field_name>
+        <variable_name>INQUIRONAMENODEWEBPROTOCOL</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroNamenodeWEBPortnumber</field_name>
+        <variable_name>INQUIRONAMENODEWEBPORTNUMBER</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroNamenodeWEBLogs</field_name>
+        <variable_name>INQUIRONAMENODEWEBLOGS</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroJobtrackerHostname</field_name>
+        <variable_name>INQUIROJOBTRACKERHOSTNAME</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroJobtrackerUsername</field_name>
+        <variable_name>INQUIROJOBTRACKERUSERNAME</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroJobtrackerPassword</field_name>
+        <variable_name>INQUIROJOBTRACKERPASSWORD</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroJobtrackerIPCProtocol</field_name>
+        <variable_name>INQUIROJOBTRACKERIPCPROTOCOL</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroJobtrackerIPCPortnumber</field_name>
+        <variable_name>INQUIROJOBTRACKERIPCPORTNUMBER</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroJobtrackerWEBProtocol</field_name>
+        <variable_name>INQUIROJOBTRACKERWEBPROTOCOL</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroJobtrackerWEBPortnumber</field_name>
+        <variable_name>INQUIROJOBTRACKERWEBPORTNUMBER</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroJobtrackerWEBLogs</field_name>
+        <variable_name>INQUIROJOBTRACKERWEBLOGS</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroFilesystemMetrics</field_name>
+        <variable_name>INQUIROFILESYSTEMMETRICS</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
+      <field>
+        <field_name>inquiroMetricsReadFrom</field_name>
+        <variable_name>INQUIROMETRICSREADFROM</variable_name>
+        <variable_type>JVM</variable_type>
+        <default_value/>
+        </field>
       </fields>
     <use_formatting>Y</use_formatting>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>388</xloc>
-      <yloc>58</yloc>
+      <xloc>387</xloc>
+      <yloc>63</yloc>
       <draw>Y</draw>
       </GUI>
     </step>

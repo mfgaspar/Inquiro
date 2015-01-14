@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CDADescriptor>
    <DataSources>
-      <Connection id="dummy" type="sql.jndi">
-         <Jndi></Jndi>
-      </Connection>
       <Connection id="jobsQuery" type="mondrian.jndi">
          <Catalog>mondrian:/Inquiro</Catalog>
          <Jndi>Inquiro</Jndi>
@@ -21,12 +18,6 @@
          <Jndi>Inquiro</Jndi>
       </Connection>
    </DataSources>
-   <DataAccess access="public" cache="true" cacheDuration="3600" connection="dummy" id="dummy"
-               type="sql">
-      <Columns/>
-      <Parameters/>
-      <Query></Query>
-   </DataAccess>
    <DataAccess access="public" cache="false" cacheDuration="3600" connection="jobsQuery"
                id="jobsQuery"
                type="mdx">
@@ -116,7 +107,7 @@ FROM [Inquiro - PDI Metrics]</Query>
  SET JOBS AS FILTER([Jobs and Tasks].[Task ID].Members, [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Type') = 'job') 
  SET METRICS AS HIERARCHIZE({{[Hadoop Metrics].[Hadoop Metric Group].Members}, {[Hadoop Metrics].[Hadoop Metric Name].Members}})
  SET MEASURES AS {[Measures].[Job ID], [Measures].[Spent Time (ms)]}
- MEMBER [Measures].[Job Name] AS [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Job Name')
+ MEMBER [Measures].[Job ID] AS [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Job Name')
  MEMBER [Measures].[Spent Time (ms)] AS [Jobs and Tasks].[Task ID].CURRENTMEMBER.PROPERTIES('Spent Time (ms)')+0 
 SELECT
  NON EMPTY MEASURES ON COLUMNS,

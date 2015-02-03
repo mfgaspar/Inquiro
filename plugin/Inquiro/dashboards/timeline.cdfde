@@ -3,6 +3,52 @@
   "title": "timeline",
   "rows": [
    {
+    "id": "7d53a922-1b16-d5fc-e1bb-5b38c02a2724",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "iconsCSS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${system:../static/custom/css/icons.css}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "84cfcd2e-e24d-8388-f2b2-18ab9e3f3fdb",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "notyJS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${system:../static/custom/js/jquery.noty.min.js}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Javascript",
+      "type": "Label"
+     }
+    ]
+   },
+   {
     "id": "2772d18c-450b-7098-e4d8-bd3c978ae60d",
     "type": "LayoutResourceFile",
     "typeDesc": "Resource",
@@ -15,7 +61,7 @@
      },
      {
       "name": "resourceFile",
-      "value": "/pentaho/api/repos/Inquiro/static/custom/js/jquery.qtip.min.js",
+      "value": "${system:../static/custom/js/jquery.qtip.min.js}",
       "type": "ResourceFile"
      },
      {
@@ -38,7 +84,7 @@
      },
      {
       "name": "resourceFile",
-      "value": "/pentaho/api/repos/Inquiro/static/custom/css/jquery.qtip.min.css",
+      "value": "${system:../static/custom/css/jquery.qtip.min.css}",
       "type": "ResourceFile"
      },
      {
@@ -61,7 +107,7 @@
      },
      {
       "name": "resourceFile",
-      "value": "/pentaho/api/repos/Inquiro/static/custom/js/numeral.min.js",
+      "value": "${system:../static/custom/js/numeral.min.js}",
       "type": "ResourceFile"
      },
      {
@@ -84,30 +130,7 @@
      },
      {
       "name": "resourceFile",
-      "value": "/pentaho/api/repos/Inquiro/static/custom/js/moment.min.js",
-      "type": "ResourceFile"
-     },
-     {
-      "name": "resourceType",
-      "value": "Javascript",
-      "type": "Label"
-     }
-    ]
-   },
-   {
-    "id": "5558d888-db53-5bd2-45b9-d3b3ef437869",
-    "type": "LayoutResourceFile",
-    "typeDesc": "Resource",
-    "parent": "UnIqEiD",
-    "properties": [
-     {
-      "name": "name",
-      "value": "TimelineJS",
-      "type": "Id"
-     },
-     {
-      "name": "resourceFile",
-      "value": "/pentaho/api/repos/Inquiro/static/custom/js/storyjs-embed.js",
+      "value": "${system:../static/custom/js/moment.min.js}",
       "type": "ResourceFile"
      },
      {
@@ -130,7 +153,7 @@
      },
      {
       "name": "resourceFile",
-      "value": "/pentaho/api/repos/Inquiro/static/custom/js/Inquiro.js",
+      "value": "${system:../static/custom/js/inquiro.js}",
       "type": "ResourceFile"
      },
      {
@@ -153,7 +176,30 @@
      },
      {
       "name": "resourceFile",
-      "value": "/pentaho/api/repos/Inquiro/static/custom/css/Inquiro.css",
+      "value": "${system:../static/custom/css/inquiro.css}",
+      "type": "ResourceFile"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "ce84ea58-faa0-b138-bb03-5e0b9e2d5f35",
+    "type": "LayoutResourceFile",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "timelineCSS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceFile",
+      "value": "${system:../static/custom/css/timeline.css}",
       "type": "ResourceFile"
      },
      {
@@ -209,12 +255,12 @@
     "properties": [
      {
       "name": "name",
-      "value": "",
+      "value": "processMetrics",
       "type": "Id"
      },
      {
       "name": "bootstrapExtraSmall",
-      "value": "",
+      "value": "12",
       "type": "String"
      },
      {
@@ -254,83 +300,45 @@
      },
      {
       "name": "textAlign",
-      "value": "",
+      "value": "right",
       "type": "TextAlign"
      },
      {
       "name": "cssClass",
-      "value": "",
+      "value": "processMetrics",
       "type": "String"
      }
     ]
    },
    {
-    "id": "6dec6181-d787-3656-acae-bf1422b9ac60",
-    "type": "LayoutRow",
-    "typeDesc": "Row",
-    "parent": "195c5b71-03e3-8782-6757-6ebf0c2fc5b0",
-    "properties": [
-     {
-      "name": "name",
-      "value": "",
-      "type": "Id"
-     },
-     {
-      "name": "height",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "backgroundColor",
-      "value": "",
-      "type": "Color"
-     },
-     {
-      "name": "roundCorners",
-      "value": "",
-      "type": "RoundCorners"
-     },
-     {
-      "name": "textAlign",
-      "value": "",
-      "type": "TextAlign"
-     },
-     {
-      "name": "cssClass",
-      "value": "",
-      "type": "String"
-     }
-    ]
-   },
-   {
-    "id": "c3abbf04-b312-0d14-b282-b4e7ce4c713c",
+    "id": "5a9d0dc6-2802-c0a6-3655-cb8626866992",
     "type": "LayoutBootstrapColumn",
     "typeDesc": "Column",
-    "parent": "6dec6181-d787-3656-acae-bf1422b9ac60",
+    "parent": "34e45dcb-e5aa-4590-8b99-675e638a1a1c",
     "properties": [
      {
       "name": "name",
-      "value": "processMetricsResult",
+      "value": "timelineMetrics",
       "type": "Id"
      },
      {
       "name": "bootstrapExtraSmall",
-      "value": "8",
+      "value": "12",
       "type": "String"
      },
      {
       "name": "bootstrapSmall",
-      "value": "8",
+      "value": "",
       "type": "String"
      },
      {
       "name": "bootstrapMedium",
-      "value": "8",
+      "value": "",
       "type": "String"
      },
      {
       "name": "bootstrapLarge",
-      "value": "8",
+      "value": "",
       "type": "String"
      },
      {
@@ -360,40 +368,40 @@
      },
      {
       "name": "cssClass",
-      "value": "processMetricsResult",
+      "value": "timelineMetrics",
       "type": "String"
      }
     ]
    },
    {
-    "id": "0e9a7af6-d548-ea90-0c07-c10e0ba8387c",
+    "id": "91337b5d-97e8-d7a0-908a-129e5ba8574f",
     "type": "LayoutBootstrapColumn",
     "typeDesc": "Column",
-    "parent": "6dec6181-d787-3656-acae-bf1422b9ac60",
+    "parent": "34e45dcb-e5aa-4590-8b99-675e638a1a1c",
     "properties": [
      {
       "name": "name",
-      "value": "processMetricsButton",
+      "value": "timelineChart",
       "type": "Id"
      },
      {
       "name": "bootstrapExtraSmall",
-      "value": "4",
+      "value": "12",
       "type": "String"
      },
      {
       "name": "bootstrapSmall",
-      "value": "4",
+      "value": "",
       "type": "String"
      },
      {
       "name": "bootstrapMedium",
-      "value": "4",
+      "value": "",
       "type": "String"
      },
      {
       "name": "bootstrapLarge",
-      "value": "4",
+      "value": "",
       "type": "String"
      },
      {
@@ -423,171 +431,7 @@
      },
      {
       "name": "cssClass",
-      "value": "processMetricsButton",
-      "type": "String"
-     }
-    ]
-   },
-   {
-    "id": "d61646c2-d933-850d-417c-5915a63754ad",
-    "type": "LayoutRow",
-    "typeDesc": "Row",
-    "parent": "195c5b71-03e3-8782-6757-6ebf0c2fc5b0",
-    "properties": [
-     {
-      "name": "name",
-      "value": "",
-      "type": "Id"
-     },
-     {
-      "name": "height",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "backgroundColor",
-      "value": "",
-      "type": "Color"
-     },
-     {
-      "name": "roundCorners",
-      "value": "",
-      "type": "RoundCorners"
-     },
-     {
-      "name": "textAlign",
-      "value": "",
-      "type": "TextAlign"
-     },
-     {
-      "name": "cssClass",
-      "value": "",
-      "type": "String"
-     }
-    ]
-   },
-   {
-    "id": "184aed5a-ebdf-7aac-70f0-7d2486211c65",
-    "type": "LayoutBootstrapColumn",
-    "typeDesc": "Column",
-    "parent": "d61646c2-d933-850d-417c-5915a63754ad",
-    "properties": [
-     {
-      "name": "name",
-      "value": "timelineContent",
-      "type": "Id"
-     },
-     {
-      "name": "bootstrapExtraSmall",
-      "value": "12",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapSmall",
-      "value": "12",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapMedium",
-      "value": "12",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapLarge",
-      "value": "12",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapCssClass",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "height",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "backgroundColor",
-      "value": "",
-      "type": "Color"
-     },
-     {
-      "name": "roundCorners",
-      "value": "",
-      "type": "RoundCorners"
-     },
-     {
-      "name": "textAlign",
-      "value": "",
-      "type": "TextAlign"
-     },
-     {
-      "name": "cssClass",
-      "value": "timelineContent",
-      "type": "String"
-     }
-    ]
-   },
-   {
-    "id": "305656f2-1d2c-59ea-ffcc-995d2e8f77f2",
-    "type": "LayoutBootstrapColumn",
-    "typeDesc": "Column",
-    "parent": "d61646c2-d933-850d-417c-5915a63754ad",
-    "properties": [
-     {
-      "name": "name",
-      "value": "executionsTimeChartContent",
-      "type": "Id"
-     },
-     {
-      "name": "bootstrapExtraSmall",
-      "value": "12",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapSmall",
-      "value": "12",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapMedium",
-      "value": "12",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapLarge",
-      "value": "12",
-      "type": "String"
-     },
-     {
-      "name": "bootstrapCssClass",
-      "value": "",
-      "type": "String"
-     },
-     {
-      "name": "height",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "backgroundColor",
-      "value": "",
-      "type": "Color"
-     },
-     {
-      "name": "roundCorners",
-      "value": "",
-      "type": "RoundCorners"
-     },
-     {
-      "name": "textAlign",
-      "value": "",
-      "type": "TextAlign"
-     },
-     {
-      "name": "cssClass",
-      "value": "executionsTimeChartContent",
+      "value": "timelineChart",
       "type": "String"
      }
     ]
@@ -740,62 +584,6 @@
     ]
    },
    {
-    "id": "22c8b4ed-527f-ad91-11f1-d3b6b6f6c83d",
-    "type": "ComponentsJavascriptParameter",
-    "typeDesc": "Custom parameter",
-    "parent": "GENERIC",
-    "properties": [
-     {
-      "name": "name",
-      "value": "dataObject",
-      "type": "Id"
-     },
-     {
-      "name": "javaScript",
-      "value": "{ \"timeline\": {\n                    \"headline\":\"The Main Timeline Headline Goes here\",\n                    \"type\":\"default\",\n                    \"text\":\"<p>Intro body text goes here, some HTML is ok</p>\",\n                    \"asset\": {\n                        //\"media\":\"http://yourdomain_or_socialmedialink_goes_here.jpg\",\n                        \"credit\":\"Credit Name Goes Here\",\n                        \"caption\":\"Caption text goes here\"\n                    },\n                    \"date\": [\n                        {\n                            \"startDate\":\"2011,12,10,14,30\",\n                            \"endDate\":\"2011,12,10,15,15\",\n                            \"headline\":\"Headline Goes Here\",\n                            \"text\":\"<p>Body text goes here, some HTML is OK</p>\",\n                            //\"tag\":\"This is Optional\",\n                            \"asset\": {\n                                //\"media\":\"http://twitter.com/ArjunaSoriano/status/164181156147900416\",\n                                //\"thumbnail\":\"optional-32x32px.jpg\",\n                                \"credit\":\"Credit Name Goes Here\",\n                                \"caption\":\"Caption text goes here\"\n                            }\n                        },\n                        {\n                            \"startDate\":\"2011,12,10,14,30\",\n                            \"endDate\":\"2011,12,10,15,15\",\n                            \"headline\":\"Headline Goes Here 2\",\n                            \"text\":\"<p>Body text goes here 2 , some HTML is OK</p>\",\n                            //\"tag\":\"This is Optional\",\n                            \"asset\": {\n                                //\"media\":\"http://twitter.com/ArjunaSoriano/status/164181156147900416\",\n                                //\"thumbnail\":\"optional-32x32px.jpg\",\n                                \"credit\":\"Credit Name Goes Here 2\",\n                                \"caption\":\"Caption text goes here 2\"\n                            }\n                        },\n                        {\n                            \"startDate\":\"2011,12,10,14,30\",\n                            \"endDate\":\"2011,12,10,15,10\",\n                            \"headline\":\"Headline Goes Here 3\",\n                            \"text\":\"<p>Body text goes here 3 , some HTML is OK</p>\",\n                            //\"tag\":\"This is Optional\",\n                            \"asset\": {\n                                //\"media\":\"http://twitter.com/ArjunaSoriano/status/164181156147900416\",\n                                //\"thumbnail\":\"optional-32x32px.jpg\",\n                                \"credit\":\"Credit Name Goes Here 2\",\n                                \"caption\":\"Caption text goes here 2\"\n                            }\n                        }\n                    ]/*\n                    ,\n                    \"era\": [\n                        {\n                            \"startDate\":\"2011,12,10\",\n                            \"endDate\":\"2011,12,20\",\n                            \"headline\":\"Headline Goes Here\",\n                            //\"tag\":\"This is Optional\"\n                        }\n\n                    ]\n                    */\n                }\n} ",
-      "type": "JavaScript"
-     },
-     {
-      "name": "parameterViewRole",
-      "value": "unused",
-      "type": "parameterViewRoleCustom"
-     },
-     {
-      "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
-     }
-    ]
-   },
-   {
-    "id": "44b99e5b-50a4-364b-75e7-ccaad34986b9",
-    "type": "ComponentsParameter",
-    "typeDesc": "Simple parameter",
-    "parent": "GENERIC",
-    "properties": [
-     {
-      "name": "name",
-      "value": "processMetricsParam",
-      "type": "Id"
-     },
-     {
-      "name": "propertyValue",
-      "value": "0",
-      "type": "String"
-     },
-     {
-      "name": "parameterViewRole",
-      "value": "unused",
-      "type": "parameterViewRoleCustom"
-     },
-     {
-      "name": "bookmarkable",
-      "value": "false",
-      "type": "Boolean"
-     }
-    ]
-   },
-   {
     "id": "OTHERCOMPONENTS",
     "name": "Others",
     "type": "Label",
@@ -806,6 +594,94 @@
       "name": "Group",
       "value": "Others",
       "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "1625ac2f-4cfb-f81d-2373-98c1720332ba",
+    "type": "ComponentsbuttonComponent",
+    "typeDesc": "Button Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetricsButton",
+      "type": "Id"
+     },
+     {
+      "name": "label",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "successCallback",
+      "value": "function() {\n    var notify = noty({text: 'test',  theme: 'bootstrapTheme', type: 'warning'});\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "expression",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "actionParameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "failureCallback",
+      "value": "function() {\n    var notify = noty({text: 'fail'});\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "Datasource",
+      "value": "processMetrics",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "buttonStyle",
+      "value": "bootstrap",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:processMetrics}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function(){\n    this.placeholder().find('button').addClass(\"icon-loop2\");\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
      }
     ]
    },
@@ -1076,7 +952,7 @@
      },
      {
       "name": "expression",
-      "value": "function f() {\n    \n    var myself = this;\n\n    _.each(jobsQueryResultsVar, function(row, ridx){\n        jobsQueryObj[row[0]] = {\n            \"ID\": row[0], \n            \"Name\": row[3], \n            \"Username\": row[4], \n            \"Status\": row[5], \n            \"Start Date/Time\": row[6], \n            \"End Date/Time\": row[7], \n            \"Duration (seconds)\": row[8],\n            \"task\": {\n                \"mapper\": {},\n                \"combiner\": {},\n                \"reducer\": {}\n            }\n        };\n    });\n\n    _.each(pdiMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]] = jobsQueryObj[row[11]][row[12]][row[13]][row[0]] || {\n            'hostname': row[4],\n            'username': row[5],\n            'startTime': row[7],\n            'endTime': row[8],\n            'duration': row[9],\n            'status': row[6].toLowerCase(),\n            'hadoop': [],\n            'pdi': []\n        };\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]]['pdi'].push({\n            'metricName': row[1],\n            'metricValue': row[3],\n            'metricUnit': row[2].toLowerCase()\n        });\n    });\n    \n    _.each(hadoopMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[10]][row[11]][row[12]][row[0]]['hadoop'].push({\n            'metricName': row[13],\n            'metricValue': row[2],\n            'metricUnit': row[14].toLowerCase()\n        });\n    });\n    \n    var data = [];\n    _.each(jobsQueryObj, function(elem, key) {\n        \n        var text =  \"<div class='job' title='\"+elem['ID']+\"'>\" +\n                        \"<p>Job \"+elem['ID']+\" started by user \"+elem['Username']+\", \"+elem['Status'].toLowerCase()+\" and took \"+elem['Duration']+\" seconds to execute</p>\"+\n                        \"<p>Executed: \"+_.keys(elem.task.mapper).length+\" Mapper(s), \"+_.keys(elem.task.combiner).length+\" Combiner(s) and \"+_.keys(elem.task.reducer).length+\" Reducer(s)</p>\"+\n                        //\"<p><a href='#\"+key+\"'>Hover me to get details.</a></p>\"+\n                        \"<div id='detailedInfo' title='\"+elem['ID']+\"' class='detailedInfo'><p>Hover me to get details</p></div>\"+\n                    \"</div>\";                \n                        \n        var mapperPH = \"\";                \n        _.each(elem.task.mapper, function(mapper, mkey) {\n            \n        });\n        \n        var reducerPH = \"\";                \n        _.each(elem.task.reducer, function(reducer, rkey) {\n            \n        });\n        \n        var details =   \"<div class='jobDetails'>\" +\n                            \"<div></div>\" +\n                        \"</div>\";\n                        \n        var tmpData = {\n            \"startDate\": moment(elem['Start Date/Time']).format('YYYY,MM,DD,hh,mm,ss'),\n            \"endDate\": moment(elem['End Date/Time']).format('YYYY,MM,DD,hh,mm,ss'),\n            //\"tag\": \"job\",\n            \"headline\": key,\n            \"text\": text,\n            \"asset\": {\n                //\"media\": \"\",\n                //\"thumbnail\": \"\",\n                \"credit\": \"<p>\"+elem['ID']+\"</p>\",\n                \"caption\": \"<p>\"+elem['ID']+\"</p>\"\n            }\n            /*\n            \"era\": [\n                {\n                    \"startDate\":\"2011,12,10\",\n                    \"endDate\":\"2011,12,20\",\n                    \"headline\":\"Headline Goes Here\",\n                    //\"tag\":\"This is Optional\"\n                }\n            ]\n            */\n        };\n        data.push(tmpData);\n         \n    });\n\n    dataObject = { \n        \"timeline\": {\n            \"headline\":\"Inquiro\",\n            \"type\":\"default\",\n            \"text\":\"<p> Pentaho Data Integration and Hadoop performance analytics. Select the job from which you want to get details. </p>\",\n            \"asset\": {\n                //\"media\":\"http://yourdomain_or_socialmedialink_goes_here.jpg\",\n                \"credit\":\"Miguel Gaspar and Hemal Govind\",\n                \"caption\":\"Evaluate Performance\"\n            },\n            \"date\": data\n        }\n    }\n    \n    createStoryJS({\n                type:               'timeline',              \n                source:             dataObject,\n                width:              '100%',\n                height:             '400',\n                embed_id:           'timelineContent',             //OPTIONAL USE A DIFFERENT DIV ID FOR EMBED\n                start_at_end:       true,                          //OPTIONAL START AT LATEST DATE\n                //start_at_slide:     '4',                            //OPTIONAL START AT SPECIFIC SLIDE\n                start_zoom_adjust:  '-1',                            //OPTIONAL TWEAK THE DEFAULT ZOOM LEVEL\n                hash_bookmark:      true,                           //OPTIONAL LOCATION BAR HASHES\n                font:               'Bevan-PotanoSans',             //OPTIONAL FONT\n                debug:              false,                           //OPTIONAL DEBUG TO CONSOLE\n                lang:               'en',                           //OPTIONAL LANGUAGE\n                maptype:            'toner',                   //OPTIONAL MAP STYLE\n                css:                '/pentaho/api/repos/Inquiro/static/custom/css/timeline.css',     //OPTIONAL PATH TO CSS\n                js:                 '/pentaho/api/repos/Inquiro/static/custom/js/timeline-min.js'    //OPTIONAL PATH TO JS\n    });\n    \n    \n    return \"\";\n} ",
+      "value": "function f() {\n    \n    var myself = this;\n\n    _.each(jobsQueryResultsVar, function(row, ridx){\n        jobsQueryObj[row[0]] = {\n            \"ID\": row[0], \n            \"Name\": row[3], \n            \"Username\": row[4], \n            \"Status\": row[5], \n            \"Start Date/Time\": row[6], \n            \"End Date/Time\": row[7], \n            \"Duration (seconds)\": row[8],\n            \"task\": {\n                \"mapper\": {},\n                \"combiner\": {},\n                \"reducer\": {}\n            }\n        };\n    });\n\n    _.each(pdiMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]] = jobsQueryObj[row[11]][row[12]][row[13]][row[0]] || {\n            'hostname': row[4],\n            'username': row[5],\n            'startTime': row[7],\n            'endTime': row[8],\n            'duration': row[9],\n            'status': row[6].toLowerCase(),\n            'hadoop': [],\n            'pdi': []\n        };\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]]['pdi'].push({\n            'metricName': row[1],\n            'metricValue': row[3],\n            'metricUnit': row[2].toLowerCase()\n        });\n    });\n    \n    _.each(hadoopMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[10]][row[11]][row[12]][row[0]]['hadoop'].push({\n            'metricName': row[13],\n            'metricValue': row[2],\n            'metricUnit': row[14].toLowerCase()\n        });\n    });\n     \n    template =  '<ul class=\"cbp_tmtimeline\">'+\n                '<% _.each(root, function(value, key) { %> ' +\n                '   <li data-value=\"<%-value.ID%>\">'+\n                '       <time class=\"cbp_tmtime\" datetime=\"<%-value.Name%>\"><span><%-moment(value[\"Start Date/Time\"]).format(\"YYYY-MM-DD\")%></span> <span><%-moment(value[\"Start Date/Time\"]).format(\"HH:mm:ss\")%></span></time>'+\n\t\t\t\t'\t\t<div class=\"cbp_tmicon cbp_tmicon-phone\"></div>'+\n\t\t\t\t'\t\t<div class=\"cbp_tmlabel\">'+\n\t\t\t\t'\t\t\t<div class=\"title\">'+\n                '               <h2><%-value.ID%></h2>'+\n                '           </div>'+\n                '    \t\t<div class=\"details\">'+\n\t\t\t\t'\t\t\t    <span><%-value[\"Name\"]%></span>'+\n                '    \t\t    <span><%-value[\"Start Date/Time\"]%></span>'+\n                '        \t    <span><%-value[\"End Date/Time\"]%></span>'+\n                '    \t\t    <span><%-value[\"Duration (seconds)\"]%></span>'+\n                '    \t\t    <span><%-value[\"Username\"]%></span>'+\n                '           </div>'+\n\t\t\t\t'\t\t</div>'+\n\t\t\t\t'\t</li>'+\n                '<% }); %>' +\n                '<ul>';\n    var $timeline = $(_.template(template, {root: jobsQueryObj}));\n    $timeline.find('.title').on('click', function(event){\n        $(this).next().toggleClass('expanded');\n    });\n\n    return $timeline;\n} ",
       "type": "JavaScript"
      },
      {
@@ -1091,7 +967,7 @@
      },
      {
       "name": "htmlObject",
-      "value": "${p:dummy}",
+      "value": "${p:timelineMetrics}",
       "type": "HtmlObject"
      },
      {
@@ -1106,178 +982,7 @@
      },
      {
       "name": "postExecution",
-      "value": "function f() {\n    this.placeholder().find('.detailedInfo').qtip();\n} ",
-      "type": "JavaScript"
-     },
-     {
-      "name": "tooltip",
-      "value": "",
-      "type": "Html"
-     }
-    ]
-   },
-   {
-    "id": "c2e981bd-c9f5-9d01-fcb0-ba76a72a30e7",
-    "type": "ComponentsQuery",
-    "typeDesc": "Query Component",
-    "parent": "OTHERCOMPONENTS",
-    "properties": [
-     {
-      "name": "name",
-      "value": "processMetrics",
-      "type": "Id"
-     },
-     {
-      "name": "listeners",
-      "value": "['${p:processMetricsParam}']",
-      "type": "Listeners"
-     },
-     {
-      "name": "parameters",
-      "value": "[]",
-      "type": "ValuesArray"
-     },
-     {
-      "name": "resultvar",
-      "value": "processMetricsResultVar",
-      "type": "Result"
-     },
-     {
-      "name": "dataSource",
-      "value": "processMetrics",
-      "type": "Datasource"
-     },
-     {
-      "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "htmlObject",
-      "value": "${p:processMetricsResult}",
-      "type": "HtmlObject"
-     },
-     {
-      "name": "executeAtStart",
-      "value": "false",
-      "type": "Boolean"
-     },
-     {
-      "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
-      "name": "postExecution",
-      "value": "function f(){\n    if (processMetricsResultVar.result)\n        location.reload();\n} ",
-      "type": "JavaScript"
-     },
-     {
-      "name": "postFetch",
-      "value": "function (data) {\n    var msg = \"Metrics processed with \";\n    var result = (data.result)?'success':'errors.';\n    (this.placeholder().empty().html(msg+result));\n    return data;\n} ",
-      "type": "JavaScript"
-     },
-     {
-      "name": "preChange",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
-      "name": "postChange",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
-      "name": "tooltip",
-      "value": "",
-      "type": "Html"
-     }
-    ]
-   },
-   {
-    "id": "1625ac2f-4cfb-f81d-2373-98c1720332ba",
-    "type": "ComponentsbuttonComponent",
-    "typeDesc": "Button Component",
-    "parent": "OTHERCOMPONENTS",
-    "properties": [
-     {
-      "name": "name",
-      "value": "processMetricsButton",
-      "type": "Id"
-     },
-     {
-      "name": "label",
-      "value": "Process Metrics",
-      "type": "String"
-     },
-     {
-      "name": "listeners",
-      "value": "[]",
-      "type": "Listeners"
-     },
-     {
-      "name": "successCallback",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
-      "name": "expression",
-      "value": "function f() {\n    Dashboards.fireChange(\"${p:processMetricsParam}\", Dashboards.getParameterValue(\"${p:processMetricsParam}\")+1);    \n} ",
-      "type": "JavaScript"
-     },
-     {
-      "name": "actionParameters",
-      "value": "[]",
-      "type": "ValuesArray"
-     },
-     {
-      "name": "failureCallback",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
-      "name": "Datasource",
-      "value": "",
-      "type": "Datasource"
-     },
-     {
-      "name": "priority",
-      "value": 5,
-      "type": "Integer"
-     },
-     {
-      "name": "refreshPeriod",
-      "value": "",
-      "type": "Integer"
-     },
-     {
-      "name": "buttonStyle",
-      "value": "themeroller",
-      "type": "TableStyle"
-     },
-     {
-      "name": "htmlObject",
-      "value": "${p:processMetricsButton}",
-      "type": "HtmlObject"
-     },
-     {
-      "name": "executeAtStart",
-      "value": "true",
-      "type": "Boolean"
-     },
-     {
-      "name": "preExecution",
-      "value": "",
-      "type": "JavaScript"
-     },
-     {
-      "name": "postExecution",
-      "value": "",
+      "value": "function f() {\n    this.placeholder().find('.detailedInfo').qtip();\n   \n} ",
       "type": "JavaScript"
      },
      {
@@ -1302,6 +1007,24 @@
     ]
    },
    {
+    "id": "d3d00688-38b6-2400-879a-6a13eb781abe",
+    "type": "ComponentsFunction",
+    "typeDesc": "JavaScript function",
+    "parent": "SCRIPT",
+    "properties": [
+     {
+      "name": "name",
+      "value": "Dashboards.preInit",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "Dashboards.listenTo( Dashboards, 'cdf:preInit', function(){\n\n}); ",
+      "type": "JavaScript"
+     }
+    ]
+   },
+   {
     "id": "83ba9821-f03b-8dc5-9da0-4127acba1aa4",
     "type": "ComponentsFunction",
     "typeDesc": "JavaScript function",
@@ -1314,7 +1037,7 @@
      },
      {
       "name": "javaScript",
-      "value": "Dashboards.listenTo( Dashboards, 'cdf:postInit', function(){\n    \n    var buildTooltipContent = function(job) {\n        \n        if (typeof jobsQueryObj[job] != undefined)\n            return jobsQueryObj[job]['Duration (seconds)'];\n        else\n            return \"\";\n            \n    }\n    setTimeout(function() {\n        _.each($('.detailedInfo'), function(elem) {\n            var myself = elem;\n            $(elem).qtip({\n                content: buildTooltipContent($(myself).attr('title')),\n                position: {\n                    my: 'center left',\n                    at: 'center right'\n                },\n                hide: {\n                    fixed: true, \n                    delay: 200\n                },\n                style: {\n                    classes: 'qtip-bootstrap',\n                    tip: {\n                        corner: true,\n                        width: 20,\n                        height: 6,\n                        border: 1\n                    }\n                }\n            });\n        });\n    }, 2000);\n}); ",
+      "value": "Dashboards.listenTo( Dashboards, 'cdf:postInit', function(){\n    var resizeChart = function() {\n        render_timelineChart.chart.options.width = render_timelineChart.placeholder().width(); \n        render_timelineChart.chart.render(true, true, false);\n    }; \n    var throttle = _.throttle(resizeChart, 200, {leading: false});\n    $(document).ready(function() {\n        $(window).resize(throttle);\n    });\n}); ",
       "type": "JavaScript"
      }
     ]
@@ -1341,7 +1064,7 @@
     "properties": [
      {
       "name": "name",
-      "value": "jobsExecutionTimeChart",
+      "value": "timelineChart",
       "type": "Id"
      },
      {
@@ -1365,7 +1088,7 @@
       "type": "Datasource"
      },
      {
-      "name": "refreshPeriod",
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
@@ -1375,13 +1098,13 @@
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
+      "name": "refreshPeriod",
+      "value": "",
       "type": "Integer"
      },
      {
-      "name": "width",
-      "value": "",
+      "name": "priority",
+      "value": 5,
       "type": "Integer"
      },
      {
@@ -1391,7 +1114,7 @@
      },
      {
       "name": "htmlObject",
-      "value": "executionsTimeChartContent",
+      "value": "${p:timelineChart}",
       "type": "HtmlObject"
      },
      {
@@ -1401,17 +1124,17 @@
      },
      {
       "name": "preExecution",
-      "value": "function f() {\n    \n    var chartOpts = {\n        height: '100',\n        colors: ['rgba(31, 119, 180, 0.5)'],\n        axisMinorTicks: false,\n        plotFrameVisible: false,\n        baseAxisTicks: false,\n        orthoAxisTicks: false,\n        orthoAxisVisible: false\n    };\n\n    $.extend(true, this.chartDefinition, chartOpts);\n} ",
-      "type": "JavaScript"
-     },
-     {
-      "name": "postFetch",
-      "value": "function f(data) {\n    data.metadata[0].colName = \"Task\";\n    return data;\n} ",
+      "value": "function f() {\n    \n    var chartOpts = {\n        height: '200',\n        colors: ['#6cbfee'],\n        axisMinorTicks: false,\n        plotFrameVisible: false,\n        baseAxisTicks: false,\n        orthoAxisTicks: false,\n        orthoAxisVisible: false,\n        orientation: 'Horizontal',\n        crosstabMode: true,\n        seriesInRows: false\n    };\n\n    $.extend(true, this.chartDefinition, chartOpts);\n} ",
       "type": "JavaScript"
      },
      {
       "name": "postExecution",
       "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function f(data) {\n    data.metadata[0].colName = \"Task\";\n    return data;\n} ",
       "type": "JavaScript"
      },
      {
@@ -1436,7 +1159,7 @@
      },
      {
       "name": "animate",
-      "value": true,
+      "value": "true",
       "type": "Boolean"
      },
      {
@@ -1896,7 +1619,7 @@
      },
      {
       "name": "orientation",
-      "value": "vertical",
+      "value": "horizontal",
       "type": "cccOrientationCustom"
      },
      {
@@ -2316,7 +2039,7 @@
      },
      {
       "name": "seriesInRows",
-      "value": false,
+      "value": "false",
       "type": "Boolean"
      },
      {

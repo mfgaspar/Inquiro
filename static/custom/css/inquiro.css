@@ -1,0 +1,31 @@
+
+/* Buttom */
+.processMetricsButton {
+  text-align: right;
+  height: 60px;
+  margin-top: 10px;
+  color: white;
+}
+
+button{
+  background-color: #6cbfee;
+  border: 5px solid #afdcf8;
+  font-weight: bold;
+  padding: 0px;
+  border-radius: 5px;
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+  margin-top: 5px;
+  color: white;
+}
+
+button:hover{
+   background-color: #afdcf8;
+}
+
+button.active{
+  -webkit-animation:spin 4s linear infinite;
+   -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}

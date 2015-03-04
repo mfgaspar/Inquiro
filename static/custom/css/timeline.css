@@ -10,6 +10,7 @@
 .cbp_tmtimeline:before {
     content: '';
     position: absolute;
+    border-radius: 10px;
     top: 0;
     bottom: 0;
     width: 10px;
@@ -67,9 +68,11 @@
 }
 
 .cbp_tmtimeline > li .cbp_tmlabel h2 { 
-    margin-top: 0px;
-    padding: 0 0 10px 0;
+    margin: 0px;
+    padding: 0px;
+    /*
     border-bottom: 1px solid rgba(255,255,255,0.4);
+    */
 }
 
 /* The triangle */
@@ -107,7 +110,7 @@
 }
 
 .cbp_tmtimeline .details.expanded {
-    max-height: 300px;
+    max-height: 20000px;
 }
 
 

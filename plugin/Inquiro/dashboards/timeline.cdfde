@@ -584,6 +584,34 @@
     ]
    },
    {
+    "id": "c4ae4ecc-d9c4-3fe5-4e4f-5186c11f8bbf",
+    "type": "ComponentsJavascriptParameter",
+    "typeDesc": "Custom parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "updateMetrics",
+      "type": "Id"
+     },
+     {
+      "name": "javaScript",
+      "value": "0 ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
     "id": "OTHERCOMPONENTS",
     "name": "Others",
     "type": "Label",
@@ -620,12 +648,12 @@
      },
      {
       "name": "successCallback",
-      "value": "function() {\n    var notify = noty({text: 'test',  theme: 'bootstrapTheme', type: 'warning'});\n} ",
+      "value": "function() {\n    this.placeholder('button').removeClass('active');\n    var notyOpts = {\n        text: 'Success processing metrics',  \n        theme: 'bootstrapTheme', \n        type: 'success',\n        layout: 'topCenter',\n        timeout: 3000\n    };\n    var notify = noty(notyOpts);\n    Dashboards.fireChange('updateMetrics', Dashboards.getParameterValue('updateMetrics')+1);\n} ",
       "type": "JavaScript"
      },
      {
       "name": "expression",
-      "value": "",
+      "value": "function() {\n    this.placeholder('button').addClass('active');\n} ",
       "type": "JavaScript"
      },
      {
@@ -635,7 +663,7 @@
      },
      {
       "name": "failureCallback",
-      "value": "function() {\n    var notify = noty({text: 'fail'});\n} ",
+      "value": "function() {\n    this.placeholder('button').removeClass('active');\n    var notyOpts = {\n        text: 'Failure processing metrics. Check connections to the database.',  \n        theme: 'bootstrapTheme', \n        type: 'error',\n        layout: 'topCenter',\n        timeout: 3000\n    };\n    var notify = noty(notyOpts);\n\n} ",
       "type": "JavaScript"
      },
      {
@@ -698,7 +726,7 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:updateMetrics}']",
       "type": "Listeners"
      },
      {
@@ -738,7 +766,7 @@
      },
      {
       "name": "preExecution",
-      "value": "",
+      "value": "function() {\n this.lifecycle = {silent: true};\n} ",
       "type": "JavaScript"
      },
      {
@@ -781,7 +809,7 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:updateMetrics}']",
       "type": "Listeners"
      },
      {
@@ -821,7 +849,7 @@
      },
      {
       "name": "preExecution",
-      "value": "",
+      "value": "function() {\n this.lifecycle = {silent: true};\n} ",
       "type": "JavaScript"
      },
      {
@@ -864,7 +892,7 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:updateMetrics}']",
       "type": "Listeners"
      },
      {
@@ -909,7 +937,7 @@
      },
      {
       "name": "postExecution",
-      "value": "",
+      "value": "function() {\n this.lifecycle = {silent: true};\n} ",
       "type": "JavaScript"
      },
      {
@@ -947,12 +975,12 @@
      },
      {
       "name": "listeners",
-      "value": "[]",
+      "value": "['${p:updateMetrics}']",
       "type": "Listeners"
      },
      {
       "name": "expression",
-      "value": "function f() {\n    \n    var myself = this;\n\n    _.each(jobsQueryResultsVar, function(row, ridx){\n        jobsQueryObj[row[0]] = {\n            \"ID\": row[0], \n            \"Name\": row[3], \n            \"Username\": row[4], \n            \"Status\": row[5], \n            \"Start Date/Time\": row[6], \n            \"End Date/Time\": row[7], \n            \"Duration (seconds)\": row[8],\n            \"task\": {\n                \"mapper\": {},\n                \"combiner\": {},\n                \"reducer\": {}\n            }\n        };\n    });\n\n    _.each(pdiMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]] = jobsQueryObj[row[11]][row[12]][row[13]][row[0]] || {\n            'hostname': row[4],\n            'username': row[5],\n            'startTime': row[7],\n            'endTime': row[8],\n            'duration': row[9],\n            'status': row[6].toLowerCase(),\n            'hadoop': [],\n            'pdi': []\n        };\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]]['pdi'].push({\n            'metricName': row[1],\n            'metricValue': row[3],\n            'metricUnit': row[2].toLowerCase()\n        });\n    });\n    \n    _.each(hadoopMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[10]][row[11]][row[12]][row[0]]['hadoop'].push({\n            'metricName': row[13],\n            'metricValue': row[2],\n            'metricUnit': row[14].toLowerCase()\n        });\n    });\n     \n    template =  '<ul class=\"cbp_tmtimeline\">'+\n                '<% _.each(root, function(value, key) { %> ' +\n                '   <li data-value=\"<%-value.ID%>\">'+\n                '       <time class=\"cbp_tmtime\" datetime=\"<%-value.Name%>\"><span><%-moment(value[\"Start Date/Time\"]).format(\"YYYY-MM-DD\")%></span> <span><%-moment(value[\"Start Date/Time\"]).format(\"HH:mm:ss\")%></span></time>'+\n\t\t\t\t'\t\t<div class=\"cbp_tmicon cbp_tmicon-phone\"></div>'+\n\t\t\t\t'\t\t<div class=\"cbp_tmlabel\">'+\n\t\t\t\t'\t\t\t<div class=\"title\">'+\n                '               <h2><%-value.ID%></h2>'+\n                '           </div>'+\n                '    \t\t<div class=\"details\">'+\n\t\t\t\t'\t\t\t    <span><%-value[\"Name\"]%></span>'+\n                '    \t\t    <span><%-value[\"Start Date/Time\"]%></span>'+\n                '        \t    <span><%-value[\"End Date/Time\"]%></span>'+\n                '    \t\t    <span><%-value[\"Duration (seconds)\"]%></span>'+\n                '    \t\t    <span><%-value[\"Username\"]%></span>'+\n                '           </div>'+\n\t\t\t\t'\t\t</div>'+\n\t\t\t\t'\t</li>'+\n                '<% }); %>' +\n                '<ul>';\n    var $timeline = $(_.template(template, {root: jobsQueryObj}));\n    $timeline.find('.title').on('click', function(event){\n        $(this).next().toggleClass('expanded');\n    });\n\n    return $timeline;\n} ",
+      "value": "function f() {\n    \n    var myself = this;\n\n    _.each(jobsQueryResultsVar, function(row, ridx){\n        jobsQueryObj[row[0]] = {\n            \"ID\": row[0], \n            \"Name\": row[3], \n            \"Username\": row[4], \n            \"Status\": row[5], \n            \"Start Date/Time\": row[6], \n            \"End Date/Time\": row[7], \n            \"Duration (seconds)\": row[8],\n            \"task\": {\n                \"mapper\": {},\n                \"combiner\": {},\n                \"reducer\": {}\n            }\n        };\n    });\n\n    _.each(pdiMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]] = jobsQueryObj[row[11]][row[12]][row[13]][row[0]] || {\n            'hostname': row[4],\n            'username': row[5],\n            'startTime': row[7],\n            'endTime': row[8],\n            'duration': row[9],\n            'status': row[6].toLowerCase(),\n            'hadoop': [],\n            'pdi': []\n        };\n        jobsQueryObj[row[11]][row[12]][row[13]][row[0]]['pdi'].push({\n            'metricName': row[1],\n            'metricValue': row[3],\n            'metricUnit': row[2].toLowerCase()\n        });\n    });\n    \n    _.each(hadoopMetricsResultsVar, function(row, idx){\n        jobsQueryObj[row[10]][row[11]][row[12]][row[0]]['hadoop'].push({\n            'metricName': row[13],\n            'metricValue': row[2],\n            'metricUnit': row[14].toLowerCase()\n        });\n    });\n     \n    template =  Inquiro.opts.timelineTemplate;\n    \n    var $timeline = $(_.template(template, {root: jobsQueryObj}));\n    $timeline.find('.title').on('click', function(event){\n        $(this).toggleClass('expanded');\n        $(this).next().toggleClass('expanded');\n    });\n    var qtipOpts = {style: {\n            tip: {\n                corner: 'center top',\n                mimic: 'center' // Single 'center' value here\n            }\n        }\n    };\n    $timeline.find('.title').qtip();\n\n    return $timeline;\n} ",
       "type": "JavaScript"
      },
      {
@@ -977,12 +1005,12 @@
      },
      {
       "name": "preExecution",
-      "value": "",
+      "value": "function() {\n this.lifecycle = {silent: true};\n} ",
       "type": "JavaScript"
      },
      {
       "name": "postExecution",
-      "value": "function f() {\n    this.placeholder().find('.detailedInfo').qtip();\n   \n} ",
+      "value": "function f() {\n    this.placeholder().find('.detailedInfo').qtip();\n} ",
       "type": "JavaScript"
      },
      {
@@ -1088,8 +1116,8 @@
       "type": "Datasource"
      },
      {
-      "name": "width",
-      "value": "",
+      "name": "priority",
+      "value": 5,
       "type": "Integer"
      },
      {
@@ -1098,13 +1126,13 @@
       "type": "Integer"
      },
      {
-      "name": "refreshPeriod",
+      "name": "width",
       "value": "",
       "type": "Integer"
      },
      {
-      "name": "priority",
-      "value": 5,
+      "name": "refreshPeriod",
+      "value": "",
       "type": "Integer"
      },
      {
@@ -1124,7 +1152,7 @@
      },
      {
       "name": "preExecution",
-      "value": "function f() {\n    \n    var chartOpts = {\n        height: '200',\n        colors: ['#6cbfee'],\n        axisMinorTicks: false,\n        plotFrameVisible: false,\n        baseAxisTicks: false,\n        orthoAxisTicks: false,\n        orthoAxisVisible: false,\n        orientation: 'Horizontal',\n        crosstabMode: true,\n        seriesInRows: false\n    };\n\n    $.extend(true, this.chartDefinition, chartOpts);\n} ",
+      "value": "function f() {\n    \n    var chartOpts = {\n        height: '200',\n        colors: ['#6cbfee'],\n        axisMinorTicks: false,\n        plotFrameVisible: false,\n        baseAxisTicks: false,\n        orthoAxisTicks: false,\n        orthoAxisVisible: false,\n        orientation: 'Horizontal',\n        crosstabMode: true,\n        seriesInRows: false,\n        categoryRole: 'category'\n    };\n\n    $.extend(true, this.chartDefinition, chartOpts);\n} ",
       "type": "JavaScript"
      },
      {

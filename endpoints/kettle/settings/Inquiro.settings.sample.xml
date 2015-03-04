@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+
+     <database>
+         <type> mysql </type>
+         <host> localhost </host>
+         <port> 3306 </port>
+         <login> root </login>
+         <password></password>
+         <schema> Inquiro </schema>
+     </database>
+
+    <baserver>
+         <protocol> http </protocol>
+         <host> localhost </host>
+         <port> 8080 </port>
+         <login> admin </login>
+         <password> password </password>
+         <inquiro> public/Inquiro </inquiro>
+    </baserver>
+
+    <hadoop>
+        <namenode>
+            <host> localhost </host>
+            <login>  </login>
+            <password>  </password>
+            <ipc>
+                <protocol> hdfs </protocol>
+                <port> 8020 </port>    
+                <metrics> /pdi_hadoop_metrics/metrics </metrics>
+            </ipc>
+            <webui>
+                <protocol> http </protocol>
+                <port> 50070 </port>
+                <logs> /logs </logs>
+            </webui>
+        </namenode>
+        <jobtracker>
+            <host> localhost </host>
+            <login>  </login>
+            <password>  </password>
+            <ipc>
+                <protocol> ipc </protocol>
+                <port> 8021 </port>
+            </ipc>
+            <webui>
+                <protocol> http </protocol>
+                <port> 50030 </port>
+                <logs> /logs/userlogs/JOB/TASK/stdout </logs>
+            </webui>
+        </jobtracker>
+    </hadoop>  
+
+    <filesystem>
+        <metrics> /logs </metrics>
+    </filesystem>
+
+    <metrics>
+        <readfrom> filesystem </readfrom>
+    </metrics>
+
+</settings>
+

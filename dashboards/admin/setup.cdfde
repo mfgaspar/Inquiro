@@ -1,0 +1,4627 @@
+{
+ "layout": {
+  "title": "setup",
+  "rows": [
+   {
+    "id": "e191dbc9-450d-0235-9c56-17331aea1f22",
+    "type": "LayoutResourceCode",
+    "typeDesc": "Resource",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "inquiroCSS",
+      "type": "Id"
+     },
+     {
+      "name": "resourceType",
+      "value": "Css",
+      "type": "Label"
+     },
+     {
+      "name": "resourceCode",
+      "value": "p, div, * {\n    font-family: 'Open Sans', sans-serif;\n    color: #ffffff;\n} \n\n@media (min-width: 1200px) {\n    .container {\n        width: 100%;\n    }\n}\n\nbody {\n    background-color: #C8CED3;\n}\n\n.pluginDescription {\n    font-size: 19.7px;\n    color: #fd7a2b;\n}\n\n.inLineHeaderGroup {\n    background-color: #485163; \n    padding: 5px 0px;\n}\n\n.inLineHeaderGroup span {\n    font-weight: bold;\n    font-size: 40px;\n}\n\n.inLineHeaderGroup span:last-child {\n    font-weight: normal;\n    font-size: 40px;\n    color: #C8CED3;\n}\n\n.titleGroup {\n    font-size: 18px;\n    font-weight: bold;\n    color: #485163;\n    margin-top: 15px;\n}\n\n\n.logout {\n    background-color: #39404D;\n}\n\n\n.inLineGroup {\n    padding: 5px 0px;\n} \n\n.inButton button{\n    background-color: #fd7a2b;\n    box-shadow: 2px 2px 10px #39404D;\n    border: 1px solid #fd7a2b;\n    padding: 10px 30px;\n    border-radius: 5px;\n    margin-top: 10px;\n}\n\n.inButton button:hover{\n    background-color: #ed5f07;\n}\n\n/*\n.inBreakdown select2-drop-mask {\n    background-color: #eaecec;\n    color: #485163;\n    width: 300px;\n}\n*/\n\n.inLineGroup .title {\n    margin-top: 4px;\n}\n\n.inInput input {\n    background-color: #eaecec;\n    color: #485163;\n    border: none;\n    padding: 5px 10px;\n    border-radius: 5px;\n    width: 100%;\n}\n\n.operationsResult {\n    line-height: 65px;\n}\n\n.inDropdown span, .inDropdown li {\n    color: #485163;\n}\n\n.chzn-select {\n    width: 200px;\n}\n\n.chzn-search {\n    display: none;\n}\n ",
+      "type": "Resource"
+     }
+    ]
+   },
+   {
+    "id": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "type": "LayoutRow",
+    "typeDesc": "Row",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "87402712-f188-476c-4744-f0ae87cc4b67",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "logo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "logo",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ea0bc6d4-6395-45e5-1a89-2066980cf994",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "87402712-f188-476c-4744-f0ae87cc4b67",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineHeaderGroup\">\n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n            <div class=\"pluginTitle\">\n                <span>INQUIRO</span><span>PLUGIN</span>\n            </div>\n        </div>\n    \n        <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n            <div class=\"pluginDescription\"> BIG DATA PERFORMANCE STATS </div> \n        </div>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0776c9de-1132-9a3b-d226-5566e03e414d",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "dbInfo",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "84ccf4d7-8b7d-c9a1-33e5-64fd7d552c5d",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "0776c9de-1132-9a3b-d226-5566e03e414d",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n        <div class=\"titleDatabase titleGroup\"> Database settings </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Type </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbType\" class=\"inDropdown dbType\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbHostname\" class=\"inInput dbHostname\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbPortnumber\" class=\"inInput dbPortnumber\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Schema </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbSchema\" class=\"inInput dbSchema\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbUsername\" class=\"inInput dbUsername\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"dbPassword\" class=\"inInput dbPassword\"> </div>        \n    </div>\n</div>    \n\n ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "d3d0fa4d-6d3b-0625-b57a-9af07789751c",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "baInfo",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "94d999a6-6b66-267d-5e4f-afaacfb5178f",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "d3d0fa4d-6d3b-0625-b57a-9af07789751c",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n        <div class=\"titleBAServer titleGroup\"> BA Server settings </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baProtocol\" class=\"inInput baProtocol\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baHostname\" class=\"inInput baHostname\"> </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baPortnumber\" class=\"inInput baPortnumber\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baUsername\" class=\"inInput baUsername\"> </div>        \n    </div>\n</div>    \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"baPassword\" class=\"inInput baPassword\"> </div>        \n    </div>\n</div>    \n\n ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ed64c00a-cbfa-d545-2b04-a3fbcb191131",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "hadoopInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "hadoopInfo",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "0e82c808-0713-2af9-5952-a20d1ad42383",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "ed64c00a-cbfa-d545-2b04-a3fbcb191131",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<!-- Nodename -->\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n        <div class=\"titleNodename titleGroup\"> Hadoop Namenode </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"namenodeHostname\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"namenodeUsername\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"namenodePassword\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> IPC protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"namenodeIPCProtocol\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> IPC portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"namenodeIPCPortnumber\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> HDFS Metrics path </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"namenodeIPCMetrics\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> WEB protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"namenodeWEBProtocol\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> WEB portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"namenodeWEBPortnumber\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> WEB logs path</div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"jobtrackerWEBLogs\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n\n\n\n<!-- Jobtracker -->\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"titleJobtracker titleGroup\"> Hadoop Jobtracker </div>        \n    </div>\n</div>\n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Hostname </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"jobtrackerHostname\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Username </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"jobtrackerUsername\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n   <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Password </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"jobtrackerPassword\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> IPC protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"jobtrackerIPCProtocol\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> IPC portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"jobtrackerIPCPortnumber\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> WEB protocol </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"jobtrackerWEBProtocol\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> \n\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> WEB portnumber </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"jobtrackerWEBPortnumber\" class=\"inInput metricsPath\"> </div>        \n    </div>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "ce68150c-8719-2557-6ca2-21cb39356981",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "metricsInfo",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "metricsInfo",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "9b5c75e6-a177-4ff6-b33b-5ca656dfdd54",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "ce68150c-8719-2557-6ca2-21cb39356981",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n        <div class=\"title\"> Read metrics from </div>        \n    </div>\n    <div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n        <div id=\"metricsReadFrom\" class=\"inDropdown metricsPath\"> </div>        \n    </div>\n</div> ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "66408251-f433-d0a8-ebbe-3f2b1e061be3",
+    "type": "LayoutBootstrapColumn",
+    "typeDesc": "Column",
+    "parent": "d8853166-3e05-f0ab-af15-6d0fac80fae8",
+    "properties": [
+     {
+      "name": "name",
+      "value": "buttons",
+      "type": "Id"
+     },
+     {
+      "name": "bootstrapExtraSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapSmall",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapMedium",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapLarge",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "bootstrapCssClass",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "height",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "roundCorners",
+      "value": "",
+      "type": "RoundCorners"
+     },
+     {
+      "name": "textAlign",
+      "value": "",
+      "type": "TextAlign"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "800e72f9-c30d-a2fb-947d-1bced475fb15",
+    "type": "LayoutHtml",
+    "typeDesc": "Html",
+    "parent": "66408251-f433-d0a8-ebbe-3f2b1e061be3",
+    "properties": [
+     {
+      "name": "name",
+      "value": "",
+      "type": "Id"
+     },
+     {
+      "name": "html",
+      "value": "<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12 inLineGroup\">\n    <div class=\"col-xs-12 col-sm-4 col-md-2 col-lg-2\">\n        <div id=\"setupPluginButton\" class=\"inButton setupPluginButton\"> </div>        \n    </div>\n    <div class=\"col-xs-12 col-sm-4 col-md-2 col-lg-2\">\n        <div id=\"processMetricsButton\" class=\"inButton processMetricsButton\"> </div>        \n    </div>\n    <div class=\"col-xs-12 col-sm-4 col-md-8 col-lg-8\">\n        <div id=\"operationsResult\" class=\"operationsResult\"> </div>        \n    </div>\n</div>\n\n ",
+      "type": "Html"
+     },
+     {
+      "name": "fontSize",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "color",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   },
+   {
+    "id": "37d3afdf-8c0f-6bb8-ffc5-aaadeddd9b53",
+    "type": "LayoutSpace",
+    "typeDesc": "Space",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "height",
+      "value": "50",
+      "type": "Integer"
+     },
+     {
+      "name": "backgroundColor",
+      "value": "",
+      "type": "Color"
+     },
+     {
+      "name": "cssClass",
+      "value": "",
+      "type": "String"
+     }
+    ]
+   }
+  ]
+ },
+ "components": {
+  "rows": [
+   {
+    "id": "GENERIC",
+    "name": "Generic",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Generic",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "a555723f-f0f8-35d2-e5c2-eb83d1b2141c",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbTypeParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "mysql",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "202b3734-5fac-0390-643d-e71b2a2db67d",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbHostnameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "localhost",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "a7dccfe6-bef3-f90a-5807-911773422276",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "3306",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "9089cf95-22c1-ec02-0472-8f00303d59fc",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbSchemaParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "inquiro",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "e3ee64c1-f3ae-b305-7bd6-78009a871f9c",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbUsernameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "root",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "1c662eae-f9d9-e73c-8765-90beafbe7159",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbPasswordParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "78f5ebea-6b63-674a-c6fb-1ee7fe02d55f",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baProtocolParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "http",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "d73ee52b-fe4e-3d73-747b-50bd2317c33a",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baHostnameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "localhost",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "4822db24-18c0-ddda-8c80-fa5b40a71615",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "8080",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "d2b38494-82d3-3bea-be24-1858d65cc3a5",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baUsernameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "admin",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "d1401466-3efe-55ee-a2be-73f3817311e7",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baPasswordParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "password",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "b70cdaf4-d57d-cc69-ce4f-4ded7b53d52d",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baInquiroParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "/plublic/inquiro",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "b2713753-2d34-9c21-5c1b-8ec346911bbf",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeHostnameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "localhost",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "dc113c38-9694-2ade-fa1a-05cd5369bb67",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeUsernameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "15bc8a74-a803-a4bd-0575-b2446949555d",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodePasswordParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "a590c918-0841-5fb3-ea20-b0ce6155a581",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeIPCProtocolParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "hdfs",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "e6230f11-ac9c-af4f-860f-259050f18cca",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeIPCPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "8020",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "4d5c1095-b107-0946-1ee2-643889d42145",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeIPCMetricsParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "/pdi_hadoop_metrics/metrics",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "91bad233-f2f4-f50f-476c-4840342a7e0f",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeWEBProtocolParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "http",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "1337ad02-211d-c73a-9c35-1aa1e98f2f9b",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeWEBPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "50070",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "9084925b-d9c6-96d4-2f0c-519aae787a38",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeWEBLogsParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "/logs",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "b9ea6b18-6fee-890a-d1ff-70d4c6e1e1b6",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerHostnameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "localhost",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "eb9480c3-2092-f939-46ad-080ae57f305c",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerUsernameParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "1863f927-3f93-212b-9005-fe246fcbefc7",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerPasswordParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "6bfc1272-b94e-ddb2-921c-5e6ce3a93c5c",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerIPCProtocolParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "ipc",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "02e8ad10-03df-80c0-09d4-a93a37b70c86",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerIPCPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "8021",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "b52bb604-4607-ac67-f78d-177e1dc4a9d1",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerWEBProtocolParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "http",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "92311fa4-a1e7-7259-2fdd-8d9fcf97b0b3",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerWEBPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "50030",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "13af0264-a961-156b-f9c5-4c9dd82120dd",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerLogsPortnumberParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "/logs/userlogs/JOB/TASK/stdout ",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "0e13b76f-4dfb-5c40-c9fe-14f663887460",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "metricsReadFromParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "filesystem",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "ad65ecae-2046-e684-fd03-f36858f35cf1",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "filesystemMetricsParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "/logs",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "18a96d4e-136e-fd28-0992-64e89693eed5",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installPluginParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "0ba13cce-2f4c-10c0-a5f0-749b59fff322",
+    "type": "ComponentsParameter",
+    "typeDesc": "Simple parameter",
+    "parent": "GENERIC",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetricsParam",
+      "type": "Id"
+     },
+     {
+      "name": "propertyValue",
+      "value": "0",
+      "type": "String"
+     },
+     {
+      "name": "parameterViewRole",
+      "value": "unused",
+      "type": "parameterViewRoleCustom"
+     },
+     {
+      "name": "bookmarkable",
+      "value": "false",
+      "type": "Boolean"
+     }
+    ]
+   },
+   {
+    "id": "SELECTORS",
+    "name": "Selects",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Selects",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "f46f9681-1208-36ff-94a6-6c3b88cdceda",
+    "type": "ComponentsSelect",
+    "typeDesc": "Select Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbType",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbTypeParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "valueAsId",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "externalPlugin",
+      "value": "chosen",
+      "type": "externalPluginCustom"
+     },
+     {
+      "name": "dataSource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "valuesArray",
+      "value": "[[\"postgres\",\"postgres\"],[\"mysql\",\"mysql\"],[\"oracle\",\"oracle\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:dbType}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "OptionArray"
+     }
+    ]
+   },
+   {
+    "id": "07b6a60c-40b2-0fbe-bb08-1a6be3b1646e",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbHostname",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbHostnameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbHostname}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "e75c3cae-8070-cb5b-6e4a-88bd595dcd5d",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbPortnumber",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbPortnumberParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbPortnumber}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "01fe6962-1cb0-cc12-58d1-d717f97a9932",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbSchema",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbSchemaParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${p:dbSchema}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "03b5a946-8e8e-9500-9cbf-86ea305e8b3c",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbUsername",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbUsernameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbUsername}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "387bb666-7665-1220-df23-4650128789c2",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "dbPassword",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:dbPasswordParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:dbPassword}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function f() {\n    this.placeholder().find('input').prop(\"type\", \"password\");\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "a348e922-f168-9168-33b7-81e2f30dd723",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baProtocol",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baProtocolParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baProtocol}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "4bc42127-75e7-c6c5-1484-99703928eaf0",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baHostname",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baHostnameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baHostname}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "b6d3e34b-1f64-e044-de84-2a8be9b613d2",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baPortnumber",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baPortnumberParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baPortnumber}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "6d0df5ce-6375-66de-a7d9-e4e7fb537f45",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baUsername",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baUsernameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baUsername}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "e95d79e6-3b37-d2d4-bed6-e3de1e53c1fc",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baPassword",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baPasswordParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baPassword}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function f() {\n    this.placeholder().find('input').prop(\"type\", \"password\");\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "6aba132f-6b91-fe4a-fe07-788d0f41f03e",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "baInquiro",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:baInquiroParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:baPassword}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "98768f87-fda9-240d-8aa7-e454f67c08a5",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeHostname",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodeHostnameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodeHostname}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "b627dd1b-7704-722a-0919-814ea31750c4",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeUsername",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodeUsernameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodeUsername}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "95a2a465-76fd-6eb3-b800-d6dde80aedb2",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodePassword",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodePasswordParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodePassword}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function f() {\n    this.placeholder().find('input').prop(\"type\", \"password\");\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "6e37172b-d306-a5bb-e3b1-8b466f02c497",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeIPCProtocol",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodeIPCProtocolParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodeIPCProtocol}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "bb47cd72-aa69-ea11-96f4-1fb7ef6e4385",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeIPCPortnumber",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodeIPCPortnumberParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodeIPCPortnumber}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "c8c76d00-84fb-1e7f-ec33-acd342cea23e",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeIPCMetrics",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodeIPCMetricsParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodeIPCMetrics}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "870f56bf-fd07-e8d6-d9a2-a54d39dbd712",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeWEBProtocol",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodeWEBProtocolParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodeWEBProtocol}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "607d6eae-4cd5-4e91-115d-7525aadce205",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeWEBPortnumber",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodeWEBPortnumberParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodeWEBPortnumber}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "c297b009-68aa-ff7f-254d-c46adc90b953",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "namenodeWEBLogs",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:namenodeWEBLogsParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:namenodeWEBLogs}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "95064539-3326-feb3-3515-36f9f22659b9",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerHostname",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:jobtrackerHostnameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:jobtrackerHostname}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "235805f3-afee-acd6-0823-fa741438770d",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerUsername",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:jobtrackerUsernameParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:jobtrackerUsername}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "5a897cb6-d434-f679-2e03-88dcec30f458",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerPassword",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:jobtrackerPasswordParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:jobtrackerPassword}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "function f() {\n    this.placeholder().find('input').prop(\"type\", \"password\");\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "05483b8a-d6c3-857c-33dd-16f5b44b23d1",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerIPCProtocol",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:jobtrackerIPCProtocolParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:jobtrackerIPCProtocol}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "54824e4b-8efb-dfef-4a6c-655c009c9b5f",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerIPCPortnumber",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:jobtrackerIPCPortnumberParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:jobtrackerIPCPortnumber}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "2232f94a-0492-7ed4-db9a-0eb64a31b7ab",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerWEBProtocol",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:jobtrackerWEBProtocolParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:jobtrackerWEBProtocol}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "78007cb1-7786-968a-719d-c17627639774",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerWEBPortnumber",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:jobtrackerWEBPortnumberParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:jobtrackerWEBPortnumber}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "87aff621-8f55-26d5-f1ac-50ffad01eaf6",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "jobtrackerWEBLogs",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "jobtrackerWEBLogsParam",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:jobtrackerWEBLogs}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "14528ba6-f990-a67f-94b4-72a0f8163a4b",
+    "type": "ComponentstextInput",
+    "typeDesc": "Text input Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "filesystemMetrics",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:filesystemMetricsParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "maxLength",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "size",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:filesystemMetrics}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "532762c6-6e35-909f-03f9-b8acae47ed64",
+    "type": "ComponentsSelect",
+    "typeDesc": "Select Component",
+    "parent": "SELECTORS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "metricsReadFrom",
+      "type": "Id"
+     },
+     {
+      "name": "parameter",
+      "value": "${p:metricsReadFromParam}",
+      "type": "Parameter"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "valueAsId",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "externalPlugin",
+      "value": "chosen",
+      "type": "externalPluginCustom"
+     },
+     {
+      "name": "dataSource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "valuesArray",
+      "value": "[[\"filesystem\",\"Filesystem\"],[\"hadoop\",\"Hadoop\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:metricsReadFrom}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     },
+     {
+      "name": "extraOptions",
+      "value": "[]",
+      "type": "OptionArray"
+     }
+    ]
+   },
+   {
+    "id": "OTHERCOMPONENTS",
+    "name": "Others",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "Others",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "1d349b98-24bc-3a9e-121c-b0f4bd807ed6",
+    "type": "ComponentsbuttonComponent",
+    "typeDesc": "Button Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "setupPlugin",
+      "type": "Id"
+     },
+     {
+      "name": "label",
+      "value": "Setup Plugin",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "successCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "expression",
+      "value": "function () {\n    Dashboards.fireChange(\"${p:installPluginParam}\", 1);    \n}\n ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "actionParameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "failureCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "Datasource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "buttonStyle",
+      "value": "themeroller",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:setupPluginButton}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "c396c2c6-ed8e-9b1c-cbd8-5017f28d18c1",
+    "type": "ComponentsbuttonComponent",
+    "typeDesc": "Button Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetrics",
+      "type": "Id"
+     },
+     {
+      "name": "label",
+      "value": "Process Metrics",
+      "type": "String"
+     },
+     {
+      "name": "listeners",
+      "value": "[]",
+      "type": "Listeners"
+     },
+     {
+      "name": "successCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "expression",
+      "value": "function () {\n    Dashboards.fireChange(\"${p:processMetricsParam}\", Dashboards.getParameterValue(\"${p:processMetricsParam}\")+1);    \n}\n ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "actionParameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "failureCallback",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "Datasource",
+      "value": "",
+      "type": "Datasource"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "buttonStyle",
+      "value": "themeroller",
+      "type": "TableStyle"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:processMetricsButton}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "true",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "959aa954-9e8a-8780-03b4-78fcbc842bbf",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "saveSettings",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:installPluginParam}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"dbType\",\"dbTypeParam\"],[\"dbHostname\",\"dbHostnameParam\"],[\"dbPortnumber\",\"dbPortnumberParam\"],[\"dbSchema\",\"dbSchemaParam\"],[\"dbUsername\",\"dbUsernameParam\"],[\"dbPassword\",\"dbPasswordParam\"],[\"baProtocol\",\"baProtocolParam\"],[\"baHostname\",\"baHostnameParam\"],[\"baPortnumber\",\"baPortnumberParam\"],[\"baUsername\",\"baUsernameParam\"],[\"baPassword\",\"baPasswordParam\"],[\"namenodeHostname\",\"namenodeHostnameParam\"],[\"namenodeUsername\",\"namenodeUsernameParam\"],[\"namenodePassword\",\"namenodePasswordParam\"],[\"namenodeIPCProtocol\",\"namenodeIPCProtocolParam\"],[\"namenodeIPCPortnumber\",\"namenodeIPCPortnumberParam\"],[\"namenodeIPCMetrics\",\"namenodeIPCMetricsParam\"],[\"namenodeWEBProtocol\",\"namenodeWEBProtocolParam\"],[\"namenodeWEBPortnumber\",\"namenodeWEBPortnumberParam\"],[\"namenodeWEBLogs\",\"namenodeWEBLogsParam\"],[\"jobtrackerHostname\",\"jobtrackerHostnameParam\"],[\"jobtrackerUsername\",\"jobtrackerUsernameParam\"],[\"jobtrackerPassword\",\"jobtrackerPasswordParam\"],[\"jobtrackerIPCProtocol\",\"jobtrackerIPCProtocolParam\"],[\"jobtrackerIPCPortnumber\",\"jobtrackerIPCPortnumberParam\"],[\"jobtrackerWEBProtocol\",\"jobtrackerWEBProtocolParam\"],[\"jobtrackerWEBPortnumber\",\"jobtrackerWEBPortnumberParam\"],[\"jobtrackerLogsPortnumber\",\"jobtrackerLogsPortnumberParam\"],[\"filesystemMetrics\",\"filesystemMetricsParam\"],[\"metricsReadFrom\",\"metricsReadFromParam\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "saveSettingsResult",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "saveSettings",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:operationsResult}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function (data) {\n    var msg = \"Plugin installed with \";\n    var result = (data.result)?'success':'errors.';\n    (this.placeholder().empty().html(msg+result));\n    return data;\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "5ee9cc2b-63c1-8c0e-0f1e-336b2cc2d1d8",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "installPluginResult",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:installPluginParam}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[[\"dbType\",\"dbTypeParam\"],[\"dbHostname\",\"dbHostnameParam\"],[\"dbPortnumber\",\"dbPortnumberParam\"],[\"dbSchema\",\"dbSchemaParam\"],[\"dbUsername\",\"dbUsernameParam\"],[\"dbPassword\",\"dbPasswordParam\"],[\"baProtocol\",\"baProtocolParam\"],[\"baHostname\",\"baHostnameParam\"],[\"baPortnumber\",\"baPortnumberParam\"],[\"baUsername\",\"baUsernameParam\"],[\"baPassword\",\"baPasswordParam\"],[\"namenodeHostname\",\"namenodeHostnameParam\"],[\"namenodeUsername\",\"namenodeUsernameParam\"],[\"namenodePassword\",\"namenodePasswordParam\"],[\"namenodeIPCProtocol\",\"namenodeIPCProtocolParam\"],[\"namenodeIPCPortnumber\",\"namenodeIPCPortnumberParam\"],[\"namenodeIPCMetrics\",\"namenodeIPCMetricsParam\"],[\"namenodeWEBProtocol\",\"namenodeWEBProtocolParam\"],[\"namenodeWEBPortnumber\",\"namenodeWEBPortnumberParam\"],[\"namenodeWEBLogs\",\"namenodeWEBLogsParam\"],[\"jobtrackerHostname\",\"jobtrackerHostnameParam\"],[\"jobtrackerUsername\",\"jobtrackerUsernameParam\"],[\"jobtrackerPassword\",\"jobtrackerPasswordParam\"],[\"jobtrackerIPCProtocol\",\"jobtrackerIPCProtocolParam\"],[\"jobtrackerIPCPortnumber\",\"jobtrackerIPCPortnumberParam\"],[\"jobtrackerWEBProtocol\",\"jobtrackerWEBProtocolParam\"],[\"jobtrackerWEBPortnumber\",\"jobtrackerWEBPortnumberParam\"],[\"jobtrackerLogsPortnumber\",\"jobtrackerLogsPortnumberParam\"],[\"filesystemMetrics\",\"filesystemMetricsParam\"],[\"metricsReadFrom\",\"metricsReadFromParam\"]]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "installPluginResult",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "setupPlugin",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:operationsResult}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function (data) {\n    var msg = \"Plugin installed with \";\n    var result = (data.result)?'success':'errors.';\n    (this.placeholder().empty().html(msg+result));\n    return data;\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   },
+   {
+    "id": "93d3aab0-a5e7-1d1e-88a0-2cbecc167acf",
+    "type": "ComponentsQuery",
+    "typeDesc": "Query Component",
+    "parent": "OTHERCOMPONENTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetricsResult",
+      "type": "Id"
+     },
+     {
+      "name": "listeners",
+      "value": "['${p:processMetricsParam}']",
+      "type": "Listeners"
+     },
+     {
+      "name": "parameters",
+      "value": "[]",
+      "type": "ValuesArray"
+     },
+     {
+      "name": "resultvar",
+      "value": "processMetricsResult",
+      "type": "Result"
+     },
+     {
+      "name": "dataSource",
+      "value": "processMetrics",
+      "type": "Datasource"
+     },
+     {
+      "name": "refreshPeriod",
+      "value": "",
+      "type": "Integer"
+     },
+     {
+      "name": "priority",
+      "value": 5,
+      "type": "Integer"
+     },
+     {
+      "name": "htmlObject",
+      "value": "${h:operationsResult}",
+      "type": "HtmlObject"
+     },
+     {
+      "name": "executeAtStart",
+      "value": "false",
+      "type": "Boolean"
+     },
+     {
+      "name": "preExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postExecution",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postFetch",
+      "value": "function (data) {\n    var msg = \"Metrics processed with \";\n    var result = (data.result)?'success':'errors.';\n    (this.placeholder().empty().html(msg+result));\n    return data;\n} ",
+      "type": "JavaScript"
+     },
+     {
+      "name": "preChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "postChange",
+      "value": "",
+      "type": "JavaScript"
+     },
+     {
+      "name": "tooltip",
+      "value": "",
+      "type": "Html"
+     }
+    ]
+   }
+  ]
+ },
+ "datasources": {
+  "rows": [
+   {
+    "id": "INQUIRO_CPKENDPOINTS",
+    "name": "INQUIRO Endpoints",
+    "type": "Label",
+    "typeDesc": "<i>Group</i>",
+    "parent": "UnIqEiD",
+    "properties": [
+     {
+      "name": "Group",
+      "value": "INQUIRO Endpoints",
+      "type": "Label"
+     }
+    ]
+   },
+   {
+    "id": "f4eaf07f-9d68-bf76-7199-af5bce271eab",
+    "type": "ComponentsInquiro_setupPlugin_CPKENDPOINT",
+    "typeDesc": "setupPlugin Endpoint",
+    "parent": "INQUIRO_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "setupPlugin",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "Inquiro",
+    "meta_endpoint": "setupPlugin"
+   },
+   {
+    "id": "cf9fc491-ebd4-5e22-5aa3-a702ef07b137",
+    "type": "ComponentsInquiro_processMetrics_CPKENDPOINT",
+    "typeDesc": "processMetrics Endpoint",
+    "parent": "INQUIRO_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "processMetrics",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "Inquiro",
+    "meta_endpoint": "processMetrics"
+   },
+   {
+    "id": "d60b6c6c-449a-d295-3095-f62c8837227a",
+    "type": "ComponentsInquiro_saveSettings_CPKENDPOINT",
+    "typeDesc": "saveSettings Endpoint",
+    "parent": "INQUIRO_CPKENDPOINTS",
+    "properties": [
+     {
+      "name": "name",
+      "value": "saveSettings",
+      "type": "Id"
+     },
+     {
+      "name": "stepName",
+      "value": "OUTPUT",
+      "type": "String"
+     },
+     {
+      "name": "kettleOutput",
+      "value": "Inferred",
+      "type": "kettleOutputCustom"
+     }
+    ],
+    "meta": "CPK",
+    "meta_pluginId": "Inquiro",
+    "meta_endpoint": "saveSettings"
+   }
+  ]
+ },
+ "filename": "/system/Inquiro/dashboards/admin/setup.cdfde"
+}

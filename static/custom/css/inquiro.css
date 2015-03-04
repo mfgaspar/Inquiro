@@ -1,0 +1,122 @@
+
+/* Buttom */
+
+@-ms-keyframes spin { 
+    from { -ms-transform: rotate(0deg); } to { -ms-transform: rotate(360deg); }
+}
+@-moz-keyframes spin { 
+    from { -moz-transform: rotate(0deg); } to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin { 
+    from { -webkit-transform: rotate(0deg); } to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin { 
+    from { transform: rotate(0deg); } to { transform: rotate(360deg); }
+}
+
+.processMetrics button{
+  background-color: #6cbfee;
+  border: 5px solid #afdcf8;
+  font-weight: bold;
+  padding: 0px;
+  border-radius: 5px;
+  width: 3em;
+  height: 3em;
+  border-radius: 100%;
+  margin-top: 5px;
+  color: white;
+}
+
+.processMetrics button:hover{
+   background-color: #afdcf8;
+}
+
+.processMetrics button.active{
+    -webkit-animation:spin 1s linear infinite;
+    -moz-animation:spin 1s linear infinite;
+    animation:spin 1s linear infinite;
+    background-color: white;
+    border: 5px solid #6cbfee;
+    color: #6cbfee;
+}
+
+*:focus {
+    outline: none;
+}
+
+
+
+
+.expanded h2 {
+    color: rgba(0,0,0,0.5);
+}
+
+
+
+.timelineMetrics .details {
+    font-size: 14px;
+}
+
+
+.timelineMetrics .details > .row {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.4);
+}
+
+.timelineMetrics .details .stopwatch {
+    font-size: 34px;
+    width: 100%;
+    text-align:center;
+}
+
+
+.timelineMetrics .details .summary .row {
+    padding-top: 10px;
+}
+
+.timelineMetrics .details .redirectTo {
+    font-size: 10px;
+}
+
+.timelineMetrics .details .taskDetails div {
+    width: 100%;
+    text-align: left;
+    font-weight: 100;
+    font-size: 12px;
+}
+
+.timelineMetrics .details .taskDetails div.title {
+    padding-top: 10px;
+    margin-top: 10px;
+    border-top: 1px solid rgba(255,255,255,0.4);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.timelineMetrics .details .taskDetails div.taskSummaryDetails {
+    padding-left: 10px;
+}
+
+
+.timelineMetrics .taskSummaryDetails {
+    max-height: 0;
+    overflow: hidden;
+	-webkit-transition: max-height 0.5s;
+	-moz-transition: max-height 0.5s;
+	transition: max-height 0.5s;
+}
+
+.timelineMetrics .taskSummaryDetails.expanded {
+    max-height: 100px;
+}
+
+
+.arrow-circle:before {
+    content: "\f18e";
+}
+
+.arrow-circle.expanded:before {
+    content: "\f01a";
+}

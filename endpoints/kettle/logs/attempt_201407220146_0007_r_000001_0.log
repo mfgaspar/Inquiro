@@ -1,0 +1,4 @@
+Step name;Step id;Lines input;Lines output;Lines red;Lines updated;Lines written;Lines rejected;Duration;attempID;hostname
+Group by;GroupBy; 0000000000; 0000000000; 0000000001; 0000000000; 0000000001; 0000000000; 0000000005;attempt_201407220146_0007_r_000001_0;mars.localdomain
+Hadoop Output;HadoopExitPlugin; 0000000000; 0000000000; 0000000001; 0000000000; 0000000001; 0000000000; 0000000010;attempt_201407220146_0007_r_000001_0;mars.localdomain
+Hadoop Input;HadoopEnterPlugin; 0000000000; 0000000000; 0000000001; 0000000000; 0000000001; 0000000000; 0000000004;attempt_201407220146_0007_r_000001_0;mars.localdomain

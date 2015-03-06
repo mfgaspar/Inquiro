@@ -6,7 +6,7 @@ INQUIRO - BIG DATA PERFORMANCE STATS
 
 The Inquiro it's a Pentaho plugin built on top of Sparkl to make possible analysis from operational metrics involving Hadoop and Pentaho Big Data technology. It's main purpose is to monitor the performance of Pentaho Data Integration (PDI) jobs and transformations running on Hadoop Mapreduce . It will grab the stats from PDI (Pentaho Data Integration) transformations and from Hadoop Counters , building a datawarehouse to use within Pentaho . It's possible to open the pre-built analysis reports and dashboards and analyse the metrics related with jobs and tasks . An interesting feature is the ability of having the metrics for each of the jobs and tasks, which makes possible to establish relations between the metrics coming from Hadoop and PDI metrics. 
 
-![Inquiro Diagram](docs/Inquiro.png =700x)
+![Inquiro Diagram](https://github.com/mfgaspar/Inquiro/blob/master/docs/Inquiro.png?raw=true =700x)
 
 
 #Requirements and Compatibility
